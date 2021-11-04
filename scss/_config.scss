@@ -1,0 +1,147 @@
+// 変数
+$accent-color: #b0881e;
+$primary-color: #071d47;
+// $secondary-color: ;
+$theme-color: #b0881e;
+
+$header-heights: (
+  "pc": 80px,
+  "tab": 80px,
+  "sp": 55px,
+);
+
+$burger-btn-width: (
+  "tab": 50px,
+  "sp": 30px,
+);
+
+$burger-btn-height: (
+  "tab": 50px,
+  "sp": 25px,
+);
+
+// レスポンシブ対応
+$break-points: (
+  "sp": 598px,
+  "tab": 1260px,
+  "wide": 1400px,
+);
+@mixin sp {
+  @media screen and (max-width: #{map-get($break-points, "sp")}) {
+    @content;
+  }
+}
+@mixin tab {
+  @media screen and (max-width: #{map-get($break-points, "tab")}) {
+    @content;
+  }
+}
+@mixin wide {
+  @media screen and (max-width: #{map-get($break-points, "wide")}) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 画像等の縦横比固定用
+// ::beforeか::afterの中で使用してください
+// @contentでpadding-topを指定してください
+//   縦:横 1:1=100%, 4:3=75%, 16:9=56.25%
+@mixin aspect-ratio {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @content;
+}
+
+@function calc-vw($content-width, $display-width: 1200) {
+  @return $content-width / $display-width * 100vw;
+}
+
+@function calc-percent($item-size, $parent-size) {
+  @return $item-size / $parent-size * 100%;
+}
+
+
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  font-family: "source-han-serif-japanese", serif;
+  font-weight: 400;
+  font-style: normal;
+  @include sp {
+    font-size: 14px;
+  }
+}
+
+section {
+  margin-bottom: 100px;
+  @include sp {
+    margin-bottom: 60px;
+  }
+}
+
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  @include tab {
+    width: 90%;
+  }
+  @include sp {
+    width: calc(100vw - 30px);
+  }
+}
+
+
+
+.is-shown-tab {
+  display: none;
+  @include tab {
+    display: block !important;
+  }
+}
+.is-shown-tab-only {
+  display: none;
+  @include tab {
+    display: block !important;
+  }
+  @include sp {
+    display: none !important;
+  }
+}
+.is-shown-sp {
+  display: none;
+  @include sp {
+    display: block !important;
+  }
+}
+.is-hidden-tab {
+  @include tab {
+    display: none !important;
+  }
+}
+.is-hidden-sp {
+  @include sp {
+    display: none !important;
+  }
+}

@@ -1,0 +1,134 @@
+.burger {
+    &__switch {
+        transform: translateX(-100vw);
+    }
+
+    &__btn {
+        width: map-get($burger-btn-width, "tab");
+        height: map-get($burger-btn-height, "tab");
+        margin-right: 15px;
+        display: none;
+        position: relative;
+        cursor: pointer;
+        z-index: 111;
+        @include tab {
+            @include flex-center;
+        }
+        @include sp {
+            width: map-get($burger-btn-width, "sp");
+            height: map-get($burger-btn-height, "sp");
+            margin-right: 0;
+        }
+    }
+
+    &__line {
+        &,
+        &::after,
+        &::before {
+            content: "";
+            width: map-get($burger-btn-width, "tab");
+            height: 4px;
+            background-color: $primary-color;
+            position: absolute;
+            transition-duration: 0.3s;
+            z-index: 115;
+            @include sp {
+                width: map-get($burger-btn-width, "sp");
+                height: 2px;
+            }
+        }
+
+        &::before {
+            transform: translateY(-15px);
+            @include sp {
+                transform: translateY(-12px);
+            }
+        }
+
+        &::after {
+            transform: translateY(15px);
+            width: calc(#{map-get($burger-btn-width, "tab")} * 0.8);
+            @include sp {
+                transform: translateY(12px);
+                width: calc(#{map-get($burger-btn-width, "sp")} * 0.8);
+            }
+        }
+    }
+
+    &__background {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition-duration: 0.3s;
+        z-index: 100;
+    }
+
+    &__nav {
+        @include tab {
+            color: #fff;
+            width: 30%;
+            height: 100%;
+            background-color: $primary-color;
+            border: 1px solid #000;
+            @include flex-center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            transform: translateX(100vw);
+            transition: 0.3s;
+            z-index: 110;
+        }
+        @include sp {
+            width: 80vw;
+        }
+        ul {
+            @include tab {
+                width: 80%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+            }
+        }
+        li {
+            @include tab {
+                font-size: 2vw;
+            }
+            @include sp {
+                font-size: 5vw;
+            }
+        }
+    }
+}
+
+#burger__switch:checked {
+    & ~ #burger__btn #burger__line {
+        background: $primary-color;
+    }
+
+    & ~ #burger__btn #burger__line::before {
+        background: #fff;
+        transform: translateY(0) rotate(45deg);
+    }
+
+    & ~ #burger__btn #burger__line::after {
+        width: map-get($burger-btn-width, "tab");
+        background: #fff;
+        transform: translateY(0) rotate(-45deg);
+        @include sp {
+            width: map-get($burger-btn-width, "sp");
+        }
+    }
+    & ~ #burger__background {
+        display: block;
+    }
+
+    & ~ .burger__nav {
+        transform: translateX(0);
+    }
+}
