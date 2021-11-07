@@ -1,0 +1,75 @@
+.header {
+    width: 100%;
+    height: map-get($header-heights, "pc");
+    padding: 23px 25px 15px 23px;
+    display: flex;
+    justify-content: space-between;
+    outline: 1px solid #000;
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__title {
+        letter-spacing: normal;
+        margin-bottom: 5px;
+    }
+    &__logo {
+        width: 230px;
+        height: 85px;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+    }
+    &__info {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 14px;
+    }
+    &__phone {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        &Title {
+            font-size: 15px;
+            line-height: calc(23 / 15);
+            width: 210px;
+            height: 27px;
+            @include flex-center;
+            border: 1px solid #2e200e;
+        }
+        &Number {
+            font-size: 28px;
+        }
+    }
+    &__hours {
+        padding-left: 16px;
+    }
+    &__notice {
+        letter-spacing: normal;
+        line-height: calc(21 / 16);
+        text-align: right;
+        margin-bottom: 5px;
+        padding-left: 37px;
+    }
+
+    &__navItems {
+        display: flex;
+        justify-content: end;
+    }
+    &__navItem {
+        text-align: center;
+        width: 128px;
+        margin-left: 10px;
+        &--en {
+            font-size: 20px;
+            line-height: calc(27 / 20);
+        }
+    }
+
+}

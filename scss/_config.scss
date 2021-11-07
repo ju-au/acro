@@ -1,24 +1,24 @@
 // 変数
-$accent-color: #b0881e;
-$primary-color: #071d47;
+// $accent-color: #b0881e;
+// $primary-color: #071d47;
 // $secondary-color: ;
-$theme-color: #b0881e;
+// $theme-color: #b0881e;
 
 $header-heights: (
-  "pc": 80px,
-  "tab": 80px,
-  "sp": 55px,
+  "pc": 167px,
+  // "tab": 80px,
+  // "sp": 55px,
 );
 
-$burger-btn-width: (
-  "tab": 50px,
-  "sp": 30px,
-);
+// $burger-btn-width: (
+//   "tab": 50px,
+//   "sp": 30px,
+// );
 
-$burger-btn-height: (
-  "tab": 50px,
-  "sp": 25px,
-);
+// $burger-btn-height: (
+//   "tab": 50px,
+//   "sp": 25px,
+// );
 
 // レスポンシブ対応
 $break-points: (
@@ -85,10 +85,12 @@ a {
 
 body {
   font-size: 16px;
-  overflow-x: hidden;
+  letter-spacing: 0.1em;
+  line-height: calc(21 / 16);
   font-family: "source-han-serif-japanese", serif;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
   @include sp {
     font-size: 14px;
   }
