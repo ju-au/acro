@@ -1,3 +1,4 @@
+@charset "UTF-8";
 li {
   list-style: none;
 }
@@ -8,11 +9,11 @@ a {
 }
 
 body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",  sans-serif;
+  font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.1em;
   line-height: calc(21 / 16);
-  font-family: "source-han-serif-japanese", serif;
-  font-weight: 400;
   font-style: normal;
   overflow-x: hidden;
 }
@@ -108,6 +109,7 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  outline: 1px solid #000;
 }
 
 .header__left {
@@ -124,8 +126,11 @@ section {
 }
 
 .header__title {
-  letter-spacing: normal;
+  font-family: "メイリオ", "Meiryo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
   margin-bottom: 5px;
+  word-break: keep-all;
 }
 
 .header__logo {
@@ -174,6 +179,8 @@ section {
 }
 
 .header__phoneTitle {
+  font-family: "メイリオ", "Meiryo", sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: calc(23 / 15);
   width: 210px;
@@ -199,7 +206,9 @@ section {
 }
 
 .header__notice {
-  letter-spacing: normal;
+  font-family: "Hiragino Sans", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0em;
   line-height: calc(21 / 16);
   text-align: right;
   margin-bottom: 5px;
@@ -217,12 +226,36 @@ section {
 
 .header__navItem {
   text-align: center;
-  width: 128px;
+  width: 8.31169vw;
   margin-left: 10px;
 }
 
+@media screen and (min-width: 1400px) {
+  .header__navItem {
+    width: 128px;
+  }
+}
+
 .header__navItem--en {
-  font-size: 20px;
+  font-family: "Hiragino Mincho ProN", sans-serif;
+  font-weight: 300;
+  font-size: 1.2987vw;
   line-height: calc(27 / 20);
+}
+
+@media screen and (min-width: 1400px) {
+  .header__navItem--en {
+    font-size: 20px;
+  }
+}
+
+.header__navItem--jp {
+  font-size: 1.03896vw;
+}
+
+@media screen and (min-width: 1400px) {
+  .header__navItem--jp {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

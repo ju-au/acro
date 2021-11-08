@@ -4,15 +4,18 @@
     padding: 23px 25px 15px 23px;
     display: flex;
     justify-content: space-between;
-    // outline: 1px solid #000;
+    outline: 1px solid #000;
     &__left {
         display: flex;
         flex-direction: column;
         align-items: start;
     }
     &__title {
-        letter-spacing: normal;
+        font-family: "メイリオ", "Meiryo", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0em;
         margin-bottom: 5px;
+        word-break: keep-all;
     }
     &__logo {
         width: 230px;
@@ -36,6 +39,8 @@
         flex-direction: column;
         justify-content: start;
         &Title {
+            font-family: "メイリオ", "Meiryo", sans-serif;
+            font-weight: 400;
             font-size: 15px;
             line-height: calc(23 / 15);
             width: 210px;
@@ -51,7 +56,9 @@
         padding-left: 16px;
     }
     &__notice {
-        letter-spacing: normal;
+        font-family: "Hiragino Sans", sans-serif;
+        font-weight: 300;
+        letter-spacing: 0em;
         line-height: calc(21 / 16);
         text-align: right;
         margin-bottom: 5px;
@@ -64,12 +71,25 @@
     }
     &__navItem {
         text-align: center;
-        width: 128px;
+        width: calc-vw(128, 1540);
         margin-left: 10px;
+        @include xl {
+            width: 128px;
+        }
         &--en {
-            font-size: 20px;
+            font-family: "Hiragino Mincho ProN", sans-serif;
+            font-weight: 300;
+            font-size: calc-vw(20, 1540);
             line-height: calc(27 / 20);
+            @include xl {
+                font-size: 20px;
+            }
+        }
+        &--jp {
+            font-size: calc-vw(16, 1540);
+            @include xl {
+                font-size: 16px;
+            }
         }
     }
-
 }

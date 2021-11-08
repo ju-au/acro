@@ -24,7 +24,7 @@ $header-heights: (
 $break-points: (
   "sp": 598px,
   "tab": 1260px,
-  "wide": 1400px,
+  "xl": 1400px,
 );
 @mixin sp {
   @media screen and (max-width: #{map-get($break-points, "sp")}) {
@@ -36,11 +36,12 @@ $break-points: (
     @content;
   }
 }
-@mixin wide {
-  @media screen and (max-width: #{map-get($break-points, "wide")}) {
+@mixin xl {
+  @media screen and (min-width: #{map-get($break-points, "xl")}) {
     @content;
   }
 }
+
 
 @mixin flex-center {
   display: -webkit-flex;
@@ -84,11 +85,11 @@ a {
 }
 
 body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",  sans-serif;
+  font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.1em;
   line-height: calc(21 / 16);
-  font-family: "source-han-serif-japanese", serif;
-  font-weight: 400;
   font-style: normal;
   overflow-x: hidden;
   @include sp {
