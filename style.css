@@ -9,7 +9,7 @@ a {
 }
 
 body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",  sans-serif;
+  font-family: "Yu Gothic",  sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.1em;
@@ -257,5 +257,145 @@ section {
   .header__navItem--jp {
     font-size: 16px;
   }
+}
+
+.footer {
+  position: relative;
+  background-color: #FFCF8D;
+}
+
+.footer__map {
+  width: 100vw;
+  height: 544px;
+}
+
+.footer__link {
+  text-align: center;
+  width: 193px;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 48px;
+}
+
+.footer__link--recruit {
+  color: #fff;
+  background-color: #1f2522;
+  padding-left: 38px;
+  top: 383px;
+}
+
+.footer__link--recruit p {
+  font-family: "メイリオ", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: calc(23 / 15);
+}
+
+.footer__link--recruit span {
+  font-family: "Hiragino Mincho ProN", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: calc(27 / 20);
+}
+
+.footer__link--reserve {
+  background-color: #fff;
+  border: 1px solid #172d22;
+  padding-left: 16px;
+  top: 457px;
+}
+
+.footer__link--reserve figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__link--reserve figure img {
+  width: 38px;
+  height: 23px;
+  margin-right: 18px;
+}
+
+.footer__inner {
+  padding: 40px 39px 19px 27px;
+}
+
+.footer__upper {
+  margin-bottom: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__logo {
+  margin-right: 25px;
+}
+
+.footer__address {
+  margin-right: 20px;
+}
+
+.footer__insta {
+  width: 41px;
+  height: 41px;
+}
+
+.footer__lower {
+  margin-bottom: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer__nav {
+  width: 359px;
+  height: 168px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__copyright {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
