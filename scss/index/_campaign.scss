@@ -1,0 +1,87 @@
+.topCampaign {
+    &__title {
+        margin-bottom: 36px;
+    }
+    &__cards {
+        width: 100%;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        width: 580px;
+        height: 344px;
+        padding: 35px 23px 33px 28px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &::before,
+        &::after {
+            content: " ";
+            width: 0;
+            height: 0;
+            position: absolute;
+            border: none;
+            border-top: 62px solid;
+            border-right: 62px solid transparent;
+            border-left: 62px solid transparent;
+        }
+        &::before {
+            transform: rotate(135deg);
+            top: -9px;
+            left: -40px;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            bottom: -9px;
+            right: -40px;
+        }
+        &:first-child {
+            border: 1px solid #2e200e;
+            &::before, &::after {
+                border-top-color: $secondary-color;
+            }
+        }
+        &:nth-child(2) {
+            background-color: $secondary-color;
+            &::before, &::after {
+                border-top-color: $accent-color;
+            }
+        }
+    }
+    &__cardImg {
+        width: 226px;
+        height: 276px;
+        object-fit: cover;
+    }
+    &__textArea {
+        width: 273px;
+    }
+    &__cardTitle {
+        font-family: "Hiragino Mincho ProN", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: calc(28 / 18);
+        height: 67px;
+        margin-bottom: 31px;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: "";
+            height: 1px;
+            width: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    &__cardBody {
+        text-align: justify;
+        height: 157px;
+    }
+    &__cardDate {
+        font-size: 15px;
+        line-height: calc(20 / 15);
+    }
+}

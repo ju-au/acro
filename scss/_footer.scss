@@ -1,20 +1,26 @@
 .footer {
     position: relative;
     background-color: $primary-color;
+    &__mapArea {
+        position: relative;
+        margin-bottom: 0;
+    }
     &__map {
         width: 100vw;
         height: 544px;
+        display: flex;
+        align-items: baseline;
     }
     &__link {
         text-align: center;
         width: 193px;
         height: 54px;
+        padding-right: 21px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         position: absolute;
         right: 48px;
-        &::after {
-        }
         &--recruit {
             color: #fff;
             background-color: #1f2522;
@@ -57,7 +63,7 @@
         margin-bottom: 42px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
     &__info {
         display: flex;
@@ -90,6 +96,16 @@
     }
 
     &__copyright {
+        font-size: 12px;
+
         text-align: center;
+    }
+
+    &__toTop {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 35px;
+        right: 30px;
     }
 }

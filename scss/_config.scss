@@ -1,13 +1,13 @@
 // 変数
-// $accent-color: #b0881e;
-$primary-color: #FFCF8D;
-$secondary-color: #FFE3BC;
+$primary-color: #ffcf8d;
+$secondary-color: #ffe3bc;
+$accent-color: #ffb04a;
 // $theme-color: #b0881e;
 
 $header-heights: (
   "pc": 167px,
   // "tab": 80px,
-  // "sp": 55px,
+  // "sp": 55px,,,
 );
 
 // $burger-btn-width: (
@@ -42,7 +42,6 @@ $break-points: (
   }
 }
 
-
 @mixin flex-center {
   display: -webkit-flex;
   display: flex;
@@ -73,8 +72,6 @@ $break-points: (
   @return $item-size / $parent-size * 100%;
 }
 
-
-
 li {
   list-style: none;
 }
@@ -85,13 +82,13 @@ a {
 }
 
 body {
-  font-family: "Yu Gothic",  sans-serif;
+  font-family: "Yu Gothic", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: 0.1em;
   line-height: calc(21 / 16);
   font-style: normal;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   @include sp {
     font-size: 14px;
   }
@@ -102,6 +99,14 @@ section {
   @include sp {
     margin-bottom: 60px;
   }
+}
+
+.sectionTitle {
+  font-family: "Hiragino Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: calc(20 / 18);
+  text-align: center;
 }
 
 .inner {
@@ -115,7 +120,23 @@ section {
   }
 }
 
-
+.button {
+  width: fit-content;
+  height: 60px;
+  border: 1px solid #2e200e;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  &::after {
+    content: "";
+    width: 60px;
+    height: 40px;
+    background: url(./wp-content/themes/acro/images/button-scissors.png);
+    background-size: cover;
+    margin-left: 60px;
+  }
+}
 
 .is-shown-tab {
   display: none;

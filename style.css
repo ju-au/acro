@@ -9,13 +9,13 @@ a {
 }
 
 body {
-  font-family: "Yu Gothic",  sans-serif;
+  font-family: "Yu Gothic", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: 0.1em;
   line-height: calc(21 / 16);
   font-style: normal;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 598px) {
@@ -34,6 +34,14 @@ section {
   }
 }
 
+.sectionTitle {
+  font-family: "Hiragino Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: calc(20 / 18);
+  text-align: center;
+}
+
 .inner {
   width: 1200px;
   margin: 0 auto;
@@ -49,6 +57,31 @@ section {
   .inner {
     width: calc(100vw - 30px);
   }
+}
+
+.button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60px;
+  border: 1px solid #2e200e;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button::after {
+  content: "";
+  width: 60px;
+  height: 40px;
+  background: url(./wp-content/themes/acro/images/button-scissors.png);
+  background-size: cover;
+  margin-left: 60px;
 }
 
 .is-shown-tab {
@@ -199,6 +232,7 @@ section {
 
 .header__phoneNumber {
   font-size: 28px;
+  letter-spacing: 0.1em;
 }
 
 .header__hours {
@@ -213,6 +247,11 @@ section {
   text-align: right;
   margin-bottom: 5px;
   padding-left: 37px;
+}
+
+.header__opening,
+.header $__closure {
+  letter-spacing: 0.1em;
 }
 
 .header__navItems {
@@ -240,6 +279,7 @@ section {
   font-family: "Hiragino Mincho ProN", sans-serif;
   font-weight: 300;
   font-size: 1.2987vw;
+  letter-spacing: 0.1em;
   line-height: calc(27 / 20);
 }
 
@@ -261,21 +301,36 @@ section {
 
 .footer {
   position: relative;
-  background-color: #FFCF8D;
+  background-color: #ffcf8d;
+}
+
+.footer__mapArea {
+  position: relative;
+  margin-bottom: 0;
 }
 
 .footer__map {
   width: 100vw;
   height: 544px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .footer__link {
   text-align: center;
   width: 193px;
   height: 54px;
+  padding-right: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -338,9 +393,9 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .footer__info {
@@ -396,6 +451,126 @@ section {
 }
 
 .footer__copyright {
+  font-size: 12px;
   text-align: center;
+}
+
+.footer__toTop {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 35px;
+  right: 30px;
+}
+
+.topCampaign__title {
+  margin-bottom: 36px;
+}
+
+.topCampaign__cards {
+  width: 100%;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.topCampaign__card {
+  width: 580px;
+  height: 344px;
+  padding: 35px 23px 33px 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.topCampaign__card::before, .topCampaign__card::after {
+  content: " ";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: none;
+  border-top: 62px solid;
+  border-right: 62px solid transparent;
+  border-left: 62px solid transparent;
+}
+
+.topCampaign__card::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: -9px;
+  left: -40px;
+}
+
+.topCampaign__card::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: -9px;
+  right: -40px;
+}
+
+.topCampaign__card:first-child {
+  border: 1px solid #2e200e;
+}
+
+.topCampaign__card:first-child::before, .topCampaign__card:first-child::after {
+  border-top-color: #ffe3bc;
+}
+
+.topCampaign__card:nth-child(2) {
+  background-color: #ffe3bc;
+}
+
+.topCampaign__card:nth-child(2)::before, .topCampaign__card:nth-child(2)::after {
+  border-top-color: #ffb04a;
+}
+
+.topCampaign__cardImg {
+  width: 226px;
+  height: 276px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.topCampaign__textArea {
+  width: 273px;
+}
+
+.topCampaign__cardTitle {
+  font-family: "Hiragino Mincho ProN", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: calc(28 / 18);
+  height: 67px;
+  margin-bottom: 31px;
+  position: relative;
+  overflow: hidden;
+}
+
+.topCampaign__cardTitle::after {
+  content: "";
+  height: 1px;
+  width: 40px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.topCampaign__cardBody {
+  text-align: justify;
+  height: 157px;
+}
+
+.topCampaign__cardDate {
+  font-size: 15px;
+  line-height: calc(20 / 15);
 }
 /*# sourceMappingURL=style.css.map */
