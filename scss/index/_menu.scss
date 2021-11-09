@@ -1,0 +1,76 @@
+.topMenu {
+    &__inner {
+        margin-bottom: 44px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__title {
+        writing-mode: vertical-rl;
+    }
+    &__card {
+        width: 1160px;
+        display: flex;
+        &:nth-child(odd) {
+            .topMenu__img {
+                background-color: #e1dede;
+            }
+            .topMenu__textArea {
+                background-color: $secondary-color;
+            }
+        }
+        &:nth-child(even) {
+            .topMenu__img {
+                background-color:#BFB9B9;
+            }
+            .topMenu__textArea {
+                background-color: $primary-color;
+            }
+        }
+    }
+    &__img {
+        width: 700px;
+        object-fit: cover;
+    }
+    &__textArea {
+        width: 460px;
+        padding: 37px 50px 33px 61px;
+    }
+    &__cardTitle {
+        margin-bottom: 30px;
+        position: relative;
+        &--en {
+            font-family: "Hiragino Mincho ProN", sans-serif;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            line-height: calc(27 / 20);
+        }
+        &::after {
+            content: "";
+            width: 180px;
+            height: 1px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            bottom: -7px;
+            left: -107px;
+        }
+    }
+    &__body {
+        min-height: 110px;
+    }
+    &__link {
+        width: 350px;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        display: block;
+        &::after {
+            content: "詳細";
+        }
+    }
+    &__price {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+    }
+}

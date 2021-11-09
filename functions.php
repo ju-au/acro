@@ -9,8 +9,7 @@ function output_inline_style()
     wp_enqueue_style('reset-style', get_template_directory_uri() . '/reset.css');
 
     // swiper.min.cssの読み込み
-    wp_enqueue_style('swiper-style', get_template_directory_uri() . '/js/plugins/swiper/swiper.min.css');
-    wp_enqueue_script('toc-script',  get_template_directory_uri() . '/js/toc.js', '',  true);
+    wp_enqueue_style('swiper-style', get_template_directory_uri() . '/js/plugins/swiper/swiper-bundle.min.css');
     // CSSスタイルファイルをキューに追加
     wp_register_style('style', false);
     wp_enqueue_style('style');

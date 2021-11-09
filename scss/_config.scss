@@ -20,6 +20,12 @@ $header-heights: (
 //   "sp": 25px,
 // );
 
+$inner-width: (
+  "pc": 1200px,
+  // "tab": 80px,
+  // "sp": 55px,,,
+);
+
 // レスポンシブ対応
 $break-points: (
   "sp": 598px,
@@ -110,7 +116,7 @@ section {
 }
 
 .inner {
-  width: 1200px;
+  width: map-get($inner-width, "pc");
   margin: 0 auto;
   @include tab {
     width: 90%;
@@ -168,4 +174,8 @@ section {
   @include sp {
     display: none !important;
   }
+}
+
+.color-white {
+  color: #fff;
 }

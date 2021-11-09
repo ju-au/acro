@@ -132,6 +132,10 @@ section {
   }
 }
 
+.color-white {
+  color: #fff;
+}
+
 .header {
   width: 100%;
   height: 167px;
@@ -463,6 +467,35 @@ section {
   right: 30px;
 }
 
+.fv-swiper-wrapper {
+  width: calc(1200px + calc((100vw - 1200px) / 2));
+  height: 500px;
+  margin-left: calc((100vw - 1200px) / 2);
+  position: relative;
+}
+
+.fv__copy {
+  font-family: "Hiragino Mincho ProN", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: calc(42 / 28);
+  position: absolute;
+  bottom: 44px;
+  left: -112px;
+  z-index: 10;
+}
+
+.fv__copy::after {
+  content: "";
+  width: 110px;
+  height: 98px;
+  border-left: 1px solid #2E200E;
+  border-bottom: 1px solid #2E200E;
+  position: absolute;
+  bottom: -9px;
+  left: -25px;
+}
+
 .topCampaign__title {
   margin-bottom: 36px;
 }
@@ -572,5 +605,102 @@ section {
 .topCampaign__cardDate {
   font-size: 15px;
   line-height: calc(20 / 15);
+}
+
+.topMenu__inner {
+  margin-bottom: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.topMenu__title {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+.topMenu__card {
+  width: 1160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.topMenu__card:nth-child(odd) .topMenu__img {
+  background-color: #e1dede;
+}
+
+.topMenu__card:nth-child(odd) .topMenu__textArea {
+  background-color: #ffe3bc;
+}
+
+.topMenu__card:nth-child(even) .topMenu__img {
+  background-color: #BFB9B9;
+}
+
+.topMenu__card:nth-child(even) .topMenu__textArea {
+  background-color: #ffcf8d;
+}
+
+.topMenu__img {
+  width: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.topMenu__textArea {
+  width: 460px;
+  padding: 37px 50px 33px 61px;
+}
+
+.topMenu__cardTitle {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.topMenu__cardTitle--en {
+  font-family: "Hiragino Mincho ProN", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  line-height: calc(27 / 20);
+}
+
+.topMenu__cardTitle::after {
+  content: "";
+  width: 180px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: -107px;
+}
+
+.topMenu__body {
+  min-height: 110px;
+}
+
+.topMenu__link {
+  width: 350px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  display: block;
+}
+
+.topMenu__link::after {
+  content: "詳細";
+}
+
+.topMenu__price {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
 }
 /*# sourceMappingURL=style.css.map */
