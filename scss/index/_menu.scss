@@ -6,7 +6,20 @@
         align-items: start;
     }
     &__title {
-        writing-mode: vertical-rl;
+        writing-mode: vertical-lr;
+        text-orientation: upright; 
+        margin: 0;
+        &::before, &::after {
+            width: 20px;
+            height: 52px;
+            background-image: url(./wp-content/themes/acro/images/index/sectoin-title-deco-vertical.png);
+        }
+        &::before {
+            margin: 0 0 15px;
+        }
+        &::after {
+            margin: 15px 0 0;
+        }
     }
     &__card {
         width: 1160px;
@@ -61,11 +74,16 @@
     }
     &__link {
         width: 350px;
-        border-bottom: 1px solid #000;
-        border-right: 1px solid #000;
-        display: block;
+        background-image: url(./wp-content/themes/acro/images/index/menu-link-arrow.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         &::after {
             content: "詳細";
+            margin-right:40px;
         }
     }
     &__price {

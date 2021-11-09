@@ -22,7 +22,7 @@
 
 <section class="topCampaign">
     <div class="inner topCampaign__inner">
-        <h2 class="sectionTitle topCampaign__title" lang="en">\ \ \&nbsp;&nbsp;TOPIC&nbsp;&nbsp;\ \ \</h2>
+        <h2 class="sectionTitle topCampaign__title" lang="en">TOPIC</h2>
         <div class="topCampaign__cards">
             <?php
             $args = array(
@@ -59,7 +59,7 @@
 
 <section class="topMenu">
     <div class="inner topMenu__inner">
-        <h2 class="sectionTitle topMenu__title" lang="en">\ \ \&nbsp;&nbsp;MENU&nbsp;&nbsp;\ \ \</h2>
+        <h2 class="sectionTitle topMenu__title" lang="en">MENU</h2>
         <ul class="topMenu__cards">
             <li class="topMenu__card">
                 <figure class="topMenu__img">
@@ -68,7 +68,7 @@
                 <div class="topMenu__textArea">
                     <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Color&nbsp;</span>カラー</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, 'カラー説明文', true); ?></p>
-                    <a href="" class="topMenu__link">￥<span class="topMenu__price"><?php echo get_post_meta(60, 'カラー料金', true) . "~"; ?></span></a>
+                    <a href="" class="topMenu__link"><p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'カラー料金', true) . "~"; ?></span></p></a>
                 </div>
             </li>
             <li class="topMenu__card">
@@ -78,7 +78,7 @@
                 <div class="topMenu__textArea">
                     <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Perm&nbsp;</span>パーマ</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, 'パーマ説明文', true); ?></p>
-                    <a href="" class="topMenu__link">￥<span class="topMenu__price"><?php echo get_post_meta(60, 'パーマ料金', true) . "~"; ?></span></a>
+                    <a href="" class="topMenu__link"><p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'パーマ料金', true) . "~"; ?></p></span></a>
                 </div>
             </li>
             <li class="topMenu__card">
@@ -88,7 +88,7 @@
                 <div class="topMenu__textArea">
                     <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Hair Straightening&nbsp;</span>縮毛矯正</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, '縮毛矯正説明文', true); ?></p>
-                    <a href="" class="topMenu__link">￥<span class="topMenu__price"><?php echo get_post_meta(60, '縮毛矯正料金', true) . "~"; ?></span></a>
+                    <a href="" class="topMenu__link"><p>￥<span class="topMenu__price"><?php echo get_post_meta(60, '縮毛矯正料金', true) . "~"; ?></p></span></a>
                 </div>
             </li>
             <li class="topMenu__card">
@@ -98,7 +98,7 @@
                 <div class="topMenu__textArea">
                     <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Treatment&nbsp;</span>トリートメント</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, 'トリートメント説明文', true); ?></p>
-                    <a href="" class="topMenu__link">￥<span class="topMenu__price"><?php echo get_post_meta(60, 'トリートメント料金', true) . '~'; ?></span></a>
+                    <a href="" class="topMenu__link"><p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'トリートメント料金', true) . '~'; ?></p></span></a>
                 </div>
             </li>
         </ul>

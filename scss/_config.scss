@@ -113,6 +113,22 @@ section {
   font-weight: 500;
   line-height: calc(20 / 18);
   text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  &::before, &::after {
+    content: '';
+    width: 31px;
+    height: 19px;
+    background-image: url(./wp-content/themes/acro/images/index/section-title-deco.png);
+    background-size: cover;
+  }
+  &::before {
+    margin-right: 15px;
+  }
+  &::after {
+    margin-left: 15px;
+  }
 }
 
 .inner {

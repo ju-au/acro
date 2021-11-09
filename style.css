@@ -40,6 +40,29 @@ section {
   font-weight: 500;
   line-height: calc(20 / 18);
   text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sectionTitle::before, .sectionTitle::after {
+  content: '';
+  width: 31px;
+  height: 19px;
+  background-image: url(./wp-content/themes/acro/images/index/section-title-deco.png);
+  background-size: cover;
+}
+
+.sectionTitle::before {
+  margin-right: 15px;
+}
+
+.sectionTitle::after {
+  margin-left: 15px;
 }
 
 .inner {
@@ -146,7 +169,6 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  outline: 1px solid #000;
 }
 
 .header__left {
@@ -621,9 +643,25 @@ section {
 }
 
 .topMenu__title {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
+  margin: 0;
+}
+
+.topMenu__title::before, .topMenu__title::after {
+  width: 20px;
+  height: 52px;
+  background-image: url(./wp-content/themes/acro/images/index/sectoin-title-deco-vertical.png);
+}
+
+.topMenu__title::before {
+  margin: 0 0 15px;
+}
+
+.topMenu__title::after {
+  margin: 15px 0 0;
 }
 
 .topMenu__card {
@@ -689,13 +727,24 @@ section {
 
 .topMenu__link {
   width: 350px;
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
-  display: block;
+  background-image: url(./wp-content/themes/acro/images/index/menu-link-arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .topMenu__link::after {
   content: "詳細";
+  margin-right: 40px;
 }
 
 .topMenu__price {
