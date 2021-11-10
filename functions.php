@@ -37,3 +37,16 @@ add_action('after_setup_theme', function () {
 add_action('init', function () {
     add_theme_support('post-thumbnails');
 });
+
+
+// ユーザープロフィールの項目のカスタマイズ
+function my_user_meta($wb)
+{
+    //項目の追加
+    $wb['main-creator'] = 'トップページに表示（表示するには「1」を入力してください）';
+    $wb['comment'] = '一言コメント';
+    $wb['job-title'] = '職種';
+
+    return $wb;
+}
+add_filter('user_contactmethods', 'my_user_meta', 10, 1);

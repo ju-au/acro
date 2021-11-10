@@ -68,7 +68,9 @@
                 <div class="topMenu__textArea">
                     <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Color&nbsp;</span>カラー</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, 'カラー説明文', true); ?></p>
-                    <a href="" class="topMenu__link"><p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'カラー料金', true) . "~"; ?></span></p></a>
+                    <a href="" class="topMenu__link">
+                        <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'カラー料金', true) . "~"; ?></span></p>
+                    </a>
                 </div>
             </li>
             <li class="topMenu__card">
@@ -78,7 +80,9 @@
                 <div class="topMenu__textArea">
                     <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Perm&nbsp;</span>パーマ</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, 'パーマ説明文', true); ?></p>
-                    <a href="" class="topMenu__link"><p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'パーマ料金', true) . "~"; ?></p></span></a>
+                    <a href="" class="topMenu__link">
+                        <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'パーマ料金', true) . "~"; ?></p></span>
+                    </a>
                 </div>
             </li>
             <li class="topMenu__card">
@@ -88,7 +92,9 @@
                 <div class="topMenu__textArea">
                     <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Hair Straightening&nbsp;</span>縮毛矯正</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, '縮毛矯正説明文', true); ?></p>
-                    <a href="" class="topMenu__link"><p>￥<span class="topMenu__price"><?php echo get_post_meta(60, '縮毛矯正料金', true) . "~"; ?></p></span></a>
+                    <a href="" class="topMenu__link">
+                        <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, '縮毛矯正料金', true) . "~"; ?></p></span>
+                    </a>
                 </div>
             </li>
             <li class="topMenu__card">
@@ -98,7 +104,9 @@
                 <div class="topMenu__textArea">
                     <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Treatment&nbsp;</span>トリートメント</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, 'トリートメント説明文', true); ?></p>
-                    <a href="" class="topMenu__link"><p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'トリートメント料金', true) . '~'; ?></p></span></a>
+                    <a href="" class="topMenu__link">
+                        <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'トリートメント料金', true) . '~'; ?></p></span>
+                    </a>
                 </div>
             </li>
         </ul>
@@ -108,5 +116,34 @@
 </section>
 <!-- /.topMenu -->
 
+
+<section class="topStylist">
+    <div class="inner topStylist__inner">
+        <h2 class="sectionTitle topStylist__title">STYLIST</h2>
+        <dl class="topStylist__cards">
+            <?php
+            $users = get_users(array(
+                'number' => 3,
+                'meta_key' => 'main-creator',
+                'meta_value' => 1,
+            ));
+
+            foreach ($users as $user) :
+                $uid = $user->ID;
+            ?>
+                <dd class="topStylist__card">
+                    <figure class="topStylist__img">
+                        <?php echo get_avatar($uid, 300); ?>
+                    </figure>
+                    <p class="topStylist__name"><span class="topStylist__jobTitle"><?php echo get_user_meta($uid, 'job-title', true); ?></span><?php echo get_user_meta($uid, 'nickname', true); ?></p>
+                </dd>
+
+            <?php endforeach; ?>
+        </dl>
+        <a href="" class="button topStylist_button">出勤日・他のスタッフ</a>
+    </div>
+    <!-- /.inner topStylist__inner -->
+</section>
+<!-- /.topStylist -->
 
 <?php get_footer(); ?>

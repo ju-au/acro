@@ -88,6 +88,7 @@ section {
   width: fit-content;
   height: 60px;
   border: 1px solid #2e200e;
+  background-color: #fff;
   padding: 0 20px;
   margin: 0 auto;
   display: -webkit-box;
@@ -751,5 +752,52 @@ section {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.1em;
+}
+
+.topStylist__inner {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #ffe3bc), color-stop(30%, transparent));
+  background: linear-gradient(0deg, #ffe3bc 70%, transparent 30%);
+  padding-bottom: 83px;
+}
+
+.topStylist__title {
+  margin-bottom: 28px;
+}
+
+.topStylist__cards {
+  width: 1000px;
+  margin: 0 auto 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.topStylist__card {
+  width: 313px;
+}
+
+.topStylist__img {
+  width: 100%;
+  height: 450px;
+  margin-bottom: 21px;
+}
+
+.topStylist__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.topStylist__name {
+  font-size: 18px;
+}
+
+.topStylist__jobTitle {
+  font-family: 'Hiragino Mincho ProN', sans-serif;
+  margin-right: 30px;
 }
 /*# sourceMappingURL=style.css.map */
