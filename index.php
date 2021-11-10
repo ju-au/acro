@@ -146,4 +146,16 @@
 </section>
 <!-- /.topStylist -->
 
+
+<section class="topGallery">
+<div class="inner topGallery__inner">
+    <h2 class="sectionTitle topGallery__title">GALLERY</h2>
+
+    <?php echo do_shortcode('[instagram-feed num=3 cols=3 imageres=small showheader=false imagepadding=15]'); ?>
+</div>
+<!-- /.inner topGallery__inner -->
+<a href="" class="button topGallery__button">ギャラリーページ</a>
+</section>
+<!-- /.topGallery -->
+
 <?php get_footer(); ?>

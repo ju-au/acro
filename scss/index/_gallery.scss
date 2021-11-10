@@ -1,0 +1,30 @@
+.topGallery {
+    &__inner {
+        margin-bottom: 16px;
+    }
+    &__title {
+        margin-bottom: 28px;
+    }
+    #sbi_images {
+        position: relative;
+        &::before, &::after {
+            content: '';
+            width: 831px;
+            height: 341px;
+            display: block;
+            position: absolute;
+        }
+        &::before {
+            top: 0;
+            right: 0;
+            border-top: 1px solid #2E200E;
+            border-right: 1px solid #2E200E;
+        }
+        &::after {
+            bottom: 0;
+            left: 0;
+            border-bottom: 1px solid #2E200E;
+            border-left: 1px solid #2E200E;
+        }
+    }
+}

@@ -800,4 +800,38 @@ section {
   font-family: 'Hiragino Mincho ProN', sans-serif;
   margin-right: 30px;
 }
+
+.topGallery__inner {
+  margin-bottom: 16px;
+}
+
+.topGallery__title {
+  margin-bottom: 28px;
+}
+
+.topGallery #sbi_images {
+  position: relative;
+}
+
+.topGallery #sbi_images::before, .topGallery #sbi_images::after {
+  content: '';
+  width: 831px;
+  height: 341px;
+  display: block;
+  position: absolute;
+}
+
+.topGallery #sbi_images::before {
+  top: 0;
+  right: 0;
+  border-top: 1px solid #2E200E;
+  border-right: 1px solid #2E200E;
+}
+
+.topGallery #sbi_images::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #2E200E;
+  border-left: 1px solid #2E200E;
+}
 /*# sourceMappingURL=style.css.map */
