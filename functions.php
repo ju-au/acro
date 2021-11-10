@@ -39,13 +39,6 @@ add_action('init', function () {
 });
 
 
-// 固定ページでカテゴリーを使えるようにする
-add_action('init', 'add_category_to_page');
-function add_category_to_page()
-{
-    register_taxonomy_for_object_type('category', 'page');
-}
-
 // ユーザープロフィールの項目のカスタマイズ
 function my_user_meta($wb)
 {

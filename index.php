@@ -148,14 +148,33 @@
 
 
 <section class="topGallery">
-<div class="inner topGallery__inner">
-    <h2 class="sectionTitle topGallery__title">GALLERY</h2>
+    <div class="inner topGallery__inner">
+        <h2 class="sectionTitle topGallery__title">GALLERY</h2>
 
-    <?php echo do_shortcode('[instagram-feed num=3 cols=3 imageres=small showheader=false showfollow=false showbutton=false imagepadding=15]'); ?>
-</div>
-<!-- /.inner topGallery__inner -->
-<a href="" class="button topGallery__button">ギャラリーページ</a>
+        <?php echo do_shortcode('[instagram-feed num=3 cols=3 imageres=small showheader=false showfollow=false showbutton=false imagepadding=15]'); ?>
+    </div>
+    <!-- /.inner topGallery__inner -->
+    <a href="" class="button topGallery__button">ギャラリーページ</a>
 </section>
 <!-- /.topGallery -->
+
+
+<?php
+$page_id = 66;
+$shown_on_top_page = get_post_meta($page_id, 'Topページに表示', true);
+if ($shown_on_top_page === "1") :
+?>
+    <section class="topColona">
+        <div class="inner topColona__inner">
+            <?php
+            $page = get_post($page_id);
+            echo $page->post_content;
+            ?>
+
+        </div>
+        <!-- /.inner topColona__inner -->
+    </section>
+    <!-- /.topColona -->
+<?php endif; ?>
 
 <?php get_footer(); ?>
