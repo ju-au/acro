@@ -160,21 +160,53 @@
 
 
 <?php
+// コロナ対策セクション
+// カスタムフィールド「Topページに表示」に「1」が入力されている時のみ表示する
 $page_id = 66;
 $shown_on_top_page = get_post_meta($page_id, 'Topページに表示', true);
 if ($shown_on_top_page === "1") :
+    $page = get_post($page_id);
+    $thumbnail_id = get_post_thumbnail_id($page_id);
+    $thumbnail_src = wp_get_attachment_image_src($thumbnail_id, 'full', true);
+    // カスタムフィールドで設定したアイコンの画像IDを取得
+    $icon_ids = array();
+    for ($i = 1; $i <= 3; $i++) {
+        $icon_no = 'アイコン' . $i;
+        $icon_id = get_post_meta($page_id, $icon_no, true);
+        array_push($icon_ids, $icon_id);
+    };
 ?>
+
     <section class="topColona">
         <div class="inner topColona__inner">
-            <?php
-            $page = get_post($page_id);
-            echo $page->post_content;
-            ?>
-
+            <div class="topColona__contentsWrapper">
+                <h2 class="topColona__title">コロナウイルス感染防止対策</h2>
+                <div class="topColona__contents">
+                    <div class="topColona__body"><?php echo $page->post_content; ?></div>
+                    <figure class="topColona__thumb">
+                        <img src="<?php echo $thumbnail_src[0] ?>" alt="">
+                    </figure>
+                    <figure class="topColona__icons">
+                        <?php
+                        // アイコンを表示
+                        foreach ($icon_ids as $id) :
+                            $icon_src = wp_get_attachment_image_src($id, 'full', true);
+                        ?>
+                            <img src="<?php echo $icon_src[0]; ?>" alt="">
+                        <?php endforeach; ?>
+                    </figure>
+                </div>
+                <!-- /.topColona__contents -->
+            </div>
+            <!-- /.topColona__contentsWrapper -->
         </div>
         <!-- /.inner topColona__inner -->
+        <p class="topColona__message">まずはお気軽にご相談ください</p>
+        <a href="" class="button topColona__button">ご予約・お問い合わせ</a>
     </section>
     <!-- /.topColona -->
+
+
 <?php endif; ?>
 
 <?php get_footer(); ?>
