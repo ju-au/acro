@@ -30,7 +30,7 @@ $inner-width: (
 $break-points: (
   "sp": 598px,
   "tab": 1260px,
-  "xl": 1400px,
+  "xl": 1500px,
 );
 @mixin sp {
   @media screen and (max-width: #{map-get($break-points, "sp")}) {
@@ -94,7 +94,7 @@ body {
   line-height: calc(21 / 16);
   font-style: normal;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  position: absolute;
   @include sp {
     font-size: 14px;
   }

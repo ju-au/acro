@@ -1,15 +1,17 @@
 <?php get_header(); ?>
 
 <section class="fv">
+    <h2 class="fv__copy">
+        美と安ら<span class="color-white">ぎを</span><br>
+        いつもの<span class="color-white">オーガニックサロンで</span>
+    </h2>
     <!-- Slider main container -->
     <div class="swiper fv-swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper fv-swiper-wrapper">
-            <h2 class="fv__copy">美と安ら<span class="color-white">ぎを</span><br>
-                いつもの<span class="color-white">オーガニックサロンで</span></h2>
             <!-- Slides -->
             <div class="swiper-slide fv-swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/index/fv1.jpg" alt=""></div>
-            <!-- <div class="swiper-slide fv-swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/index/fv1.jpg" alt=""></div> -->
+            <div class="swiper-slide fv-swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/index/colona1.png" alt=""></div>
             <!-- <div class="swiper-slide fv-swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/index/fv1.jpg" alt=""></div> -->
         </div>
         <!-- If we need pagination -->

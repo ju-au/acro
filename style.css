@@ -15,7 +15,7 @@ body {
   line-height: calc(21 / 16);
   font-style: normal;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  position: absolute;
 }
 
 @media screen and (max-width: 598px) {
@@ -296,7 +296,7 @@ section {
   margin-left: 10px;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
   .header__navItem {
     width: 128px;
   }
@@ -310,7 +310,7 @@ section {
   line-height: calc(27 / 20);
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
   .header__navItem--en {
     font-size: 20px;
   }
@@ -320,20 +320,14 @@ section {
   font-size: 1.03896vw;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
   .header__navItem--jp {
     font-size: 16px;
   }
 }
 
 .footer {
-  position: relative;
   background-color: #ffcf8d;
-}
-
-.footer__mapArea {
-  position: relative;
-  margin-bottom: 0;
 }
 
 .footer__map {
@@ -345,67 +339,6 @@ section {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-}
-
-.footer__link {
-  text-align: center;
-  width: 193px;
-  height: 54px;
-  padding-right: 21px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  right: 48px;
-}
-
-.footer__link--recruit {
-  color: #fff;
-  background-color: #1f2522;
-  padding-left: 38px;
-  top: 383px;
-}
-
-.footer__link--recruit p {
-  font-family: "メイリオ", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: calc(23 / 15);
-}
-
-.footer__link--recruit span {
-  font-family: "Hiragino Mincho ProN", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: calc(27 / 20);
-}
-
-.footer__link--reserve {
-  background-color: #fff;
-  border: 1px solid #172d22;
-  padding-left: 16px;
-  top: 457px;
-}
-
-.footer__link--reserve figure {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer__link--reserve figure img {
-  width: 38px;
-  height: 23px;
-  margin-right: 18px;
 }
 
 .footer__inner {
@@ -482,41 +415,154 @@ section {
   text-align: center;
 }
 
-.footer__toTop {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: 35px;
+.fixedLink {
+  width: 211px;
+  height: 268px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: fixed;
+  bottom: 30px;
   right: 30px;
+  z-index: 100;
 }
 
-.fv-swiper-wrapper {
-  width: calc(1200px + calc((100vw - 1200px) / 2));
-  height: 500px;
-  margin-left: calc((100vw - 1200px) / 2);
+.fixedLink__recruit, .fixedLink__reserve {
+  text-align: center;
+  width: 193px;
+  height: 54px;
+  padding-right: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fixedLink__recruit {
+  color: #fff;
+  background-color: #1f2522;
+  padding-left: 38px;
+  margin-bottom: 21px;
+}
+
+.fixedLink__recruit p {
+  font-family: "メイリオ", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: calc(23 / 15);
+}
+
+.fixedLink__recruit span {
+  font-family: "Hiragino Mincho ProN", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: calc(27 / 20);
+}
+
+.fixedLink__reserve {
+  background-color: #fff;
+  border: 1px solid #172d22;
+  padding-left: 16px;
+  margin-bottom: 69px;
+}
+
+.fixedLink__reserve figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fixedLink__reserve figure img {
+  width: 38px;
+  height: 23px;
+  margin-right: 18px;
+}
+
+.fixedLink__toTop {
+  width: 70px;
+  height: 70px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.fv {
   position: relative;
 }
 
 .fv__copy {
   font-family: "Hiragino Mincho ProN", sans-serif;
   font-size: 28px;
-  font-weight: 600;
   line-height: calc(42 / 28);
   position: absolute;
-  bottom: 44px;
-  left: -112px;
-  z-index: 10;
+  bottom: 74px;
+  left: 47px;
+  z-index: 100;
+}
+
+@media screen and (min-width: 1500px) {
+  .fv__copy {
+    left: calc(calc((100vw - 1200px) / 2) - 111px);
+  }
 }
 
 .fv__copy::after {
   content: "";
   width: 110px;
   height: 98px;
-  border-left: 1px solid #2E200E;
-  border-bottom: 1px solid #2E200E;
+  border-left: 1px solid #2e200e;
+  border-bottom: 1px solid #2e200e;
   position: absolute;
   bottom: -9px;
   left: -25px;
+}
+
+.fv-swiper {
+  width: calc(100vw - 158px);
+  padding-bottom: 30px;
+  margin-left: 158px;
+}
+
+@media screen and (min-width: 1500px) {
+  .fv-swiper {
+    width: calc(1200px + calc((100vw - 1200px) / 2));
+    margin-left: calc((100vw - 1200px) / 2);
+  }
+}
+
+.fv-swiper-wrapper {
+  width: 100%;
+  height: 500px;
+}
+
+.fv-swiper-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.fv-swiper-pagination {
+  text-align: left;
+}
+
+.fv .swiper-pagination-bullet-active {
+  background-color: #ffb04a;
 }
 
 .topCampaign__title {
