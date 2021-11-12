@@ -8,8 +8,7 @@
         <?php
         $args = array(
             'post_type' => 'post',
-            // 'category_name' => 'shown-on-top-page',
-            'posts_per_page' => 2,
+            // 'status' => ,
             'orderby' => array('date' => 'DES'),
         );
         $sub_query = new WP_Query($args);
@@ -20,8 +19,16 @@
                     <figure class="campaign__thumb">
                         <?php the_post_thumbnail('medium', true); ?>
                     </figure>
-                    <p class="campaign__date">期間&nbsp;&nbsp;<?php echo get_post_meta(get_the_ID(), 'キャンペーン期間', true); ?></p>
                     <?php
+                    $campaignPeriod = get_post_meta(get_the_ID(), 'キャンペーン期間', true);
+                    $setPrice = get_post_meta(get_the_ID(), 'セット価格', true);
+                    if ($campaignPeriod) {
+                        echo '<p class="campaign__date">期間&nbsp;&nbsp;' . $campaignPeriod . '</p>';
+                    };
+                    if ($setPrice) {
+                        echo '<p class="campaign__date">セット価格&nbsp;&nbsp;' . $setPrice . '</p>';
+                    };
+                    
                     $content_string = get_the_content();
                     $content_string = str_replace('<p', '<p class="campaign__body" ', $content_string);
                     echo $content_string;
