@@ -16,7 +16,7 @@
     <header class="header">
         <div class="header__left">
             <p class="header__title">葛西 南葛西の美容室 ヘアーラウンジアクロ南葛西店</p>
-            <img class="header__logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="">
+            <a class="header__logo" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
         </div>
         <!-- /.header__left -->
 
@@ -36,31 +36,31 @@
             <nav class="header__nav burger__nab">
                 <ul class="header__navItems">
                     <li class="header__navItem">
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url()); ?>">
                             <p class="header__navItem--en">HOME</p>
                             <p class="header__navItem--jp">ホーム</p>
                         </a>
                     </li>
                     <li class="header__navItem">
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url('/menu')); ?>">
                             <p class="header__navItem--en">MENU</p>
                             <p class="header__navItem--jp">メニュー・料金</p>
                         </a>
                     </li>
                     <li class="header__navItem">
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url('/identity')); ?>">
                             <p class="header__navItem--en">IDENTITY</p>
                             <p class="header__navItem--jp">こだわり</p>
                         </a>
                     </li>
                     <li class="header__navItem">
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url('/salon')); ?>">
                             <p class="header__navItem--en">SALON</p>
                             <p class="header__navItem--jp">店舗紹介</p>
                         </a>
                     </li>
                     <li class="header__navItem">
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url('/stylists')); ?>">
                             <p class="header__navItem--en">STYLIST</p>
                             <p class="header__navItem--jp">スタッフ紹介</p>
                         </a>
@@ -72,13 +72,13 @@
                         </a>
                     </li>
                     <li class="header__navItem">
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url('/access')); ?>">
                             <p class="header__navItem--en">ACCESS</p>
                             <p class="header__navItem--jp">アクセス</p>
                         </a>
                     </li>
                     <li class="header__navItem">
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url('/qa')); ?>">
                             <p class="header__navItem--en">Q&A</p>
                             <p class="header__navItem--jp">よくある質問</p>
                         </a>
@@ -99,3 +99,4 @@
     </header>
 
     <main>
+        <article>

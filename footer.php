@@ -1,3 +1,5 @@
+</article>
+
 </main>
 
 <footer class="footer">
@@ -5,7 +7,7 @@
     <div class="inner footer__inner">
         <div class="footer__upper">
             <div class="footer__info">
-                <img class="footer__logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="">
+            <a class="footer__logo" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
                 <p class="footer__address">
                     〒134-0085<br>
                     東京都江戸川区南葛西2-1-9<br>
@@ -32,37 +34,37 @@
             </p>
             <nav class="footer__nav">
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">ホーム</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url()); ?>">ホーム</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">メニュー・料金</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/menu')); ?>">メニュー・料金</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">こだわり</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/identity')); ?>">こだわり</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">店舗紹介</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/salon')); ?>">店舗紹介</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">スタッフ紹介</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/stylists')); ?>">スタッフ紹介</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">ギャラリー</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/gallery')); ?>">ギャラリー</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">アクセス</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/access')); ?>">アクセス</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">Q&A</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/qa')); ?>">Q&A</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">お問い合わせ</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/reserve')); ?>">お問い合わせ</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">採用情報</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/recruit')); ?>">採用情報</a></li>
                 </ul>
                 <ul class="footer__navItems">
-                    <li class="footer__navItem"><a href="">プライバシーポリシー</a></li>
+                    <li class="footer__navItem"><a href="<?php echo esc_url(home_url('/')); ?>">プライバシーポリシー</a></li>
                 </ul>
             </nav>
         </div>
@@ -74,11 +76,11 @@
 
 
 <nav class="fixedLink">
-    <a href="" class="fixedLink__recruit">
+    <a href="<?php echo esc_url(home_url('/recruit')); ?>" class="fixedLink__recruit">
         <p><span>RECRUIT</span><br>採用情報</p>
         <img src="<?php echo get_template_directory_uri(); ?>/images/footer/arrow-white.png" alt="">
     </a>
-    <a href="" class="fixedLink__reserve">
+    <a href="<?php echo esc_url(home_url('/reserve')); ?>" class="fixedLink__reserve">
         <figure>
             <img src="<?php echo get_template_directory_uri(); ?>/images/footer/mail.png" alt="">
             <p>メールでの<br>ご予約</p>
