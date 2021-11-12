@@ -103,9 +103,13 @@ section {
   content: "";
   width: 60px;
   height: 40px;
-  background: url(./wp-content/themes/acro/images/button-scissors.png);
+  background: url(../wp-content/themes/acro/images/button-scissors.png);
   background-size: cover;
   margin-left: 60px;
+}
+
+.home .button::after {
+  background: url(./wp-content/themes/acro/images/button-scissors.png);
 }
 
 .is-shown-tab {
