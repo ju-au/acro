@@ -22,7 +22,13 @@
         align-items: center;
     }
     &__logo {
+        width: 156px;
+        height: 83px;
         margin-right: 25px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
     &__address {
         margin-right: 20px;

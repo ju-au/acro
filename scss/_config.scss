@@ -7,23 +7,23 @@ $accent-color: #ffb04a;
 $header-heights: (
   "pc": 167px,
   // "tab": 80px,
-  // "sp": 55px,,,
+  "sp": 85px,
 );
 
-// $burger-btn-width: (
-//   "tab": 50px,
-//   "sp": 30px,
-// );
+$burger-btn-width: (
+  "tab": 22px,
+  "sp": 22px,
+);
 
-// $burger-btn-height: (
-//   "tab": 50px,
-//   "sp": 25px,
-// );
+$burger-btn-height: (
+  "tab": 24px,
+  "sp": 24px,
+);
 
 $inner-width: (
   "pc": 1200px,
-  // "tab": 80px,
-  // "sp": 55px,,,
+  "tab": 90%,
+  "sp": calc(100vw - 40px),
 );
 
 // レスポンシブ対応
@@ -116,8 +116,12 @@ section {
   width: fit-content;
   margin: 0 auto;
   display: flex;
-  &::before, &::after {
-    content: '';
+  @include sp {
+    font-size: 14px;
+  }
+  &::before,
+  &::after {
+    content: "";
     width: 31px;
     height: 19px;
     background-image: url(./wp-content/themes/acro/images/index/section-title-deco.png);
@@ -135,10 +139,10 @@ section {
   width: map-get($inner-width, "pc");
   margin: 0 auto;
   @include tab {
-    width: 90%;
+    width: map-get($inner-width, "tab");
   }
   @include sp {
-    width: calc(100vw - 30px);
+    width: map-get($inner-width, "sp");
   }
 }
 
@@ -202,4 +206,9 @@ section {
 
 .color-white {
   color: #fff;
+}
+.color-white-sp {
+  @include sp {
+    color: #fff;
+  }
 }

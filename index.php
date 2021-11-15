@@ -2,8 +2,8 @@
 
 <section class="fv">
     <h2 class="fv__copy">
-        美と安ら<span class="color-white">ぎを</span><br>
-        いつもの<span class="color-white">オーガニックサロンで</span>
+        美と<span class="color-white-sp">安ら</span><span class="color-white">ぎを</span><br>
+        いつ<span class="color-white-sp">もの</span><span class="color-white">オーガニックサロンで</span>
     </h2>
     <!-- Slider main container -->
     <div class="swiper fv-swiper">

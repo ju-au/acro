@@ -18,6 +18,7 @@
             width: map-get($burger-btn-width, "sp");
             height: map-get($burger-btn-height, "sp");
             margin-right: 0;
+            margin-top: 18px;
         }
     }
 
@@ -28,7 +29,7 @@
             content: "";
             width: map-get($burger-btn-width, "tab");
             height: 4px;
-            background-color: $primary-color;
+            background-color: #2E200E;
             position: absolute;
             transition-duration: 0.3s;
             z-index: 115;
@@ -47,10 +48,8 @@
 
         &::after {
             transform: translateY(15px);
-            width: calc(#{map-get($burger-btn-width, "tab")} * 0.8);
             @include sp {
                 transform: translateY(12px);
-                width: calc(#{map-get($burger-btn-width, "sp")} * 0.8);
             }
         }
     }

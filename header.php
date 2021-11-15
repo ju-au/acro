@@ -19,8 +19,15 @@
             <a class="header__logo" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
         </div>
         <!-- /.header__left -->
+        <!-- ハンバーガーメニュー用 -->
+        <input type="checkbox" name="res" id="burger__switch" class="burger__switch">
+        <label for="burger__switch" id="burger__btn" class="burger__btn">
+            <span id="burger__line" class="burger__line"></span>
+        </label>
+        <label for="burger__switch" id="burger__background" class="burger__background"></label>
+        <!-- /ハンバーガーメニュー用 -->
 
-        <div class="header__right">
+        <div class="header__right burger__nav">
             <div class="header__info">
                 <div class="header__phone">
                     <p class="header__phoneTitle">ご予約・お問い合わせ</p>
@@ -33,7 +40,7 @@
                 </div>
             </div>
             <!-- /.header__info -->
-            <nav class="header__nav burger__nab">
+            <nav class="header__nav">
                 <ul class="header__navItems">
                     <li class="header__navItem">
                         <a href="<?php echo esc_url(home_url()); ?>">
@@ -84,13 +91,6 @@
                         </a>
                     </li>
                 </ul>
-                <!-- ハンバーガーメニュー用 -->
-                <!-- <input type="checkbox" name="res" id="burger__switch" class="burger__switch">
-                <label for="burger__switch" id="burger__btn" class="burger__btn">
-                    <span id="burger__line" class="burger__line"></span>
-                </label>
-                <label for="burger__switch" id="burger__background" class="burger__background"></label> -->
-                <!-- /ハンバーガーメニュー用 -->
             </nav>
             <!-- /.header__nav burger__nab -->
         </div>
