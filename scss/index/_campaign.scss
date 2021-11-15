@@ -1,12 +1,19 @@
 .topCampaign {
     &__title {
         margin-bottom: 36px;
+        @include sp {
+            margin-bottom: 18px;
+        }
     }
     &__cards {
         width: 100%;
         margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
+        @include sp {
+            margin-bottom: 20px;
+            flex-direction: column;
+        }
     }
     &__card {
         width: 580px;
@@ -14,7 +21,18 @@
         padding: 35px 23px 33px 28px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         position: relative;
+        @include sp {
+            width: 100%;
+            padding: 21px 13px 19px 17px;
+            height: unset;
+        }
+        &:not(:last-child) {
+            @include sp {
+                margin-bottom: 20px;
+            }
+        }
         &::before,
         &::after {
             content: " ";
@@ -25,26 +43,41 @@
             border-top: 62px solid;
             border-right: 62px solid transparent;
             border-left: 62px solid transparent;
+            @include sp {
+                border-top: 36px solid;
+                border-right: 36px solid transparent;
+                border-left: 36px solid transparent;
+            }
         }
         &::before {
             transform: rotate(135deg);
             top: -9px;
             left: -40px;
+            @include sp {
+                top: -5px;
+                left: -23px;
+            }
         }
         &::after {
             transform: rotate(-45deg);
             bottom: -9px;
             right: -40px;
+            @include sp {
+                bottom: -5px;
+                right: -23px;
+            }
         }
         &:first-child {
             border: 1px solid #2e200e;
-            &::before, &::after {
+            &::before,
+            &::after {
                 border-top-color: $secondary-color;
             }
         }
         &:nth-child(2) {
             background-color: $secondary-color;
-            &::before, &::after {
+            &::before,
+            &::after {
                 border-top-color: $accent-color;
             }
         }
@@ -53,19 +86,35 @@
         width: 226px;
         height: 276px;
         object-fit: cover;
+        @include sp {
+            width: 130px;
+            height: 160px;
+            margin-right: 5px;
+        }
     }
     &__textArea {
         width: 273px;
+        overflow: hidden;
+        @include sp {
+            width: calc-percent(158, 335);
+        }
     }
     &__cardTitle {
         font-family: "Hiragino Mincho ProN", sans-serif;
         font-size: 18px;
         font-weight: 600;
         line-height: calc(28 / 18);
-        height: 67px;
+        min-height: 67px;
+        height: auto;
         margin-bottom: 31px;
         position: relative;
-        overflow: hidden;
+        @include sp {
+            font-size: 14px;
+            line-height: calc(20 / 14);
+            min-height: 39px;
+            height: auto;
+            margin-bottom: 12px;
+        }
         &::after {
             content: "";
             height: 1px;
@@ -79,9 +128,19 @@
     &__cardBody {
         text-align: justify;
         height: 157px;
+        @include sp {
+            font-size: 13px;
+            line-height: calc(18 / 13);
+            // height: 85px;
+            height: auto;
+        }
     }
     &__cardDate {
         font-size: 15px;
         line-height: calc(20 / 15);
+        @include sp {
+            font-size: 10px;
+            line-height: calc(14 / 10);
+        }
     }
 }

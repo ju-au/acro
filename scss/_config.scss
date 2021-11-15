@@ -155,6 +155,11 @@ section {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  @include sp {
+    font-size: 13px;
+    line-height: calc(17 / 13);
+    padding: 0 13px 0 20px;
+  }
   &::after {
     content: "";
     width: 60px;
@@ -162,12 +167,20 @@ section {
     background: url(../wp-content/themes/acro/images/button-scissors.png);
     background-size: cover;
     margin-left: 60px;
+    @include sp {
+      background-size: contain;
+      width: 53px;
+      height: 40px;
+      margin-left: 40px;
+    }
   }
 }
 .home {
   .button {
     &::after {
-      background: url(./wp-content/themes/acro/images/button-scissors.png);
+      background: center/contain no-repeat url(./wp-content/themes/acro/images/button-scissors.png);
+      @include sp {
+      }
     }
   }
 }

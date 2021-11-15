@@ -105,6 +105,14 @@ section {
           align-items: center;
 }
 
+@media screen and (max-width: 598px) {
+  .button {
+    font-size: 13px;
+    line-height: calc(17 / 13);
+    padding: 0 13px 0 20px;
+  }
+}
+
 .button::after {
   content: "";
   width: 60px;
@@ -114,8 +122,17 @@ section {
   margin-left: 60px;
 }
 
+@media screen and (max-width: 598px) {
+  .button::after {
+    background-size: contain;
+    width: 53px;
+    height: 40px;
+    margin-left: 40px;
+  }
+}
+
 .home .button::after {
-  background: url(./wp-content/themes/acro/images/button-scissors.png);
+  background: center/contain no-repeat url(./wp-content/themes/acro/images/button-scissors.png);
 }
 
 .is-shown-tab {
@@ -871,6 +888,12 @@ section {
   margin-bottom: 36px;
 }
 
+@media screen and (max-width: 598px) {
+  .topCampaign__title {
+    margin-bottom: 18px;
+  }
+}
+
 .topCampaign__cards {
   width: 100%;
   margin-bottom: 40px;
@@ -880,6 +903,16 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 598px) {
+  .topCampaign__cards {
+    margin-bottom: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .topCampaign__card {
@@ -892,7 +925,24 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
+}
+
+@media screen and (max-width: 598px) {
+  .topCampaign__card {
+    width: 100%;
+    padding: 21px 13px 19px 17px;
+    height: unset;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .topCampaign__card:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .topCampaign__card::before, .topCampaign__card::after {
@@ -906,6 +956,14 @@ section {
   border-left: 62px solid transparent;
 }
 
+@media screen and (max-width: 598px) {
+  .topCampaign__card::before, .topCampaign__card::after {
+    border-top: 36px solid;
+    border-right: 36px solid transparent;
+    border-left: 36px solid transparent;
+  }
+}
+
 .topCampaign__card::before {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
@@ -913,11 +971,25 @@ section {
   left: -40px;
 }
 
+@media screen and (max-width: 598px) {
+  .topCampaign__card::before {
+    top: -5px;
+    left: -23px;
+  }
+}
+
 .topCampaign__card::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   bottom: -9px;
   right: -40px;
+}
+
+@media screen and (max-width: 598px) {
+  .topCampaign__card::after {
+    bottom: -5px;
+    right: -23px;
+  }
 }
 
 .topCampaign__card:first-child {
@@ -943,8 +1015,23 @@ section {
      object-fit: cover;
 }
 
+@media screen and (max-width: 598px) {
+  .topCampaign__cardImg {
+    width: 130px;
+    height: 160px;
+    margin-right: 5px;
+  }
+}
+
 .topCampaign__textArea {
   width: 273px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 598px) {
+  .topCampaign__textArea {
+    width: 47.16418%;
+  }
 }
 
 .topCampaign__cardTitle {
@@ -952,10 +1039,20 @@ section {
   font-size: 18px;
   font-weight: 600;
   line-height: calc(28 / 18);
-  height: 67px;
+  min-height: 67px;
+  height: auto;
   margin-bottom: 31px;
   position: relative;
-  overflow: hidden;
+}
+
+@media screen and (max-width: 598px) {
+  .topCampaign__cardTitle {
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    min-height: 39px;
+    height: auto;
+    margin-bottom: 12px;
+  }
 }
 
 .topCampaign__cardTitle::after {
@@ -973,9 +1070,24 @@ section {
   height: 157px;
 }
 
+@media screen and (max-width: 598px) {
+  .topCampaign__cardBody {
+    font-size: 13px;
+    line-height: calc(18 / 13);
+    height: auto;
+  }
+}
+
 .topCampaign__cardDate {
   font-size: 15px;
   line-height: calc(20 / 15);
+}
+
+@media screen and (max-width: 598px) {
+  .topCampaign__cardDate {
+    font-size: 10px;
+    line-height: calc(14 / 10);
+  }
 }
 
 .topMenu__inner {
