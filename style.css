@@ -618,8 +618,36 @@ section {
           align-items: baseline;
 }
 
+@media screen and (max-width: 598px) {
+  .footer__map {
+    height: 350px;
+  }
+}
+
+.footer__buttons-sp {
+  background-color: #fff;
+}
+
+.footer__buttons-sp .inner {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .footer__inner {
   padding: 40px 39px 19px 27px;
+}
+
+@media screen and (max-width: 598px) {
+  .footer__inner {
+    padding: 20px 0 16px;
+    font-size: 13px;
+    line-height: calc(18 / 13);
+  }
 }
 
 .footer__upper {
@@ -635,6 +663,12 @@ section {
           align-items: flex-start;
 }
 
+@media screen and (max-width: 598px) {
+  .footer__upper {
+    margin-bottom: 16px;
+  }
+}
+
 .footer__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -647,10 +681,30 @@ section {
           align-items: center;
 }
 
+@media screen and (max-width: 598px) {
+  .footer__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+
 .footer__logo {
   width: 156px;
   height: 83px;
   margin-right: 25px;
+}
+
+@media screen and (max-width: 598px) {
+  .footer__logo {
+    width: 92px;
+    height: 49px;
+    margin-bottom: 10px;
+  }
 }
 
 .footer__logo img {
@@ -660,6 +714,12 @@ section {
 
 .footer__address {
   margin-right: 20px;
+}
+
+@media screen and (max-width: 598px) {
+  .footer__address {
+    margin-bottom: 6px;
+  }
 }
 
 .footer__insta {
@@ -680,6 +740,19 @@ section {
           align-items: flex-start;
 }
 
+@media screen and (max-width: 598px) {
+  .footer__lower {
+    margin-bottom: 35px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .footer__lower p {
+    margin-bottom: 70px;
+  }
+}
+
 .footer__nav {
   width: 359px;
   height: 168px;
@@ -692,6 +765,13 @@ section {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media screen and (max-width: 598px) {
+  .footer__nav {
+    width: 100%;
+    height: 136px;
+  }
 }
 
 .footer__copyright {
@@ -720,7 +800,8 @@ section {
 
 @media screen and (max-width: 598px) {
   .fixedLink {
-    display: none;
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -740,11 +821,24 @@ section {
           align-items: center;
 }
 
+@media screen and (max-width: 598px) {
+  .fixedLink__recruit, .fixedLink__reserve {
+    max-width: 163px;
+    width: calc(50% - 10px);
+  }
+}
+
 .fixedLink__recruit {
   color: #fff;
   background-color: #1f2522;
   padding-left: 38px;
   margin-bottom: 21px;
+}
+
+@media screen and (max-width: 598px) {
+  .fixedLink__recruit {
+    margin-bottom: 0;
+  }
 }
 
 .fixedLink__recruit p {
@@ -754,6 +848,13 @@ section {
   line-height: calc(23 / 15);
 }
 
+@media screen and (max-width: 598px) {
+  .fixedLink__recruit p {
+    font-size: 13px;
+    line-height: calc(20 / 13);
+  }
+}
+
 .fixedLink__recruit span {
   font-family: "Hiragino Mincho ProN", sans-serif;
   font-size: 20px;
@@ -761,11 +862,27 @@ section {
   line-height: calc(27 / 20);
 }
 
+@media screen and (max-width: 598px) {
+  .fixedLink__recruit span {
+    font-size: 16px;
+    line-height: calc(21 / 16);
+  }
+}
+
 .fixedLink__reserve {
   background-color: #fff;
   border: 1px solid #172d22;
   padding-left: 16px;
   margin-bottom: 69px;
+}
+
+@media screen and (max-width: 598px) {
+  .fixedLink__reserve {
+    font-size: 13px;
+    line-height: calc(16 / 13);
+    margin-bottom: 0;
+    padding: 0 15px;
+  }
 }
 
 .fixedLink__reserve figure {
@@ -783,12 +900,25 @@ section {
   margin-right: 18px;
 }
 
+@media screen and (max-width: 598px) {
+  .fixedLink__reserve figure img {
+    margin-right: 5px;
+  }
+}
+
 .fixedLink__toTop {
   width: 70px;
   height: 70px;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+}
+
+@media screen and (max-width: 598px) {
+  .fixedLink__toTop {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .fv {
