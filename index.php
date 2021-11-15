@@ -68,7 +68,7 @@
                     <img src="" alt="">
                 </figure>
                 <div class="topMenu__textArea">
-                    <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Color&nbsp;</span>カラー</h3>
+                    <h3 class="topMenu__cardTitle topMenu__cardTitle--color"><span class="topMenu__cardTitle--en">Color&nbsp;</span>カラー</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, 'カラー説明文', true); ?></p>
                     <a class="topMenu__link" href="<?php echo esc_url(home_url('/color')); ?>">
                         <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'カラー料金', true) . "~"; ?></span></p>
@@ -80,7 +80,7 @@
                     <img src="" alt="">
                 </figure>
                 <div class="topMenu__textArea">
-                    <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Perm&nbsp;</span>パーマ</h3>
+                    <h3 class="topMenu__cardTitle topMenu__cardTitle--perm"><span class="topMenu__cardTitle--en">Perm&nbsp;</span>パーマ</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, 'パーマ説明文', true); ?></p>
                     <a href="<?php echo esc_url(home_url('/perm')); ?>" class="topMenu__link">
                         <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'パーマ料金', true) . "~"; ?></p></span>
@@ -92,7 +92,7 @@
                     <img src="" alt="">
                 </figure>
                 <div class="topMenu__textArea">
-                    <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Hair Straightening&nbsp;</span>縮毛矯正</h3>
+                    <h3 class="topMenu__cardTitle topMenu__cardTitle--straightening"><span class="topMenu__cardTitle--en">Hair Straightening&nbsp;</span>縮毛矯正</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, '縮毛矯正説明文', true); ?></p>
                     <a href="<?php echo esc_url(home_url('/hair-straightening')); ?>" class="topMenu__link">
                         <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, '縮毛矯正料金', true) . "~"; ?></p></span>
@@ -104,7 +104,7 @@
                     <img src="" alt="">
                 </figure>
                 <div class="topMenu__textArea">
-                    <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en">Treatment&nbsp;</span>トリートメント</h3>
+                    <h3 class="topMenu__cardTitle topMenu__cardTitle--treatment"><span class="topMenu__cardTitle--en">Treatment&nbsp;</span>トリートメント</h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, 'トリートメント説明文', true); ?></p>
                     <a href="<?php echo esc_url(home_url('/treatment')); ?>" class="topMenu__link">
                         <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'トリートメント料金', true) . '~'; ?></p></span>
