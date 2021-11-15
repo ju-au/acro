@@ -1,24 +1,46 @@
 .topStylist {
+    background: linear-gradient(0deg, $secondary-color 85%, transparent 15%);
     &__inner {
         background: linear-gradient(0deg, $secondary-color 70%, transparent 30%);
         padding-bottom: 83px;
+        @include sp {
+            padding-bottom: 44px;
+        }
     }
     &__title {
         margin-bottom: 28px;
+        @include sp {
+            margin-bottom: 18px;
+        }
     }
     &__cards {
         width: 1000px;
         margin: 0 auto 36px;
         display: flex;
         justify-content: space-between;
+        @include sp {
+            width: 100%;
+            margin-bottom: 24px;
+            flex-direction: column;
+        }
     }
     &__card {
         width: 313px;
+        @include sp {
+            width: 100%;
+        }
+        &:not(:last-of-type) {
+            margin-bottom: 15px;
+        }
     }
     &__img {
         width: 100%;
         height: 450px;
         margin-bottom: 21px;
+        @include sp {
+            height: 360px;
+            margin-bottom: 10px;
+        }
         img {
             object-fit: cover;
             width: 100%;
@@ -28,8 +50,8 @@
     &__name {
         font-size: 18px;
     }
-    &__jobTitle{
-        font-family: 'Hiragino Mincho ProN', sans-serif;
+    &__jobTitle {
+        font-family: "Hiragino Mincho ProN", sans-serif;
         margin-right: 30px;
     }
 }

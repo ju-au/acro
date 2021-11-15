@@ -718,6 +718,12 @@ section {
   z-index: 100;
 }
 
+@media screen and (max-width: 598px) {
+  .fixedLink {
+    display: none;
+  }
+}
+
 .fixedLink__recruit, .fixedLink__reserve {
   text-align: center;
   width: 193px;
@@ -1189,7 +1195,7 @@ section {
 @media screen and (max-width: 598px) {
   .topMenu__img {
     width: 100%;
-    height: 180px;
+    padding-top: 53%;
   }
 }
 
@@ -1319,14 +1325,31 @@ section {
   }
 }
 
+.topStylist {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, #ffe3bc), color-stop(15%, transparent));
+  background: linear-gradient(0deg, #ffe3bc 85%, transparent 15%);
+}
+
 .topStylist__inner {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #ffe3bc), color-stop(30%, transparent));
   background: linear-gradient(0deg, #ffe3bc 70%, transparent 30%);
   padding-bottom: 83px;
 }
 
+@media screen and (max-width: 598px) {
+  .topStylist__inner {
+    padding-bottom: 44px;
+  }
+}
+
 .topStylist__title {
   margin-bottom: 28px;
+}
+
+@media screen and (max-width: 598px) {
+  .topStylist__title {
+    margin-bottom: 18px;
+  }
 }
 
 .topStylist__cards {
@@ -1340,14 +1363,42 @@ section {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 598px) {
+  .topStylist__cards {
+    width: 100%;
+    margin-bottom: 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .topStylist__card {
   width: 313px;
+}
+
+@media screen and (max-width: 598px) {
+  .topStylist__card {
+    width: 100%;
+  }
+}
+
+.topStylist__card:not(:last-of-type) {
+  margin-bottom: 15px;
 }
 
 .topStylist__img {
   width: 100%;
   height: 450px;
   margin-bottom: 21px;
+}
+
+@media screen and (max-width: 598px) {
+  .topStylist__img {
+    height: 360px;
+    margin-bottom: 10px;
+  }
 }
 
 .topStylist__img img {
@@ -1362,7 +1413,7 @@ section {
 }
 
 .topStylist__jobTitle {
-  font-family: 'Hiragino Mincho ProN', sans-serif;
+  font-family: "Hiragino Mincho ProN", sans-serif;
   margin-right: 30px;
 }
 
