@@ -34,6 +34,7 @@
             bottom: 35px;
         }
     }
+    $inner-width-sp : 293px;
     &__title {
         font-size: 18px;
         text-align: center;
@@ -43,7 +44,8 @@
             font-weight: bold;
             text-align: left;
             line-height: calc(19 / 14);
-            margin-bottom: 5px;
+            max-width: $inner-width-sp;
+            margin: 0 auto 5px;
             padding-left: 10px;
         }
     }
@@ -54,6 +56,8 @@
         justify-content: space-between;
         row-gap: 26px;
         @include sp {
+            max-width: $inner-width-sp;
+            margin: 0 auto;
             grid-template-columns: 1fr;
             row-gap: 24px;
         }
@@ -76,8 +80,9 @@
         grid-row: 1 / 2;
         @include sp {
             width: 100%;
+            max-width: $inner-width-sp;
             height: 168px;
-            margin-bottom: 20px;
+            margin: 0 auto 20px;
         }
         img {
             object-fit: cover;

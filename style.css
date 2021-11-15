@@ -1677,7 +1677,8 @@ section {
     font-weight: bold;
     text-align: left;
     line-height: calc(19 / 14);
-    margin-bottom: 5px;
+    max-width: 293px;
+    margin: 0 auto 5px;
     padding-left: 10px;
   }
 }
@@ -1697,6 +1698,8 @@ section {
 
 @media screen and (max-width: 598px) {
   .topColona__contents {
+    max-width: 293px;
+    margin: 0 auto;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     row-gap: 24px;
@@ -1738,8 +1741,9 @@ section {
 @media screen and (max-width: 598px) {
   .topColona__thumb {
     width: 100%;
+    max-width: 293px;
     height: 168px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
   }
 }
 
