@@ -1574,6 +1574,13 @@ section {
 @media screen and (max-width: 598px) {
   .topGallery #sbi_images {
     padding: 5px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1604,6 +1611,12 @@ section {
   left: 0;
   border-bottom: 1px solid #2E200E;
   border-left: 1px solid #2E200E;
+}
+
+@media screen and (max-width: 598px) {
+  .topGallery .sbi_item {
+    width: 100% !important;
+  }
 }
 
 .topColona__inner {

@@ -15,6 +15,8 @@
         position: relative;
         @include sp {
             padding: 5px !important;
+            display: flex;
+            flex-direction: column;
         }
         &::before, &::after {
             content: '';
@@ -38,6 +40,11 @@
             left: 0;
             border-bottom: 1px solid #2E200E;
             border-left: 1px solid #2E200E;
+        }
+    }
+    .sbi_item {
+        @include sp {
+            width: 100% !important;
         }
     }
 }
