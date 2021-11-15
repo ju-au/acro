@@ -182,10 +182,13 @@ if ($shown_on_top_page === "1") :
     <section class="topColona">
         <div class="inner topColona__inner">
             <div class="topColona__contentsWrapper">
+                <figure class="topColona__thumb is-shown-sp">
+                    <img src="<?php echo $thumbnail_src[0] ?>" alt="">
+                </figure>
                 <h2 class="topColona__title">コロナウイルス感染防止対策</h2>
                 <div class="topColona__contents">
                     <div class="topColona__body"><?php echo $page->post_content; ?></div>
-                    <figure class="topColona__thumb">
+                    <figure class="topColona__thumb is-hidden-sp">
                         <img src="<?php echo $thumbnail_src[0] ?>" alt="">
                     </figure>
                     <figure class="topColona__icons">

@@ -1480,6 +1480,12 @@ section {
   margin-bottom: 38px;
 }
 
+@media screen and (max-width: 598px) {
+  .topColona__inner {
+    margin-bottom: 30px;
+  }
+}
+
 .topColona__contentsWrapper {
   width: 1000px;
   border: 1px solid #2e200e;
@@ -1488,11 +1494,18 @@ section {
   position: relative;
 }
 
+@media screen and (max-width: 598px) {
+  .topColona__contentsWrapper {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
 .topColona__contentsWrapper::before, .topColona__contentsWrapper::after {
   content: "";
   width: 145px;
   height: 1px;
-  background-color: #2E200E;
+  background-color: #2e200e;
   display: block;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -1515,6 +1528,17 @@ section {
   margin-bottom: 37px;
 }
 
+@media screen and (max-width: 598px) {
+  .topColona__title {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    line-height: calc(19 / 14);
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+}
+
 .topColona__contents {
   display: -ms-grid;
   display: grid;
@@ -1528,6 +1552,14 @@ section {
   row-gap: 26px;
 }
 
+@media screen and (max-width: 598px) {
+  .topColona__contents {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
+
 .topColona__body {
   width: 450px;
   -ms-grid-column: 1;
@@ -1536,6 +1568,17 @@ section {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1 / 3;
+}
+
+@media screen and (max-width: 598px) {
+  .topColona__body {
+    font-size: 13px;
+    line-height: calc(17 / 13);
+    width: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
 }
 
 .topColona__thumb {
@@ -1547,6 +1590,14 @@ section {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
+}
+
+@media screen and (max-width: 598px) {
+  .topColona__thumb {
+    width: 100%;
+    height: 168px;
+    margin-bottom: 20px;
+  }
 }
 
 .topColona__thumb img {
@@ -1572,6 +1623,16 @@ section {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 598px) {
+  .topColona__icons {
+    width: 100%;
+    padding: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+}
+
 .topColona__icons img {
   -o-object-fit: contain;
      object-fit: contain;
@@ -1582,6 +1643,13 @@ section {
 .topColona__message {
   text-align: center;
   margin-bottom: 18px;
+}
+
+@media screen and (max-width: 598px) {
+  .topColona__message {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
 }
 
 .page-id-31 .ewd-ufaq-post-margin {
