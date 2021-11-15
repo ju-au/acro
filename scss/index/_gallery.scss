@@ -1,18 +1,31 @@
 .topGallery {
     &__inner {
         margin-bottom: 16px;
+        @include sp {
+            margin-bottom: 0;
+        }
     }
     &__title {
         margin-bottom: 28px;
+        @include sp {
+            margin-bottom: 18px;
+        }
     }
     #sbi_images {
         position: relative;
+        @include sp {
+            padding: 5px !important;
+        }
         &::before, &::after {
             content: '';
             width: 831px;
             height: 341px;
             display: block;
             position: absolute;
+            @include sp {
+                width: calc-vw(250, 375);
+                height: 87px;
+            }
         }
         &::before {
             top: 0;

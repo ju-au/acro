@@ -1421,12 +1421,30 @@ section {
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 598px) {
+  .topGallery__inner {
+    margin-bottom: 0;
+  }
+}
+
 .topGallery__title {
   margin-bottom: 28px;
 }
 
+@media screen and (max-width: 598px) {
+  .topGallery__title {
+    margin-bottom: 18px;
+  }
+}
+
 .topGallery #sbi_images {
   position: relative;
+}
+
+@media screen and (max-width: 598px) {
+  .topGallery #sbi_images {
+    padding: 5px !important;
+  }
 }
 
 .topGallery #sbi_images::before, .topGallery #sbi_images::after {
@@ -1435,6 +1453,13 @@ section {
   height: 341px;
   display: block;
   position: absolute;
+}
+
+@media screen and (max-width: 598px) {
+  .topGallery #sbi_images::before, .topGallery #sbi_images::after {
+    width: 66.66667vw;
+    height: 87px;
+  }
 }
 
 .topGallery #sbi_images::before {
