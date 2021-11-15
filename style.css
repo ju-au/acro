@@ -14,7 +14,7 @@ body {
   font-size: 16px;
   line-height: calc(21 / 16);
   font-style: normal;
-  width: 100wv;
+  width: 100vw;
   position: absolute;
 }
 
@@ -199,8 +199,8 @@ section {
 }
 
 .burger__btn {
-  width: 22px;
-  height: 24px;
+  width: 30px;
+  height: 33px;
   margin-right: 15px;
   display: none;
   position: relative;
@@ -233,7 +233,7 @@ section {
 
 .burger__line, .burger__line::after, .burger__line::before {
   content: "";
-  width: 22px;
+  width: 30px;
   height: 4px;
   background-color: #2e200e;
   position: absolute;
@@ -288,7 +288,7 @@ section {
 
 @media screen and (max-width: 1260px) {
   .burger__nav {
-    width: 30%;
+    width: 250px;
     height: 100%;
     background-color: #ffcf8d;
     border: 1px solid #000;
@@ -346,7 +346,7 @@ section {
 }
 
 #burger__switch:checked ~ #burger__btn #burger__line::after {
-  width: 22px;
+  width: 30px;
   -webkit-transform: translateY(0) rotate(-45deg);
           transform: translateY(0) rotate(-45deg);
 }
@@ -376,6 +376,12 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 1260px) {
+  .header {
+    height: 127px;
+  }
 }
 
 @media screen and (max-width: 598px) {
@@ -417,6 +423,13 @@ section {
   height: 100px;
 }
 
+@media screen and (max-width: 1260px) {
+  .header__logo {
+    width: 133px;
+    height: 70px;
+  }
+}
+
 @media screen and (max-width: 598px) {
   .header__logo {
     width: 92px;
@@ -445,9 +458,9 @@ section {
           align-items: end;
 }
 
-@media screen and (max-width: 598px) {
+@media screen and (max-width: 1260px) {
   .header__right {
-    padding: 85px 20px 10px;
+    padding: 127px 20px 10px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
@@ -455,6 +468,12 @@ section {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .header__right {
+    padding: 85px 20px 10px;
   }
 }
 
@@ -468,7 +487,7 @@ section {
   margin-bottom: 14px;
 }
 
-@media screen and (max-width: 598px) {
+@media screen and (max-width: 1260px) {
   .header__info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -489,6 +508,12 @@ section {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+}
+
+@media screen and (max-width: 1260px) {
+  .header__phone {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 598px) {
@@ -530,6 +555,12 @@ section {
   letter-spacing: 0.1em;
 }
 
+@media screen and (max-width: 1260px) {
+  .header__phoneNumber {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 598px) {
   .header__phoneNumber {
     font-size: 20px;
@@ -542,7 +573,7 @@ section {
   padding-left: 16px;
 }
 
-@media screen and (max-width: 598px) {
+@media screen and (max-width: 1260px) {
   .header__hours {
     text-align: left;
     padding-left: 0;
@@ -559,11 +590,17 @@ section {
   padding-left: 37px;
 }
 
+@media screen and (max-width: 1260px) {
+  .header__notice {
+    margin-bottom: 20px;
+    padding-left: 0;
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 598px) {
   .header__notice {
     font-size: 14px;
-    padding-left: 0;
-    text-align: left;
   }
 }
 
@@ -592,12 +629,23 @@ section {
   }
 }
 
-@media screen and (max-width: 598px) {
+@media screen and (max-width: 1260px) {
   .header__navItem {
     text-align: left;
     width: 100%;
-    margin-bottom: 15px;
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .header__navItem {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .header__navItem {
+    margin-bottom: 15px;
   }
 }
 
@@ -610,6 +658,12 @@ section {
 }
 
 @media screen and (min-width: 1500px) {
+  .header__navItem--en {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
   .header__navItem--en {
     font-size: 20px;
   }
@@ -629,6 +683,12 @@ section {
 @media screen and (min-width: 1500px) {
   .header__navItem--jp {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .header__navItem--jp {
+    font-size: 14px;
   }
 }
 

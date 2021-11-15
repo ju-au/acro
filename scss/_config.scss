@@ -6,17 +6,17 @@ $accent-color: #ffb04a;
 
 $header-heights: (
   "pc": 167px,
-  // "tab": 80px,
+  "tab": 127px,
   "sp": 85px,
 );
 
 $burger-btn-width: (
-  "tab": 22px,
+  "tab": 30px,
   "sp": 22px,
 );
 
 $burger-btn-height: (
-  "tab": 24px,
+  "tab": 33px,
   "sp": 24px,
 );
 
@@ -93,7 +93,7 @@ body {
   font-size: 16px;
   line-height: calc(21 / 16);
   font-style: normal;
-  width: 100wv;
+  width: 100vw;
   // overflow-x: hidden;
   position: absolute;
   @include sp {

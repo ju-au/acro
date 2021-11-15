@@ -4,6 +4,9 @@
     padding: 23px 25px 15px 23px;
     display: flex;
     justify-content: space-between;
+    @include tab {
+        height: map-get($header-heights, "tab");
+    }
     @include sp {
         height: map-get($header-heights, "sp");
         padding: 10px 21px 10px 10px;
@@ -26,6 +29,10 @@
     &__logo {
         width: 190px;
         height: 100px;
+        @include tab {
+            width: 133px;
+            height: 70px;
+        }
         @include sp {
             width: 92px;
             height: 49px;
@@ -41,18 +48,20 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: end;
-        @include sp {
-            padding: map-get($header-heights, "sp") 20px 10px;
-            // align-items: center;
+        @include tab {
+            padding: map-get($header-heights, "tab") 20px 10px;
             align-items: start;
             flex-direction: column-reverse;
+        }
+        @include sp {
+            padding: map-get($header-heights, "sp") 20px 10px;
         }
     }
     &__info {
         display: flex;
         justify-content: end;
         margin-bottom: 14px;
-        @include sp {
+        @include tab {
             flex-direction: column;
         }
     }
@@ -61,6 +70,9 @@
         display: flex;
         flex-direction: column;
         justify-content: start;
+        @include tab {
+            margin-bottom: 20px;
+        }
         @include sp {
             margin-bottom: 10px;
         }
@@ -76,12 +88,14 @@
             @include sp {
                 width: fit-content;
                 padding: 0 10px;
-                
             }
         }
         &Number {
             font-size: 28px;
             letter-spacing: 0.1em;
+            @include tab {
+                font-size: 20px;
+            }
             @include sp {
                 font-size: 20px;
                 text-align: left;
@@ -91,7 +105,7 @@
     }
     &__hours {
         padding-left: 16px;
-        @include sp {
+        @include tab {
             text-align: left;
             padding-left: 0;
         }
@@ -104,10 +118,13 @@
         text-align: right;
         margin-bottom: 5px;
         padding-left: 37px;
-        @include sp {
-            font-size: 14px;
+        @include tab {
+            margin-bottom: 20px;
             padding-left: 0;
             text-align: left;
+        }
+        @include sp {
+            font-size: 14px;
         }
     }
     &__opening,
@@ -118,10 +135,6 @@
     &__navItems {
         display: flex;
         justify-content: end;
-        @include sp {
-            // width: 50%;
-            // flex-wrap: wrap;
-        }
     }
     &__navItem {
         text-align: center;
@@ -130,11 +143,16 @@
         @include xl {
             width: 128px;
         }
-        @include sp {
+        @include tab {
             text-align: left;
             width: 100%;
-            margin-bottom: 15px;
             margin-left: 0;
+        }
+        @include tab {
+            margin-bottom: 20px;
+        }
+        @include sp {
+            margin-bottom: 15px;
         }
         &--en {
             font-family: "Hiragino Mincho ProN", sans-serif;
@@ -143,6 +161,9 @@
             letter-spacing: 0.1em;
             line-height: calc(27 / 20);
             @include xl {
+                font-size: 20px;
+            }
+            @include tab {
                 font-size: 20px;
             }
             @include sp {
@@ -154,6 +175,9 @@
             font-size: calc-vw(16, 1540);
             @include xl {
                 font-size: 16px;
+            }
+            @include tab {
+                font-size: 14px;
             }
             @include sp {
                 font-size: 14px;
