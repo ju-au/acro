@@ -41,6 +41,12 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: end;
+        @include sp {
+            padding: map-get($header-heights, "sp") 20px 10px;
+            // align-items: center;
+            align-items: start;
+            flex-direction: column-reverse;
+        }
     }
     &__info {
         display: flex;
@@ -56,7 +62,7 @@
         flex-direction: column;
         justify-content: start;
         @include sp {
-            align-items: center;
+            margin-bottom: 10px;
         }
         &Title {
             font-family: "メイリオ", "Meiryo", sans-serif;
@@ -67,16 +73,26 @@
             height: 27px;
             @include flex-center;
             border: 1px solid #2e200e;
+            @include sp {
+                width: fit-content;
+                padding: 0 10px;
+                
+            }
         }
         &Number {
             font-size: 28px;
             letter-spacing: 0.1em;
+            @include sp {
+                font-size: 20px;
+                text-align: left;
+                padding-left: 8px;
+            }
         }
     }
     &__hours {
         padding-left: 16px;
         @include sp {
-            text-align: center;
+            text-align: left;
             padding-left: 0;
         }
     }
@@ -89,7 +105,9 @@
         margin-bottom: 5px;
         padding-left: 37px;
         @include sp {
+            font-size: 14px;
             padding-left: 0;
+            text-align: left;
         }
     }
     &__opening,
@@ -100,6 +118,10 @@
     &__navItems {
         display: flex;
         justify-content: end;
+        @include sp {
+            // width: 50%;
+            // flex-wrap: wrap;
+        }
     }
     &__navItem {
         text-align: center;
@@ -107,6 +129,12 @@
         margin-left: 10px;
         @include xl {
             width: 128px;
+        }
+        @include sp {
+            text-align: left;
+            width: 100%;
+            margin-bottom: 15px;
+            margin-left: 0;
         }
         &--en {
             font-family: "Hiragino Mincho ProN", sans-serif;
@@ -117,11 +145,18 @@
             @include xl {
                 font-size: 20px;
             }
+            @include sp {
+                font-size: 16px;
+                line-height: 1;
+            }
         }
         &--jp {
             font-size: calc-vw(16, 1540);
             @include xl {
                 font-size: 16px;
+            }
+            @include sp {
+                font-size: 14px;
             }
         }
     }

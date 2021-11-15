@@ -29,7 +29,7 @@
             content: "";
             width: map-get($burger-btn-width, "tab");
             height: 4px;
-            background-color: #2E200E;
+            background-color: #2e200e;
             position: absolute;
             transition-duration: 0.3s;
             z-index: 115;
@@ -68,7 +68,6 @@
 
     &__nav {
         @include tab {
-            color: #fff;
             width: 30%;
             height: 100%;
             background-color: $primary-color;
@@ -82,24 +81,14 @@
             z-index: 110;
         }
         @include sp {
-            width: 80vw;
+            width: 85vw;
         }
         ul {
             @include tab {
-                width: 80%;
-                height: 80%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: flex-start;
-            }
-        }
-        li {
-            @include tab {
-                font-size: 2vw;
-            }
-            @include sp {
-                font-size: 5vw;
             }
         }
     }
@@ -111,13 +100,13 @@
     }
 
     & ~ #burger__btn #burger__line::before {
-        background: #fff;
+        // background: #fff;
         transform: translateY(0) rotate(45deg);
     }
 
     & ~ #burger__btn #burger__line::after {
         width: map-get($burger-btn-width, "tab");
-        background: #fff;
+        // background: #fff;
         transform: translateY(0) rotate(-45deg);
         @include sp {
             width: map-get($burger-btn-width, "sp");
