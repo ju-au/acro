@@ -15,6 +15,7 @@ body {
   line-height: calc(21 / 16);
   font-style: normal;
   width: 100vw;
+  overflow-x: hidden;
   position: absolute;
 }
 
