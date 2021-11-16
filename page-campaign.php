@@ -39,7 +39,7 @@
         endif;
         wp_reset_postdata();
         ?>
-        <a href="" class="button campaign__button">ご予約・お問い合わせ</a>
+        <a href="<?php echo esc_url(home_url('/reserve')); ?>" class="button campaign__button">ご予約・お問い合わせ</a>
     </section>
 </article>
 <?php get_footer(); ?>
