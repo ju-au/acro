@@ -8,7 +8,7 @@
         <?php
         $args = array(
             'post_type' => 'post',
-            // 'status' => ,
+            'status' => 'publish',
             'orderby' => array('date' => 'DES'),
         );
         $sub_query = new WP_Query($args);
