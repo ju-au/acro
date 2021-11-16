@@ -145,6 +145,7 @@
         <a href="<?php echo esc_url(home_url('/stylist')); ?>" class="button topStylist_button">出勤日・他のスタッフ</a>
     </div>
     <!-- /.inner topStylist__inner -->
+    
 </section>
 <!-- /.topStylist -->
 
@@ -207,7 +208,7 @@ if ($shown_on_top_page === "1") :
         </div>
         <!-- /.inner topColona__inner -->
         <p class="topColona__message">まずはお気軽にご相談ください</p>
-        <a href="<?php echo esc_url(home_url('/reserve')); ?>" class="button topColona__button">ご予約・お問い合わせ</a>
+        <a class="button topColona__button" href="<?php echo esc_url(home_url('/reserve')); ?>">ご予約・お問い合わせ</a>
     </section>
     <!-- /.topColona -->
 
