@@ -2,8 +2,8 @@
 
 <section class="fv">
     <h2 class="fv__copy">
-        美と<span class="color-white-sp">安ら</span><span class="color-white">ぎを</span><br>
-        いつ<span class="color-white-sp">もの</span><span class="color-white">オーガニックサロンで</span>
+        美と<span class="color-white-tab">安ら</span><span class="color-white">ぎを</span><br>
+        いつ<span class="color-white-tab">もの</span><span class="color-white">オーガニックサロンで</span>
     </h2>
     <!-- Slider main container -->
     <div class="swiper fv-swiper">
@@ -92,7 +92,7 @@
                     <img src="" alt="">
                 </figure>
                 <div class="topMenu__textArea">
-                    <h3 class="topMenu__cardTitle topMenu__cardTitle--straightening"><span class="topMenu__cardTitle--en">Hair Straightening&nbsp;</span>縮毛矯正</h3>
+                    <h3 class="topMenu__cardTitle topMenu__cardTitle--straightening"><span class="topMenu__cardTitle--en">Hair Straightening&nbsp;</span><span>縮毛矯正</span></h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, '縮毛矯正説明文', true); ?></p>
                     <a href="<?php echo esc_url(home_url('/hair-straightening')); ?>" class="topMenu__link">
                         <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, '縮毛矯正料金', true) . "~"; ?></p></span>
@@ -137,7 +137,7 @@
                     <figure class="topStylist__img">
                         <?php echo get_avatar($uid, 300); ?>
                     </figure>
-                    <p class="topStylist__name"><span class="topStylist__jobTitle"><?php echo get_user_meta($uid, 'job-title', true); ?></span><?php echo get_user_meta($uid, 'nickname', true); ?></p>
+                    <p class="topStylist__name"><span class="topStylist__jobTitle"><?php echo get_user_meta($uid, 'job-title', true); ?></span><br class="is-shown-tab-only"><?php echo get_user_meta($uid, 'nickname', true); ?></p>
                 </dd>
 
             <?php endforeach; ?>

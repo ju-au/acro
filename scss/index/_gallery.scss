@@ -13,17 +13,24 @@
     }
     #sbi_images {
         position: relative;
-        @include sp {
+        @include tab {
             padding: 5px !important;
+        }
+        @include sp {
             display: flex;
             flex-direction: column;
         }
-        &::before, &::after {
-            content: '';
+        &::before,
+        &::after {
+            content: "";
             width: 831px;
             height: 341px;
             display: block;
             position: absolute;
+            @include tab {
+                width: 70%;
+                height: 70%;
+            }
             @include sp {
                 width: calc-vw(250, 375);
                 height: 87px;
@@ -32,14 +39,14 @@
         &::before {
             top: 0;
             right: 0;
-            border-top: 1px solid #2E200E;
-            border-right: 1px solid #2E200E;
+            border-top: 1px solid #2e200e;
+            border-right: 1px solid #2e200e;
         }
         &::after {
             bottom: 0;
             left: 0;
-            border-bottom: 1px solid #2E200E;
-            border-left: 1px solid #2E200E;
+            border-bottom: 1px solid #2e200e;
+            border-left: 1px solid #2e200e;
         }
     }
     .sbi_item {

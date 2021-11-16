@@ -103,7 +103,7 @@ body {
 
 section {
   margin-bottom: 100px;
-  @include sp {
+  @include tab {
     margin-bottom: 60px;
   }
 }
@@ -221,8 +221,8 @@ section {
 .color-white {
   color: #fff;
 }
-.color-white-sp {
-  @include sp {
+.color-white-tab {
+  @include tab {
     color: #fff;
   }
 }

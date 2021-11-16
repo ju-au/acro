@@ -44,6 +44,10 @@
             width: calc(#{map-get($inner-width, "pc")} + #{$outer-width});
             margin-left: $outer-width;
         }
+        @include tab {
+            width: calc(100vw - 103px);
+            margin-left: 103px;
+        }
         @include sp {
             width: calc(100vw - 57px);
             margin-left: 57px;
@@ -52,6 +56,9 @@
     &-swiper-wrapper {
         width: 100%;
         height: 500px;
+        @include tab {
+            height: 350px;
+        }
         @include sp {
             height: 270px;
         }
