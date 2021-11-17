@@ -73,7 +73,7 @@
                         </a>
                     </li>
                     <li class="header__navItem">
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url('/gallery')); ?>">
                             <p class="header__navItem--en">GALLERY</p>
                             <p class="header__navItem--jp">ギャラリー</p>
                         </a>
