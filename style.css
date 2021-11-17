@@ -118,8 +118,7 @@ section {
   content: "";
   width: 60px;
   height: 40px;
-  background: url(../wp-content/themes/acro/images/button-scissors.png);
-  background-size: cover;
+  background: center/cover no-repeat url(../wp-content/themes/acro/images/button-scissors.png);
   margin-left: 60px;
 }
 
@@ -134,6 +133,10 @@ section {
 
 .home .button::after {
   background: center/contain no-repeat url(./wp-content/themes/acro/images/button-scissors.png);
+}
+
+.author .button::after {
+  background: center/cover no-repeat url(../../wp-content/themes/acro/images/button-scissors.png);
 }
 
 .is-shown-tab {
