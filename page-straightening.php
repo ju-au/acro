@@ -4,12 +4,16 @@
 
         <?php get_template_part('./includes/top'); ?>
 
-        <section class="menuDetail__imageArea">
-            <div class="inner">
-                <figure class="menuDetail__images">
-                    <img src="" alt="" class="menuDetail__img">
-                    <img src="" alt="" class="menuDetail__img">
-                    <img src="" alt="" class="menuDetail__img">
+        <section class="straightening__imageArea">
+            <div class="inner straightening__imagesInner">
+                <figure class="straightening__before">
+                    <img src="" alt="" class="straightening__beforeImg">
+                    <figcaption>before</figcaption>
+                    <p class="straightening__beforeExplanation">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </figure>
+                <figure class="straightening__after">
+                    <img src="" alt="" class="straightening__afterImg">
+                    <figcaption>after</figcaption>
                 </figure>
             </div>
         </section>
@@ -54,7 +58,7 @@
         <section class="menuDetail__qa">
             <div class="inner">
                 <h2 class="sectionTitle menuDetail__qaTitle">よくある質問</h2>
-                <?php echo do_shortcode('[ultimate-faqs include_category=’color-page’]'); ?>
+                <?php echo do_shortcode('[ultimate-faqs include_category=’straightening-page’]'); ?>
                 <a class="button menuDetail_toQa" href="<?php echo esc_url(home_url('/qa')); ?>">その他のQ&A</a>
             </div>
             <a class="button menuDetail__toReserve" href="<?php echo esc_url(home_url('/reserve')); ?>">ご予約・お問い合わせ</a>

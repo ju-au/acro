@@ -53,11 +53,11 @@
 
         <section class="menuDetail__qa">
             <div class="inner">
-                <h2 class="sectionTitle menuDetail__qaTitle">よくある質問</h2>
-                <?php echo do_shortcode('[ultimate-faqs include_category=’color-page’]'); ?>
-                <a class="button menuDetail_toQa" href="<?php echo esc_url(home_url('/qa')); ?>">その他のQ&A</a>
+                <h2 class="sectionTitle menuDetail__qa__title">よくある質問</h2>
+                <?php echo do_shortcode('[ultimate-faqs include_category=’perm-page’]'); ?>
+                <a class="button menuDetail__qa_toQa" href="<?php echo esc_url(home_url('/qa')); ?>">その他のQ&A</a>
             </div>
-            <a class="button menuDetail__toReserve" href="<?php echo esc_url(home_url('/reserve')); ?>">ご予約・お問い合わせ</a>
+            <a class="button menuDetail__qa__toReserve" href="<?php echo esc_url(home_url('/reserve')); ?>">ご予約・お問い合わせ</a>
 
         </section>
 
