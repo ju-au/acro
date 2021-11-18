@@ -112,7 +112,7 @@
 
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/plugins/swiper/swiper-bundle.min.js"></script>
-<script type="module" src="<?php echo get_template_directory_uri(); ?>/js/index.js"></script>
+<script type="module" src="<?php echo get_template_directory_uri(); ?>/index.js"></script>
 
 <?php wp_footer(); ?>
 
