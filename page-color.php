@@ -32,18 +32,19 @@
                     $img = 'step' . $i . 'img';
                     $img_id = get_post_meta($page_id, $img, true);
                     $body = 'step' . $i . 'body';
-                    // if (!get_post_meta($page_id, $title, true)) : 
+                    $is_title = get_post_meta($page_id, $title, true);
+                    if ($is_title) :
                 ?>
-                    <div class="flow__step">
-                        <p class="flow__number"><span>STEP</span><?php echo '0' . $i; ?></p>
-                        <h3 class="flow__title"><?php echo get_post_meta($page_id, $title, true); ?></h3>
-                        <figure class="flow__img">
-                            <img src="<?php echo wp_get_attachment_url($img_id, 'medium', true); ?>" alt="">
-                        </figure>
-                        <p class="flow__body"><?php echo get_post_meta($page_id, $body, true); ?></p>
-                    </div>
+                        <div class="flow__step">
+                            <p class="flow__number"><span>STEP</span><?php echo '0' . $i; ?></p>
+                            <h3 class="flow__title"><?php echo $is_title ?></h3>
+                            <figure class="flow__img">
+                                <img src="<?php echo wp_get_attachment_url($img_id, 'medium', true); ?>" alt="">
+                            </figure>
+                            <p class="flow__body"><?php echo get_post_meta($page_id, $body, true); ?></p>
+                        </div>
                 <?php
-                // endif;
+                    endif;
                 endfor;
                 ?>
             </div>
