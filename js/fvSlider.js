@@ -1,5 +1,4 @@
 export default function () {
-    console.log('swiper');
     const swiper = new Swiper('.swiper', {
         autoplay:{
             delay: 5000,
