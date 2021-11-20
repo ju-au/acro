@@ -50,6 +50,9 @@
         </section>
 
         <?php echo do_shortcode('[contact-form-7 id="283" title="ご予約・お問い合わせフォーム"]'); ?>
+
+        <div id="form__closure--hidden" style="display: hidden;"><?php echo '定休：' . get_post_meta(39, '定休日', true); ?></div>
+
 <?php
     endwhile;
 endif;
