@@ -7,7 +7,7 @@
 
         <section class="menuDetail">
             <div class="inner">
-                <?php the_content() ?>
+                <?php the_content(); ?>
             </div>
         </section>
 
