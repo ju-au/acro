@@ -43,10 +43,25 @@ add_action('init', function () {
 function my_user_meta($wb)
 {
     //項目の追加
-    $wb['main-creator'] = 'トップページに表示（表示するには「1」を入力してください）';
+    $wb['main-creator'] = 'トップページに表示（半角「1」を入力で表示）';
+    $wb['reserve-creator'] = '予約ページに表示（半角「1」を入力で表示）';
     $wb['comment'] = '一言コメント';
     $wb['job-title'] = '職種';
 
     return $wb;
 }
 add_filter('user_contactmethods', 'my_user_meta', 10, 1);
+
+
+// 予約・お問い合わせを送信後にThanksページに遷移する
+function add_thanks_page()
+{
+    echo <<< EOD
+    <script>
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = './thanks';
+    }, false );
+    </script>
+    EOD;
+}
+add_action('wp_footer', 'add_thanks_page');

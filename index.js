@@ -9,5 +9,11 @@ toTop();
 import gallery from './js/gallery.js';
 gallery();
 
+import form from './js/form.js';
+form();
+
+import reserveCalender from './js/reserveCalender.js';
+reserveCalender();
+
 // import  from './js/.js';
 // ();
