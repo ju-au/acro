@@ -4,22 +4,8 @@
 
         <?php get_template_part('./includes/top'); ?>
 
-        <section class="straightening__imageArea">
-            <div class="inner straightening__imagesInner">
-                <figure class="straightening__before">
-                    <img src="" alt="" class="straightening__beforeImg">
-                    <figcaption>before</figcaption>
-                    <p class="straightening__beforeExplanation">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                </figure>
-                <figure class="straightening__after">
-                    <img src="" alt="" class="straightening__afterImg">
-                    <figcaption>after</figcaption>
-                </figure>
-            </div>
-        </section>
 
-
-        <section class="menuDetail__body">
+        <section class="menuDetail">
             <div class="inner">
                 <?php the_content() ?>
             </div>

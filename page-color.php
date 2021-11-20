@@ -4,18 +4,8 @@
 
         <?php get_template_part('./includes/top'); ?>
 
-        <section class="menuDetail__imageArea">
-            <div class="inner">
-                <figure class="menuDetail__images">
-                    <img src="" alt="" class="menuDetail__img">
-                    <img src="" alt="" class="menuDetail__img">
-                    <img src="" alt="" class="menuDetail__img">
-                </figure>
-            </div>
-        </section>
 
-
-        <section class="menuDetail__body">
+        <section class="menuDetail">
             <div class="inner">
                 <?php the_content() ?>
             </div>

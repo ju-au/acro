@@ -4,21 +4,8 @@
 
         <?php get_template_part('./includes/top'); ?>
 
-        <section class="treatment__imageArea">
-            <div class="inner">
-                <figure class="treatment__image">
-                    <img src="" alt="" class="treatment__img">
-                </figure>
-                <p class="treatment__text">
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                </p>
-            </div>
-        </section>
 
-
-        <section class="menuDetail__body">
+        <section class="menuDetail">
             <div class="inner">
                 <?php the_content() ?>
             </div>
