@@ -94,7 +94,7 @@
                 <div class="topMenu__textArea">
                     <h3 class="topMenu__cardTitle topMenu__cardTitle--straightening"><span class="topMenu__cardTitle--en">Hair Straightening&nbsp;</span><span>縮毛矯正</span></h3>
                     <p class="topMenu__body"><?php echo get_post_meta(60, '縮毛矯正説明文', true); ?></p>
-                    <a href="<?php echo esc_url(home_url('/hair-straightening')); ?>" class="topMenu__link">
+                    <a href="<?php echo esc_url(home_url('/straightening')); ?>" class="topMenu__link">
                         <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, '縮毛矯正料金', true) . "~"; ?></p></span>
                     </a>
                 </div>
