@@ -36,7 +36,7 @@
                 <div class="header__hours">
                     <p class="header__notice">【予約優先】<br class="is-shown-tab-only">各種キャッシュレス決済OK</p>
                     <p class="header__opening"><?php echo 'OPEN：' . get_post_meta(39, '開店時間', true) . '～' . get_post_meta(39, '閉店時間', true); ?></p>
-                    <p class="header__closure"></p><?php echo '定休：' . get_post_meta(39, '定休日', true); ?>
+                    <p class="header__closure"><?php echo '定休：' . get_post_meta(39, '定休日', true); ?></p>
                 </div>
             </div>
             <!-- /.header__info -->
