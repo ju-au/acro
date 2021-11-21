@@ -65,3 +65,23 @@ function add_thanks_page()
     EOD;
 }
 add_action('wp_footer', 'add_thanks_page');
+
+
+// 投稿画面から他のページの内容を、the_content()で取り込む
+function get_contents_from_page($pageSlug)
+{
+    $args = array(
+        'post_type' => 'page',
+        'name' => $pageSlug[0],
+    );
+
+    $sub_query = new WP_Query($args);
+    if ($sub_query->have_posts()) : while ($sub_query->have_posts()) : $sub_query->the_post();
+            $theContent =get_the_content();
+        endwhile;
+    endif;
+    wp_reset_postdata();
+    
+    return $theContent;
+}
+add_shortcode('get_contents_from_page', 'get_contents_from_page');
