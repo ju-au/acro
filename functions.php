@@ -38,6 +38,18 @@ add_action('init', function () {
     add_theme_support('post-thumbnails');
 });
 
+// カスタム投稿タイプ
+add_action('init', function () {
+    register_post_type('skill', [
+        'public' => true,
+        'label' => '技術ページ',
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => [
+            'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'
+        ]
+    ]);
+});
 
 // ユーザープロフィールの項目のカスタマイズ
 function my_user_meta($wb)
@@ -77,11 +89,11 @@ function get_contents_from_page($pageSlug)
 
     $sub_query = new WP_Query($args);
     if ($sub_query->have_posts()) : while ($sub_query->have_posts()) : $sub_query->the_post();
-            $theContent =get_the_content();
+            $theContent = get_the_content();
         endwhile;
     endif;
     wp_reset_postdata();
-    
+
     return $theContent;
 }
 add_shortcode('get_contents_from_page', 'get_contents_from_page');

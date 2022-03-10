@@ -1,12 +1,39 @@
 .topStylist {
+    position: relative;
+    &::after {
+        @include tab {
+            content: "";
+            background: url(./wp-content/themes/acro/images/index/bg-pattern3.png);
+            width: 100%;
+            height: 85%;
+            position: absolute;
+            top: 15%;
+            left: 0;
+            z-index: -1;
+        }
+    }
     @include tab {
-        background: linear-gradient(0deg, $secondary-color 85%, transparent 15%);
+        // background: linear-gradient(0deg, $secondary-color 85%, transparent 15%);
     }
     &__inner {
-        background: linear-gradient(0deg, $secondary-color 70%, transparent 30%);
+        // background: linear-gradient(0deg, $secondary-color 70%, transparent 30%);
         padding-bottom: 83px;
+        position: relative;
         @include sp {
             padding-bottom: 44px;
+        }
+        &::after {
+            content: "";
+            background: url(./wp-content/themes/acro/images/index/bg-pattern3.png);
+            width: 100%;
+            height: 70%;
+            position: absolute;
+            top: 30%;
+            left: 0;
+            z-index: -1;
+            @include tab {
+                background: none;
+            }
         }
     }
     &__title {
@@ -60,6 +87,7 @@
     }
     &__name {
         font-size: 18px;
+        color: $accent-color;
     }
     &__jobTitle {
         font-family: "Hiragino Mincho ProN", sans-serif;

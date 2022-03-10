@@ -1598,22 +1598,48 @@ section {
   }
 }
 
+.topStylist {
+  position: relative;
+}
+
 @media screen and (max-width: 1260px) {
-  .topStylist {
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, #fff6ea), color-stop(15%, transparent));
-    background: linear-gradient(0deg, #fff6ea 85%, transparent 15%);
+  .topStylist::after {
+    content: "";
+    background: url(./wp-content/themes/acro/images/index/bg-pattern3.png);
+    width: 100%;
+    height: 85%;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: -1;
   }
 }
 
 .topStylist__inner {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #fff6ea), color-stop(30%, transparent));
-  background: linear-gradient(0deg, #fff6ea 70%, transparent 30%);
   padding-bottom: 83px;
+  position: relative;
 }
 
 @media screen and (max-width: 598px) {
   .topStylist__inner {
     padding-bottom: 44px;
+  }
+}
+
+.topStylist__inner::after {
+  content: "";
+  background: url(./wp-content/themes/acro/images/index/bg-pattern3.png);
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1260px) {
+  .topStylist__inner::after {
+    background: none;
   }
 }
 
@@ -1703,6 +1729,7 @@ section {
 
 .topStylist__name {
   font-size: 18px;
+  color: #5d3c13;
 }
 
 .topStylist__jobTitle {
