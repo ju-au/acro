@@ -1,56 +1,47 @@
 .fv {
-    position: relative;
+    // ローカル変数
     $outer-width: calc((100vw - #{map-get($inner-width, "pc")}) / 2);
+    $outer-width-tab: calc((100vw - #{map-get($inner-width, "tab")}) / 2);
+    $outer-width-sp: calc((100vw - #{map-get($inner-width, "sp")}) / 2);
+
+    position: relative;
     @include sp {
         margin-bottom: 15px;
     }
+    &__inner {
+        position: relative;
+    }
     &__copy {
-        font-family: "Hiragino Mincho ProN", sans-serif;
-        font-size: 28px;
-        line-height: calc(42 / 28);
+        width: 458px;
         position: absolute;
-        bottom: 74px;
-        left: 47px;
+        bottom: 35px;
+        left: 0;
         z-index: 10;
         @include xl {
-            left: calc(#{$outer-width} - 111px);            
+            left: calc(#{$outer-width} - 172px);
+        }
+        @include tab {
+            width: calc-vw(340, 810);
+            max-width: 458px;
+            min-width: 200px;
+            left: $outer-width-tab;
         }
         @include sp {
             font-size: 16px;
             line-height: calc(20 / 16);
-            left: 25px;
-        }
-        &::after {
-            content: "";
-            width: 110px;
-            height: 98px;
-            border-left: 1px solid #2e200e;
-            border-bottom: 1px solid #2e200e;
-            position: absolute;
-            bottom: -9px;
-            left: -25px;
-            @include sp {
-                width: 37px;
-                height: 50px;
-                left: -15px;
-            }
+            left: 0;
         }
     }
-    &-swiper {
-        width: calc(100vw - 158px);
+    &__swiper {
+        width: calc(100vw - #{$outer-width});
         padding-bottom: 30px;
-        margin-left: 158px;
-        @include xl {
-            width: calc(#{map-get($inner-width, "pc")} + #{$outer-width});
-            margin-left: $outer-width;
-        }
         @include tab {
-            width: calc(100vw - 103px);
+            width: calc(100vw - #{$outer-width-tab});
             margin-left: 103px;
         }
         @include sp {
-            width: calc(100vw - 57px);
-            margin-left: 57px;
+            width: calc(100vw - #{$outer-width-sp});
+            margin-left: $outer-width-sp;
         }
     }
     &-swiper-wrapper {

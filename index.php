@@ -2,35 +2,36 @@
 
 <section class="fv">
     <h2 class="fv__copy">
-        美と<span class="color-white-tab">安ら</span><span class="color-white">ぎを</span><br>
-        いつ<span class="color-white-tab">もの</span><span class="color-white">オーガニックサロンで</span>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/index/fv-deco.png" alt="">
     </h2>
-    <!-- Slider main container -->
-    <div class="swiper fv-swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper fv-swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide fv-swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/index/fv1.jpg" alt=""></div>
-            <div class="swiper-slide fv-swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/index/colona1.png" alt=""></div>
-            <!-- <div class="swiper-slide fv-swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/index/fv1.jpg" alt=""></div> -->
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination fv-swiper-pagination"></div>
+    <div class="inner fv__inner">
+        <div class="swiper fv__swiper">
+            <div class="swiper-wrapper fv-swiper-wrapper">
+                <?php
+                $fv_images = get_post_meta(319, 'First View Image', false);
+                foreach ($fv_images as $image) :
+                ?>
+                    <div class="swiper-slide fv-swiper-slide"><img src="<?php echo wp_get_attachment_url($image); ?>" alt=""></div>
+                <?php endforeach; ?>
+            </div>
+            <div class="swiper-pagination fv-swiper-pagination"></div>
 
+        </div>
     </div>
+    <!-- /.fv__container -->
 </section>
 
 
 
-<section class="topCampaign">
+<section class="topCampaign" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/index/bg-pattern1.png);">
     <div class="inner topCampaign__inner">
-        <h2 class="sectionTitle topCampaign__title" lang="en">TOPIC</h2>
-        <div class="topCampaign__cards">
+        <h2 class="sectionTitle topCampaign__title"><img src="<?php echo get_template_directory_uri(); ?>/images/index/title-topic.png" alt=""></h2>
+        <div class="topCampaign__card-wrapper" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/index/bg-pattern2.png);">
             <?php
             $args = array(
                 'post_type' => 'post',
                 'category_name' => 'shown-on-top-page',
-                'posts_per_page' => 2,
+                'posts_per_page' => 1,
                 'orderby' => array('date' => 'DES'),
             );
             $sub_query = new WP_Query($args);
@@ -39,8 +40,11 @@
                     <div class="topCampaign__card">
                         <div class="topCampaign__cardImg"><?php the_post_thumbnail('small', array('class' => 'topCampaign__cardImg')); ?></div>
                         <div class="topCampaign__textArea">
-                            <h3 class="topCampaign__cardTitle"><?php the_title(); ?></h3>
-                            <p class="topCampaign__cardBody"><?php echo mb_substr(get_the_excerpt(), 0, 100); ?></p>
+                            <div class="topCampaign__text-upper">
+                                <h3 class="topCampaign__cardTitle"><?php the_title(); ?></h3>
+                                <p class="topCampaign__cardBody"><?php echo mb_substr(get_the_excerpt(), 0, 100); ?></p>
+                            </div>
+                            <!-- /.topCampaign__text-upper -->
                             <span class="topCampaign__cardDate"><?php echo $sub_query->post->キャンペーン期間; ?></span>
                         </div>
                     </div>
@@ -55,6 +59,8 @@
     </div>
     <!-- /.topCampaign__inner -->
     <a class="button topCampaign__button" href="<?php echo esc_url(home_url('/campaign')); ?>">詳細・その他のキャンペーン</a>
+    <figure class="topCampaign__deco1"><img src="<?php echo get_template_directory_uri(); ?>/images/index/campaign-deco1.png" alt=""></figure>
+    <figure class="topCampaign__deco2"><img src="<?php echo get_template_directory_uri(); ?>/images/index/campaign-deco2.png" alt=""></figure>
 </section>
 <!-- /.topCampaign -->
 
@@ -145,7 +151,7 @@
         <a href="<?php echo esc_url(home_url('/stylist')); ?>" class="button topStylist_button">出勤日・他のスタッフ</a>
     </div>
     <!-- /.inner topStylist__inner -->
-    
+
 </section>
 <!-- /.topStylist -->
 
