@@ -1821,61 +1821,49 @@ section {
   }
 }
 
+.topColona {
+  color: #5d3c13;
+}
+
 .topColona__inner {
+  width: 1018px;
+  padding: 9px;
   margin-bottom: 38px;
+}
+
+@media screen and (max-width: 1260px) {
+  .topColona__inner {
+    width: 90%;
+    max-width: 1018px;
+  }
 }
 
 @media screen and (max-width: 598px) {
   .topColona__inner {
+    width: calc(100vw - 40px);
     margin-bottom: 30px;
   }
 }
 
 .topColona__contentsWrapper {
-  width: 1000px;
-  border: 1px solid #2e200e;
+  background-color: #fff;
+  width: 100%;
   padding: 4.6% 8.1% 4.2% 4.6%;
   margin: 0 auto;
   position: relative;
 }
 
-@media screen and (max-width: 1260px) {
-  .topColona__contentsWrapper {
-    max-width: 1000px;
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 598px) {
   .topColona__contentsWrapper {
     width: 100%;
-    padding: 20px;
+    padding: 126px 20px 20px;
   }
-}
-
-.topColona__contentsWrapper::before, .topColona__contentsWrapper::after {
-  content: "";
-  width: 145px;
-  height: 1px;
-  background-color: #2e200e;
-  display: block;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  position: absolute;
-}
-
-.topColona__contentsWrapper::before {
-  top: 35px;
-  left: -37px;
-}
-
-.topColona__contentsWrapper::after {
-  right: -37px;
-  bottom: 35px;
 }
 
 .topColona__title {
   font-size: 18px;
+  line-height: calc(24 / 18);
+  letter-spacing: 0.01em;
   text-align: center;
   margin-bottom: 37px;
 }
@@ -1925,6 +1913,7 @@ section {
 }
 
 .topColona__body {
+  letter-spacing: 0.01em;
   width: 450px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -1952,8 +1941,8 @@ section {
 }
 
 .topColona__thumb {
-  width: 420px;
-  height: 192px;
+  width: 360px;
+  height: 241px;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
@@ -1984,7 +1973,6 @@ section {
 }
 
 .topColona__icons {
-  padding: 0 35px;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
@@ -2031,6 +2019,20 @@ section {
   .topColona__message {
     font-size: 13px;
     margin-bottom: 5px;
+  }
+}
+
+.topColona__deco {
+  width: 318px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 598px) {
+  .topColona__deco {
+    width: 100%;
+    max-width: 318px;
   }
 }
 

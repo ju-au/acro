@@ -187,7 +187,7 @@ if ($shown_on_top_page === "1") :
 ?>
 
     <section class="topColona">
-        <div class="inner topColona__inner">
+        <div class="inner topColona__inner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/index/bg-pattern2.png);">
             <div class="topColona__contentsWrapper">
                 <figure class="topColona__thumb is-shown-sp">
                     <img src="<?php echo $thumbnail_src[0] ?>" alt="">
@@ -209,6 +209,8 @@ if ($shown_on_top_page === "1") :
                     </figure>
                 </div>
                 <!-- /.topColona__contents -->
+                <figure class="topColona__deco"><img src="<?php echo get_template_directory_uri(); ?>/images/index/colona-deco.png" alt=""></figure>
+
             </div>
             <!-- /.topColona__contentsWrapper -->
         </div>
