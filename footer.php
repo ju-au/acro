@@ -2,7 +2,7 @@
 
 </main>
 
-<footer class="footer">
+<footer class="footer" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/footer/footer-bg.png);">
 
     <?php if (!is_page(29)) : // Accessページ以外にgoogle mapsを表示する 
     ?>

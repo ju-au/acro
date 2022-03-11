@@ -685,7 +685,9 @@ section {
 }
 
 .footer {
-  background-color: #f7e9d6;
+  color: #2e200e;
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 .footer__map {
