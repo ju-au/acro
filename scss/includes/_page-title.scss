@@ -1,0 +1,15 @@
+.pageTitle {
+    width: fit-content;
+    height: 250px;
+    margin-top: 27px;
+    &__inner {
+        margin-left: calc((100vw - #{map-get($inner-width, "pc")}) / 2);
+        padding: 79px 155px 0 0;
+    }
+    &__title {
+        padding: 0 70px 20px 0;
+        border-bottom: 1px solid #2e200e;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+}

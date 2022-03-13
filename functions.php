@@ -112,9 +112,16 @@ function deco_title($attr)
 add_shortcode('deco_title', 'deco_title');
 
 
-// page.phpの注釈
-function page_note($attr)
+// page.phpの各アイテムの注釈
+function item_note($attr)
 {
-    return '<span class="page__note">' . $attr[0] . '</span>';
+    return '<span class="page__itemNote">' . $attr[0] . '</span>';
 }
-add_shortcode('page_note', 'page_note');
+add_shortcode('item_note', 'item_note');
+
+// page.phpのセクション一番下の注釈
+function section_note($attr)
+{
+    return '<span class="page__sectionNote">' . $attr[0] . '</span>';
+}
+add_shortcode('section_note', 'section_note');

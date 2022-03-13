@@ -1,5 +1,6 @@
 .page {
     color: $accent-color;
+    letter-spacing: 0.01em;
     &__sectionTitleArea {
         margin: 90px 0 11px;
         position: relative;
@@ -15,6 +16,9 @@
             left: 0;
             z-index: -1;
         }
+        & + p {
+            text-align: center;
+        }
     }
     &__sectionTitle {
         background-color: #fff;
@@ -27,14 +31,31 @@
         font-size: 12px;
         line-height: calc(16 / 12);
         text-align: center;
+        margin-bottom: 10px;
+        display: block;
+        & + p {
+            text-align: center;
+        }
+    }
+    &__sectionNote {
+        font-size: 12px;
+        line-height: calc(16 / 12);
+        margin: 25px 0 40px 0;
         display: block;
     }
-    &__note {
+    &__itemNote {
         font-size: 12px;
         line-height: calc(16 / 12);
     }
     &__button {
-        margin: 0 0 0 auto;
+        margin: 50px 0 0 auto;
+    }
+    .button {
+        margin-top: 50px;
+    }
+    &__link {
+        color: #005dff;
+        text-decoration: underline;
     }
     h3 {
         font-size: 20px;
@@ -54,8 +75,8 @@
         justify-content: space-between;
         margin: 0 auto;
         p,
-        .page__note {
-            padding-left: 0.6em;
+        .page__itemNote {
+            padding-left: 20px;
             width: fit-content;
         }
     }
@@ -65,8 +86,8 @@
         flex-basis: unset !important;
     }
     .wp-block-image {
-        width: 100%;
-        margin: 65px 0 0;
+        width: 100vw;
+        margin: 65px 0 0 calc(50% - 50vw);
         img {
             width: 100% !important;
             height: 100% !important;
