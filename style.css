@@ -2038,6 +2038,112 @@ section {
   }
 }
 
+.page {
+  color: #5d3c13;
+}
+
+.page__sectionTitleArea {
+  margin: 90px 0 11px;
+  position: relative;
+}
+
+.page__sectionTitleArea::before {
+  content: "";
+  background-image: url(../wp-content/themes/acro/images/title-deco.png);
+  background-size: contain;
+  background-repeat: repeat;
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.page__sectionTitle {
+  background-color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 65px 0;
+  margin: 0 auto;
+}
+
+.page__sectionTitleNote {
+  font-family: "Hiragino Mincho ProN", sans-serif;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  text-align: center;
+  display: block;
+}
+
+.page__note {
+  font-size: 12px;
+  line-height: calc(16 / 12);
+}
+
+.page__button {
+  margin: 0 0 0 auto;
+}
+
+.page h3 {
+  font-size: 20px;
+  line-height: calc(27 / 20);
+  width: 1000px;
+  margin: 12px auto 0.25em;
+}
+
+.page h3::before {
+  content: "・";
+}
+
+.page td {
+  text-align: right;
+  padding-left: 1em;
+}
+
+.page .wp-block-columns {
+  width: 1000px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.page .wp-block-columns p,
+.page .wp-block-columns .page__note {
+  padding-left: 0.6em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.page .wp-block-column {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-flex: 0 !important;
+      -ms-flex-positive: 0 !important;
+          flex-grow: 0 !important;
+  -ms-flex-preferred-size: unset !important;
+      flex-basis: unset !important;
+}
+
+.page .wp-block-image {
+  width: 100%;
+  margin: 65px 0 0;
+}
+
+.page .wp-block-image img {
+  width: 100% !important;
+  height: 100% !important;
+  vertical-align: bottom;
+}
+
+.page-id-9 .page__sectionTitleArea {
+  margin-top: 60px;
+}
+
 .page-id-31 .ewd-ufaq-post-margin {
   pointer-events: none;
 }
@@ -2047,6 +2153,30 @@ section {
 }
 
 .pageTop {
-  margin-bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 337px;
+  padding: 82px 0 1em;
+}
+
+.pageTop__title, .pageTop__subtitle, .pageTop__message {
+  text-shadow: 0 0 10px #fff;
+}
+
+.pageTop__title {
+  padding: 0 70px 20px 0;
+  border-bottom: 1px solid #2e200e;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.pageTop__subtitle {
+  margin-bottom: 15px;
+}
+
+.page-id-9 .pageTop {
+  margin-bottom: 50px;
 }
 /*# sourceMappingURL=style.css.map */

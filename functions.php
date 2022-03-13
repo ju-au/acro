@@ -97,3 +97,24 @@ function get_contents_from_page($pageSlug)
     return $theContent;
 }
 add_shortcode('get_contents_from_page', 'get_contents_from_page');
+
+
+// page.phpの装飾付きタイトル
+function deco_title($attr)
+{
+    $title_area = '<div class="page__sectionTitleArea">
+    <h2 class="page__sectionTitle">' . $attr['title'] . '</h2></div>';
+    if (!empty($attr['note'])) {
+        $title_area .= '<span class="page__sectionTitleNote">' . $attr['note'] . '</span>';
+    }
+    return $title_area;
+}
+add_shortcode('deco_title', 'deco_title');
+
+
+// page.phpの注釈
+function page_note($attr)
+{
+    return '<span class="page__note">' . $attr[0] . '</span>';
+}
+add_shortcode('page_note', 'page_note');

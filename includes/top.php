@@ -8,8 +8,8 @@ if ($eye_img) {
 };
 ?>
 <div class="inner">
-    <h1 class="pageTitle"><?php the_title(); ?></h1>
-    <p class="pageSubtitle"><?php echo get_post_meta(get_the_ID(), 'pageSubtitle', true); ?></p>
-    <p class="pageMessage"><?php echo get_post_meta(get_the_ID(), 'ページトップ説明文', true); ?></p>
+    <h1 class="pageTop__title"><?php the_title(); ?></h1>
+    <p class="pageTop__subtitle"><?php echo get_post_meta(get_the_ID(), 'pageSubtitle', true); ?></p>
+    <p class="pageTop__message"><?php echo get_post_meta(get_the_ID(), 'ページトップ説明文', true); ?></p>
 </div>
 </section>
