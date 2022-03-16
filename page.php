@@ -7,7 +7,7 @@
         if (is_page(31)) {
             $top_part = "./includes/page-title";
         } else {
-            $top_part = "./include/top";
+            $top_part = "./includes/top";
         }
         get_template_part($top_part); ?>
         <section>
