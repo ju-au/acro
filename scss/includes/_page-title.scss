@@ -2,14 +2,32 @@
     width: fit-content;
     height: 250px;
     margin-top: 27px;
+    @include sp {
+        height: 100px;
+    }
     &__inner {
         margin-left: calc((100vw - #{map-get($inner-width, "pc")}) / 2);
         padding: 79px 155px 0 0;
+        @include tab {
+            margin-left: calc((100vw - #{map-get($inner-width, "tab")}) / 2);
+        }
+        @include sp {
+            margin-left: calc((100vw - #{map-get($inner-width, "sp")}) / 2);
+            padding: 30px 70px 0 0;
+        }
     }
     &__title {
         padding: 0 70px 20px 0;
         border-bottom: 1px solid #2e200e;
         margin-bottom: 10px;
         display: inline-block;
+        @include sp {
+            padding: 0 15px 5px 0;
+            margin-bottom: 5px;
+        }
+    }
+    &__subTitle {
+        font-size: 13px;
+        line-height: calc(17 / 13);
     }
 }

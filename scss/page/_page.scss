@@ -6,22 +6,10 @@
         }
     }
 
-    h3,
-    &__sectionNote,
-    .wp-block-columns,
-    &__link {
-        width: 1000px;
-        @include tab {
-            width: 90%;
-        }
-        @include sp {
-            width: 100%;
-        }
-    }
-
     color: $accent-color;
     letter-spacing: 0.01em;
-    &__sectionTitleArea {
+    &__sectionTitleArea,
+    .ewd-ufaq-faq-category-title {
         margin: 90px 0 11px;
         position: relative;
         &::before {
@@ -42,7 +30,8 @@
             @include sectionExplain;
         }
     }
-    &__sectionTitle {
+    &__sectionTitle,
+    .ewd-ufaq-faq-category-title > h3 {
         background-color: #fff;
         width: fit-content;
         padding: 10px 65px 0;
@@ -77,6 +66,9 @@
     }
     .button {
         margin-top: 50px;
+        @include sp {
+            margin-top: 21px;
+        }
     }
     &__link {
         color: #005dff;
@@ -143,6 +135,19 @@
 // menuページ
 .page-id-9 {
     .page {
+        h3,
+        &__sectionNote,
+        .wp-block-columns,
+        &__link {
+            width: 1000px;
+            @include tab {
+                width: 90%;
+            }
+            @include sp {
+                width: 100%;
+            }
+        }
+
         &__sectionTitleArea {
             margin-top: 60px;
         }
@@ -151,10 +156,65 @@
 
 // Q&Aページ
 .page-id-31 {
-    .ewd-ufaq-post-margin {
-        pointer-events: none;
-    }
+    letter-spacing: 0.01em;
     .ewd-ufaq-post-margin-symbol {
         display: none;
+    }
+    .ewd-ufaq-faq-category-title {
+        & > h3::before {
+            content: "";
+        }
+    }
+    .ewd-ufaq-faq-title,
+    .ewd-ufaq-faq-body {
+        padding-left: 65px;
+        position: relative;
+        @include sp {
+            padding-left: 48px;
+        }
+        &::before {
+            content: "";
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 57px;
+            height: 48px;
+            position: absolute;
+            left: 0;
+            top: -6px;
+            @include sp {
+                width: 40px;
+                height: 34px;
+                top: -1px;
+            }
+        }
+    }
+    .ewd-ufaq-faq-title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: calc(27 / 20);
+        margin-top: 52px;
+        @include sp {
+            font-size: 16px;
+            line-height: calc(21 / 16);
+            margin-top: 34px;
+        }
+        &::before {
+            background-image: url(../wp-content/themes/acro/images/qa/question.png);
+        }
+    }
+    .ewd-ufaq-faq-body {
+        margin-top: 38px;
+        @include sp {
+            font-size: 13px;
+            line-height: calc(18 / 13);
+            margin-top: 17px;
+        }
+        &::before {
+            background-image: url(../wp-content/themes/acro/images/qa/answer.png);
+        }
+    }
+    .button {
+        z-index: 5;
+        position: relative;
     }
 }

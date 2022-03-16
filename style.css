@@ -1047,6 +1047,57 @@ section {
   }
 }
 
+.pageTitle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 250px;
+  margin-top: 27px;
+}
+
+@media screen and (max-width: 598px) {
+  .pageTitle {
+    height: 100px;
+  }
+}
+
+.pageTitle__inner {
+  margin-left: calc((100vw - 1200px) / 2);
+  padding: 79px 155px 0 0;
+}
+
+@media screen and (max-width: 1260px) {
+  .pageTitle__inner {
+    margin-left: calc((100vw - 90%) / 2);
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .pageTitle__inner {
+    margin-left: calc((100vw - calc(100vw - 40px)) / 2);
+    padding: 30px 70px 0 0;
+  }
+}
+
+.pageTitle__title {
+  padding: 0 70px 20px 0;
+  border-bottom: 1px solid #2e200e;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 598px) {
+  .pageTitle__title {
+    padding: 0 15px 5px 0;
+    margin-bottom: 5px;
+  }
+}
+
+.pageTitle__subTitle {
+  font-size: 13px;
+  line-height: calc(17 / 13);
+}
+
 .fv {
   position: relative;
 }
@@ -2040,18 +2091,22 @@ section {
 
 .page {
   color: #5d3c13;
+  letter-spacing: 0.01em;
 }
 
-.page__sectionTitleArea {
+.page__sectionTitleArea,
+.page .ewd-ufaq-faq-category-title {
   margin: 90px 0 11px;
   position: relative;
 }
 
-.page__sectionTitleArea::before {
+.page__sectionTitleArea::before,
+.page .ewd-ufaq-faq-category-title::before {
   content: "";
   background-image: url(../wp-content/themes/acro/images/title-deco.png);
   background-size: contain;
-  background-repeat: repeat;
+  background-repeat: repeat-x;
+  background-position: bottom;
   width: 100%;
   height: 25px;
   position: absolute;
@@ -2060,7 +2115,20 @@ section {
   z-index: -1;
 }
 
-.page__sectionTitle {
+.page__sectionTitleArea + p,
+.page .ewd-ufaq-faq-category-title + p {
+  text-align: center;
+}
+
+@media screen and (max-width: 1260px) {
+  .page__sectionTitleArea + p,
+  .page .ewd-ufaq-faq-category-title + p {
+    text-align: left;
+  }
+}
+
+.page__sectionTitle,
+.page .ewd-ufaq-faq-category-title > h3 {
   background-color: #fff;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -2069,32 +2137,84 @@ section {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 598px) {
+  .page__sectionTitle,
+  .page .ewd-ufaq-faq-category-title > h3 {
+    padding: 0 25px;
+  }
+}
+
 .page__sectionTitleNote {
   font-family: "Hiragino Mincho ProN", sans-serif;
   font-size: 12px;
   line-height: calc(16 / 12);
   text-align: center;
+  margin-bottom: 10px;
   display: block;
 }
 
-.page__note {
+.page__sectionTitleNote + p {
+  text-align: center;
+}
+
+@media screen and (max-width: 1260px) {
+  .page__sectionTitleNote + p {
+    text-align: left;
+  }
+}
+
+.page__sectionNote {
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  margin: 25px auto 40px;
+  display: block;
+}
+
+.page__itemNote {
   font-size: 12px;
   line-height: calc(16 / 12);
 }
 
 .page__button {
-  margin: 0 0 0 auto;
+  margin: 50px 0 0 auto;
+}
+
+.page .button {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 598px) {
+  .page .button {
+    margin-top: 21px;
+  }
+}
+
+.page__link {
+  color: #005dff;
+  text-decoration: underline;
+  margin: 0 auto;
+  display: block;
 }
 
 .page h3 {
   font-size: 20px;
   line-height: calc(27 / 20);
-  width: 1000px;
+  padding-left: 1em;
   margin: 12px auto 0.25em;
+  position: relative;
+}
+
+@media screen and (max-width: 598px) {
+  .page h3 {
+    font-size: 16px;
+  }
 }
 
 .page h3::before {
   content: "・";
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .page td {
@@ -2103,19 +2223,19 @@ section {
 }
 
 .page .wp-block-columns {
-  width: 1000px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
 }
 
-.page .wp-block-columns p,
-.page .wp-block-columns .page__note {
-  padding-left: 0.6em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+@media screen and (max-width: 1260px) {
+  .page .wp-block-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .page .wp-block-column {
@@ -2127,11 +2247,33 @@ section {
           flex-grow: 0 !important;
   -ms-flex-preferred-size: unset !important;
       flex-basis: unset !important;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1260px) {
+  .page .wp-block-column:nth-of-type(even) {
+    margin-top: 5px;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
+
+.page .wp-block-column p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .page .wp-block-image {
-  width: 100%;
-  margin: 65px 0 0;
+  width: 100vw;
+  margin: 65px 0 0 calc(50% - 50vw);
+}
+
+@media screen and (max-width: 598px) {
+  .page .wp-block-image {
+    height: 100px;
+  }
 }
 
 .page .wp-block-image img {
@@ -2140,16 +2282,113 @@ section {
   vertical-align: bottom;
 }
 
+.page-id-9 .page h3, .page-id-9 .page__sectionNote,
+.page-id-9 .page .wp-block-columns, .page-id-9 .page__link {
+  width: 1000px;
+}
+
+@media screen and (max-width: 1260px) {
+  .page-id-9 .page h3, .page-id-9 .page__sectionNote,
+  .page-id-9 .page .wp-block-columns, .page-id-9 .page__link {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-9 .page h3, .page-id-9 .page__sectionNote,
+  .page-id-9 .page .wp-block-columns, .page-id-9 .page__link {
+    width: 100%;
+  }
+}
+
 .page-id-9 .page__sectionTitleArea {
   margin-top: 60px;
 }
 
-.page-id-31 .ewd-ufaq-post-margin {
-  pointer-events: none;
+.page-id-31 {
+  letter-spacing: 0.01em;
 }
 
 .page-id-31 .ewd-ufaq-post-margin-symbol {
   display: none;
+}
+
+.page-id-31 .ewd-ufaq-faq-category-title > h3::before {
+  content: "";
+}
+
+.page-id-31 .ewd-ufaq-faq-title,
+.page-id-31 .ewd-ufaq-faq-body {
+  padding-left: 65px;
+  position: relative;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-31 .ewd-ufaq-faq-title,
+  .page-id-31 .ewd-ufaq-faq-body {
+    padding-left: 48px;
+  }
+}
+
+.page-id-31 .ewd-ufaq-faq-title::before,
+.page-id-31 .ewd-ufaq-faq-body::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 57px;
+  height: 48px;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-31 .ewd-ufaq-faq-title::before,
+  .page-id-31 .ewd-ufaq-faq-body::before {
+    width: 40px;
+    height: 34px;
+    top: -1px;
+  }
+}
+
+.page-id-31 .ewd-ufaq-faq-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: calc(27 / 20);
+  margin-top: 52px;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-31 .ewd-ufaq-faq-title {
+    font-size: 16px;
+    line-height: calc(21 / 16);
+    margin-top: 34px;
+  }
+}
+
+.page-id-31 .ewd-ufaq-faq-title::before {
+  background-image: url(../wp-content/themes/acro/images/qa/question.png);
+}
+
+.page-id-31 .ewd-ufaq-faq-body {
+  margin-top: 38px;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-31 .ewd-ufaq-faq-body {
+    font-size: 13px;
+    line-height: calc(18 / 13);
+    margin-top: 17px;
+  }
+}
+
+.page-id-31 .ewd-ufaq-faq-body::before {
+  background-image: url(../wp-content/themes/acro/images/qa/answer.png);
+}
+
+.page-id-31 .button {
+  z-index: 5;
+  position: relative;
 }
 
 .pageTop {
