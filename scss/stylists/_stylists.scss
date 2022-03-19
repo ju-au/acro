@@ -1,0 +1,117 @@
+.stylists {
+    &__cardArea {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__card {
+        width: 50%;
+        min-width: 500px;
+        min-height: 427px;
+        display: flex;
+        @include tab {
+            margin: 0 auto;
+            width: 600px;
+        }
+        @include sp {
+            min-width: unset;
+            min-height: 238px;
+        }
+        &:nth-of-type(4n + 1) .stylists__textArea,
+        &:nth-of-type(4n) .stylists__textArea {
+            background-image: url(../wp-content/themes/acro/images/stylists/stylists-bg1.png);
+        }
+        &:nth-of-type(4n + 2) .stylists__textArea,
+        &:nth-of-type(4n + 3) .stylists__textArea {
+            background-image: url(../wp-content/themes/acro/images/stylists/stylists-bg2.png);
+        }
+        &:nth-of-type(2n + 1) .stylists__textArea {
+            @include tab {
+                background-image: url(../wp-content/themes/acro/images/stylists/stylists-bg1.png);
+            }
+        }
+        &:nth-of-type(2n) .stylists__textArea {
+            @include tab {
+                background-image: url(../wp-content/themes/acro/images/stylists/stylists-bg2.png);
+            }
+        }
+    }
+    &__img {
+        height: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__textArea {
+        background-repeat: repeat;
+        letter-spacing: 0.01em;
+        width: 246px;
+        padding: 56px 35px 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include sp {
+            width: calc-percent(137, 335);
+            min-width: 137px;
+            padding: 30px 18px 19px;
+        }
+    }
+    &__jobTitle {
+        font-family: "Hiragino Mincho ProN", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: calc(27 / 20);
+        border-bottom: 1px solid #2e200e;
+        padding: 0 24px 8px 80px;
+        margin: 0 0 44px calc(-35px - 52px);
+        @include sp {
+            font-size: 12px;
+            line-height: calc(16 / 12);
+            padding: 0 10px 5px 47px;
+            margin: 0 0 24px calc(-18px - 30px);
+        }
+    }
+    &__name {
+        font-family: "Hiragino Mincho ProN", sans-serif;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: calc(32 / 24);
+        margin-bottom: 3px;
+        @include sp {
+            font-size: 14px;
+            line-height: calc(19 / 14);
+            margin-bottom: 1px;
+        }
+    }
+    &__enName {
+        margin-bottom: 55px;
+        display: inline-block;
+        @include sp {
+            font-size: 12px;
+            line-height: calc(16 / 12);
+            margin-bottom: 16px;
+        }
+    }
+    &__comment {
+        margin-bottom: 77px;
+        @include sp {
+            font-size: 13px;
+            line-height: calc(15 / 13);
+            margin-bottom: 38px;
+        }
+    }
+    &__link {
+        text-align: right;
+        background: url(../wp-content/themes/acro/images/stylists/link-arrow.png) right bottom/ contain no-repeat;
+        width: 100%;
+        padding: 0 46px 8px 0;
+        @include sp {
+            font-size: 12px;
+            padding: 0 26px 4px 0;
+        }
+    }
+}
