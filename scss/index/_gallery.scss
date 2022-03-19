@@ -5,12 +5,6 @@
             margin-bottom: 0;
         }
     }
-    &__title {
-        margin-bottom: 28px;
-        @include sp {
-            margin-bottom: 18px;
-        }
-    }
     #sbi_images {
         position: relative;
         @include tab {

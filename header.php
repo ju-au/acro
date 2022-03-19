@@ -7,6 +7,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="<?php bloginfo('description'); ?>">
+    <link rel="stylesheet" href="https://use.typekit.net/gdm0hfh.css">
     <?php wp_head(); ?>
 </head>
 

@@ -25,7 +25,7 @@
 
 <section class="topCampaign" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/index/bg-pattern1.png);">
     <div class="inner topCampaign__inner">
-        <h2 class="sectionTitle topCampaign__title"><img src="<?php echo get_template_directory_uri(); ?>/images/index/title-topic.png" alt=""></h2>
+        <h2 class="sectionTitle topCampaign__title">Topic</h2>
         <div class="topCampaign__card-wrapper" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/index/bg-pattern2.png);">
             <?php
             $args = array(
@@ -67,56 +67,40 @@
 
 <section class="topMenu">
     <div class="inner topMenu__inner">
-        <h2 class="sectionTitle topMenu__title" lang="en">MENU</h2>
+        <h2 class="sectionTitle topMenu__title" lang="en">Pick up menu</h2>
         <ul class="topMenu__cards">
-            <li class="topMenu__card">
-                <figure class="topMenu__img">
-                    <img src="" alt="">
-                </figure>
-                <div class="topMenu__textArea">
-                    <h3 class="topMenu__cardTitle topMenu__cardTitle--color"><span class="topMenu__cardTitle--en">Color&nbsp;</span>カラー</h3>
-                    <p class="topMenu__body"><?php echo get_post_meta(60, 'カラー説明文', true); ?></p>
-                    <a class="topMenu__link" href="<?php echo esc_url(home_url('/color')); ?>">
-                        <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'カラー料金', true) . "~"; ?></span></p>
-                    </a>
-                </div>
-            </li>
-            <li class="topMenu__card">
-                <figure class="topMenu__img">
-                    <img src="" alt="">
-                </figure>
-                <div class="topMenu__textArea">
-                    <h3 class="topMenu__cardTitle topMenu__cardTitle--perm"><span class="topMenu__cardTitle--en">Perm&nbsp;</span>パーマ</h3>
-                    <p class="topMenu__body"><?php echo get_post_meta(60, 'パーマ説明文', true); ?></p>
-                    <a href="<?php echo esc_url(home_url('/perm')); ?>" class="topMenu__link">
-                        <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'パーマ料金', true) . "~"; ?></p></span>
-                    </a>
-                </div>
-            </li>
-            <li class="topMenu__card">
-                <figure class="topMenu__img">
-                    <img src="" alt="">
-                </figure>
-                <div class="topMenu__textArea">
-                    <h3 class="topMenu__cardTitle topMenu__cardTitle--straightening"><span class="topMenu__cardTitle--en">Hair Straightening&nbsp;</span><span>縮毛矯正</span></h3>
-                    <p class="topMenu__body"><?php echo get_post_meta(60, '縮毛矯正説明文', true); ?></p>
-                    <a href="<?php echo esc_url(home_url('/straightening')); ?>" class="topMenu__link">
-                        <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, '縮毛矯正料金', true) . "~"; ?></p></span>
-                    </a>
-                </div>
-            </li>
-            <li class="topMenu__card">
-                <figure class="topMenu__img">
-                    <img src="" alt="">
-                </figure>
-                <div class="topMenu__textArea">
-                    <h3 class="topMenu__cardTitle topMenu__cardTitle--treatment"><span class="topMenu__cardTitle--en">Treatment&nbsp;</span>トリートメント</h3>
-                    <p class="topMenu__body"><?php echo get_post_meta(60, 'トリートメント説明文', true); ?></p>
-                    <a href="<?php echo esc_url(home_url('/treatment')); ?>" class="topMenu__link">
-                        <p>￥<span class="topMenu__price"><?php echo get_post_meta(60, 'トリートメント料金', true) . '~'; ?></p></span>
-                    </a>
-                </div>
-            </li>
+            <?php
+            $args = [
+                'post_type' => 'service',
+                'post_status' => 'publish',
+                'meta_key' => 'トップページ：表示順',
+                'orderby' => ['meta_value_num' => 'ASC', 'date' => 'DECS'],
+            ];
+            $sub_query = new WP_Query($args);
+            if ($sub_query->have_posts()) :
+                while ($sub_query->have_posts()) :
+                    $sub_query->the_post();
+                    $img_id = get_post_meta(get_the_ID(), 'トップページ：画像', true);
+                    $img_url = wp_get_attachment_image_src($img_id, 'full');
+            ?>
+
+                    <li class="topMenu__card">
+                        <figure class="topMenu__img">
+                            <img src="<?php echo $img_url[0]; ?>" alt="">
+                        </figure>
+                        <div class="topMenu__textArea">
+                            <h3 class="topMenu__cardTitle"><span class="topMenu__cardTitle--en"><?php the_title(); ?></span>&nbsp;&nbsp;<?php echo get_post_meta(get_the_id(), 'pageSubtitle', true); ?></h3>
+                            <p class="topMenu__body"><?php echo get_post_meta(get_the_ID(), 'トップページ：説明文', true); ?></p>
+                            <a class="topMenu__link" href="<?php echo get_permalink(); ?>">
+                                <p><?php echo get_post_meta(get_the_id(), 'トップページ：料金', true); ?></p>
+                            </a>
+                        </div>
+                    </li>
+
+            <?php endwhile;
+            endif;
+            wp_reset_postdata(); ?>
+
         </ul>
     </div>
     <!-- /.topMenu__inner -->
@@ -127,7 +111,7 @@
 
 <section class="topStylist">
     <div class="inner topStylist__inner">
-        <h2 class="sectionTitle topStylist__title">STYLIST</h2>
+        <h2 class="sectionTitle topStylist__title">Stylist</h2>
         <dl class="topStylist__cards">
             <?php
             $users = get_users(array(
@@ -158,7 +142,7 @@
 
 <section class="topGallery">
     <div class="inner topGallery__inner">
-        <h2 class="sectionTitle topGallery__title">GALLERY</h2>
+        <h2 class="sectionTitle topGallery__title">Gallery</h2>
 
         <?php echo do_shortcode('[instagram-feed num=3 cols=3 imageres=small showheader=false showfollow=false showbutton=false imagepadding=15]'); ?>
     </div>

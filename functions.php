@@ -75,6 +75,17 @@ function add_thanks_page()
 add_action('wp_footer', 'add_thanks_page');
 
 
+// 新規投稿時に投稿表示順の初期値を挿入する
+function my_hook($post_id, $post, $update)
+{
+    if ($update == false) { // 新規投稿のみ
+        if (get_post_meta($post_id, 'トップページ：表示順', true) == '') {
+            update_post_meta($post_id, 'トップページ：表示順',  9999);
+        }
+    }
+}
+add_action('save_post', 'my_hook', 10, 3);
+
 
 
 /** 以下ショートコード */

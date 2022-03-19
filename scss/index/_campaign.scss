@@ -1,19 +1,18 @@
 .topCampaign {
     background: repeat;
-    padding-bottom: 31px;
+    padding: 59px 0 31px;
     position: relative;
     // z-index: -1;
-    &__title,
     &__card-wrapper,
     &__button {
         position: relative;
         z-index: 2;
     }
     &__title {
-        margin-bottom: 36px;
-        @include sp {
-            margin-bottom: 18px;
-        }
+        position: absolute;
+        top: -86px;
+        transform: translateX(-50%);
+        left: 50%;
     }
     &__card-wrapper {
         width: 602px;
@@ -114,10 +113,16 @@
         width: 576px;
         bottom: 0;
         left: 0;
+        @include sp {
+            width: 44%;
+        }
     }
     &__deco2 {
         width: 517px;
         top: 0;
         right: 0;
+        @include sp {
+            width: 50%;
+        }
     }
 }

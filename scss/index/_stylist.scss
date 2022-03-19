@@ -36,12 +36,6 @@
             }
         }
     }
-    &__title {
-        margin-bottom: 28px;
-        @include sp {
-            margin-bottom: 18px;
-        }
-    }
     &__cards {
         width: 1000px;
         margin: 0 auto 36px;

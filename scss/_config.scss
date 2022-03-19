@@ -128,16 +128,13 @@ section {
 }
 
 .sectionTitle {
-  font-family: "Hiragino Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: calc(20 / 18);
+  font-family: "delaney", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
   text-align: center;
-  width: fit-content;
-  margin: 0 auto;
-  display: flex;
+  margin-bottom: 17px;
   @include sp {
-    font-size: 14px;
+    font-size: 40px;
   }
 }
 
@@ -220,6 +217,7 @@ section {
 .inner {
   width: map-get($inner-width, "pc");
   margin: 0 auto;
+  position: relative;
   @include tab {
     width: map-get($inner-width, "tab");
   }
