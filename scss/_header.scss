@@ -18,6 +18,7 @@
         align-items: start;
     }
     &__title {
+        letter-spacing: 0;
         margin-bottom: 5px;
         word-break: keep-all;
         @include sp {
@@ -78,6 +79,7 @@
             font-size: 15px;
             color: #fff;
             line-height: calc(20 / 15);
+            letter-spacing: 0;
             background-color: #91734d;
             width: 210px;
             height: 27px;
@@ -108,6 +110,7 @@
         }
     }
     &__notice {
+        letter-spacing: 0;
         text-align: right;
         margin-bottom: 5px;
         padding-left: 37px;
@@ -120,11 +123,6 @@
             font-size: 14px;
         }
     }
-    &__opening,
-    &__closure {
-        letter-spacing: 0.1em;
-    }
-
     &__navItems {
         display: flex;
         justify-content: end;
@@ -151,7 +149,6 @@
             font-family: "Hiragino Mincho ProN", sans-serif;
             font-weight: 300;
             font-size: calc-vw(20, 1540);
-            letter-spacing: 0.1em;
             line-height: calc(27 / 20);
             @include xl {
                 font-size: 20px;

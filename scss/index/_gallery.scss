@@ -39,14 +39,14 @@
         &::before {
             top: 0;
             right: 0;
-            border-top: 1px solid #2e200e;
-            border-right: 1px solid #2e200e;
+            border-top: 1px solid $letter-color;
+            border-right: 1px solid $letter-color;
         }
         &::after {
             bottom: 0;
             left: 0;
-            border-bottom: 1px solid #2e200e;
-            border-left: 1px solid #2e200e;
+            border-bottom: 1px solid $letter-color;
+            border-left: 1px solid $letter-color;
         }
     }
     .sbi_item {

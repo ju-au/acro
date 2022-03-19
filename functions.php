@@ -21,26 +21,20 @@ function output_inline_style()
 add_action('wp_enqueue_scripts', 'output_inline_style');
 
 
-/**
- * 以下をサポート
- * 	title-tag
- */
+/**title-tag をサポート */
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
 });
 
 
-/**
- * 以下をサポート
- * 	投稿のサムネイル
- */
+/**	投稿のサムネイルをサポート */
 add_action('init', function () {
     add_theme_support('post-thumbnails');
 });
 
 // カスタム投稿タイプ
 add_action('init', function () {
-    register_post_type('skill', [
+    register_post_type('service', [
         'public' => true,
         'label' => '技術ページ',
         'show_in_rest' => true,
@@ -51,12 +45,14 @@ add_action('init', function () {
     ]);
 });
 
+
 // ユーザープロフィールの項目のカスタマイズ
 function my_user_meta($wb)
 {
     //項目の追加
     $wb['main-creator'] = 'トップページに表示（半角「1」を入力で表示）';
     $wb['reserve-creator'] = '予約ページに表示（半角「1」を入力で表示）';
+    $wb['stylists-creator'] = 'スタッフ紹介ページに表示（半角「1」を入力で表示）';
     $wb['comment'] = '一言コメント';
     $wb['job-title'] = '職種';
 
@@ -79,7 +75,15 @@ function add_thanks_page()
 add_action('wp_footer', 'add_thanks_page');
 
 
-// 投稿画面から他のページの内容を、the_content()で取り込む
+
+
+/** 以下ショートコード */
+
+/**
+ * 投稿画面から他のページの内容を、the_content()で取り込む
+ * 
+ * @param str $pageSlug 取り込みたい投稿のスラッグ
+ */
 function get_contents_from_page($pageSlug)
 {
     $args = array(
@@ -99,29 +103,93 @@ function get_contents_from_page($pageSlug)
 add_shortcode('get_contents_from_page', 'get_contents_from_page');
 
 
-// page.phpの装飾付きタイトル
+/**
+ * page.phpの装飾付きタイトル
+ * 
+ * @param str $title タイトル
+ * @param str $note タイトル下の注釈
+ * @return HTML
+ */
 function deco_title($attr)
 {
-    $title_area = '<div class="page__sectionTitleArea">
-    <h2 class="page__sectionTitle">' . $attr['title'] . '</h2></div>';
+    $title_area = '<div class="decoTitle">
+    <h2 class="decoTitle__title">' . $attr['title'] . '</h2></div>';
     if (!empty($attr['note'])) {
-        $title_area .= '<span class="page__sectionTitleNote">' . $attr['note'] . '</span>';
+        $title_area .= '<span class="decoTitle__note">' . $attr['note'] . '</span>';
     }
     return $title_area;
 }
 add_shortcode('deco_title', 'deco_title');
 
 
-// page.phpの各アイテムの注釈
+/** page.phpの各アイテムの注釈 */
+
 function item_note($attr)
 {
     return '<span class="page__itemNote">' . $attr[0] . '</span>';
 }
 add_shortcode('item_note', 'item_note');
 
-// page.phpのセクション一番下の注釈
+
+/** page.phpのセクション一番下の注釈 */
 function section_note($attr)
 {
     return '<span class="page__sectionNote">' . $attr[0] . '</span>';
 }
 add_shortcode('section_note', 'section_note');
+
+
+/** 技術ページの「アクロのこだわり」ボタン */
+function identity_button($attr)
+{
+    return '<a class="button service__button" href="../identity">アクロのこだわり</a>';
+}
+add_shortcode('identity_button', 'identity_button');
+
+
+/** 技術ページのFlowのタイトルを表示する */
+function flow_title($attr)
+{
+    return '<h2 class="flow__title">Flow</h2>';
+}
+add_shortcode('flow_title', 'flow_title');
+
+
+/**
+ * 技術ページのFlowを表示する
+ * 
+ * 画像はカスタムフィールドで指定（プラグイン「Smart Custom Field」を使用）
+ * 
+ * @param int $step  ステップの番号
+ * @param str $title ステップのタイトル
+ * @param str $body ステップの説明文
+ * @param bool $arrow 下向きの矢印の有無  
+ */
+function step($attr)
+{
+    $page_id = get_the_ID();
+    $img = 'step' . $attr['step'] . '-img';
+    $img_id = get_post_meta($page_id, $img, true);
+    $step_class = ($attr['arrow'] === 'true') ? 'step arrow' : 'step';
+    $img_url = wp_get_attachment_url($img_id, 'medium', true);
+    $step =
+        '<div class="' . $step_class . '">
+            <div class="step__titleArea">
+                <p class="step__number"><span>STEP</span>0' . $attr['step'] . '</p>
+                <h3 class="step__title">' . $attr['title'] . '</h3>
+            </div>';
+    if (!empty($img_url)) {
+        $step .=
+            '<figure class="step__img">
+                <img src="' . $img_url . '" alt="">
+            </figure>';
+    }
+    $step .=
+        '<p class="step__body">' . $attr['body'] . '</p>
+        </div>';
+    return $step;
+}
+add_shortcode('step', 'step');
+
+
+/** 以上ショートコード */

@@ -5,6 +5,10 @@
     width: 100vw;
     min-height: 337px;
     padding: 82px 0 1em;
+    margin-top: 32px;
+    @include sp {
+        margin-top: 10px;
+    }
     &__title,
     &__subtitle,
     &__message {
@@ -12,7 +16,7 @@
     }
     &__title {
         padding: 0 70px 20px 0;
-        border-bottom: 1px solid #2e200e;
+        border-bottom: 1px solid $letter-color;
         margin-bottom: 10px;
         display: inline-block;
     }

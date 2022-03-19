@@ -1,56 +1,5 @@
 .page {
-    @mixin sectionExplain {
-        text-align: center;
-        @include tab {
-            text-align: left;
-        }
-    }
-
-    color: $accent-color;
     letter-spacing: 0.01em;
-    &__sectionTitleArea,
-    .ewd-ufaq-faq-category-title {
-        margin: 90px 0 11px;
-        position: relative;
-        &::before {
-            content: "";
-            background-image: url(../wp-content/themes/acro/images/title-deco.png);
-            background-size: contain;
-            background-repeat: repeat-x;
-            background-position: bottom;
-            width: 100%;
-            height: 25px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        & + p {
-            @include sectionExplain;
-        }
-    }
-    &__sectionTitle,
-    .ewd-ufaq-faq-category-title > h3 {
-        background-color: #fff;
-        width: fit-content;
-        padding: 10px 65px 0;
-        margin: 0 auto;
-        @include sp {
-            padding: 0 25px;
-        }
-    }
-    &__sectionTitleNote {
-        font-family: "Hiragino Mincho ProN", sans-serif;
-        font-size: 12px;
-        line-height: calc(16 / 12);
-        text-align: center;
-        margin-bottom: 10px;
-        display: block;
-        & + p {
-            @include sectionExplain;
-        }
-    }
     &__sectionNote {
         font-size: 12px;
         line-height: calc(16 / 12);
@@ -154,9 +103,30 @@
     }
 }
 
-// Q&Aページ
-.page-id-31 {
-    letter-spacing: 0.01em;
+// identityページ
+.page-id-19 {
+    .inner > h2 {
+        font-family: "Hiragino Mincho ProN", sans-serif;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: calc(48 / 32);
+        margin: 96px 0 -54px;
+    }
+    .wp-block-column {
+        flex-basis: 0 !important;
+        flex-grow: 1 !important;
+    }
+    .wp-block-image {
+        margin: 0;
+    }
+    .decoTitle {
+        margin-bottom: 36px;
+    }
+}
+
+// Q&Aページ,技術ページのQ&A
+.page-id-31,
+.single-service {
     .ewd-ufaq-post-margin-symbol {
         display: none;
     }
@@ -193,6 +163,7 @@
         font-weight: bold;
         line-height: calc(27 / 20);
         margin-top: 52px;
+        pointer-events: none;
         @include sp {
             font-size: 16px;
             line-height: calc(21 / 16);
@@ -214,7 +185,8 @@
         }
     }
     .button {
-        z-index: 5;
+        margin-top: 30px;
         position: relative;
+        z-index: 5;
     }
 }

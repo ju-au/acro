@@ -7,10 +7,8 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="<?php bloginfo('description'); ?>">
-
     <?php wp_head(); ?>
 </head>
-
 
 <body <?php body_class(); ?>>
     <header class="header">

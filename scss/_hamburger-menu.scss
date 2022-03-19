@@ -29,7 +29,7 @@
             content: "";
             width: map-get($burger-btn-width, "tab");
             height: 4px;
-            background-color: #2e200e;
+            background-color: $letter-color;
             position: absolute;
             transition-duration: 0.3s;
             z-index: 115;

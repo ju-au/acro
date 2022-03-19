@@ -15,14 +15,6 @@
         <section class="flow">
             <div class="inner">
                 <?php
-                $page_id = get_the_ID();
-                $keys = array();
-                for ($i = 1; $i <= 6; $i++) :
-                    $title = 'step' . $i . 'title';
-                    $img = 'step' . $i . 'img';
-                    $img_id = get_post_meta($page_id, $img, true);
-                    $body = 'step' . $i . 'body';
-                    $is_title = get_post_meta($page_id, $title, true);
                     if ($is_title) :
                 ?>
                         <div class="flow__step">

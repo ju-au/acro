@@ -12,6 +12,9 @@ gallery();
 import form from './js/form.js';
 form();
 
+import qaTitle from './js/qaTitle.js';
+qaTitle();
+
 import reserveCalender from './js/reserveCalender.js';
 reserveCalender();
 

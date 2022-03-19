@@ -4,6 +4,7 @@
     margin-top: 27px;
     @include sp {
         height: 100px;
+        margin-top: 10px;
     }
     &__inner {
         margin-left: calc((100vw - #{map-get($inner-width, "pc")}) / 2);
@@ -18,7 +19,7 @@
     }
     &__title {
         padding: 0 70px 20px 0;
-        border-bottom: 1px solid #2e200e;
+        border-bottom: 1px solid $letter-color;
         margin-bottom: 10px;
         display: inline-block;
         @include sp {

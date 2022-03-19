@@ -2,6 +2,7 @@
 $primary-color: #f7e9d6;
 $secondary-color: #fff6ea;
 $accent-color: #5d3c13;
+$letter-color: #2e200e;
 // $theme-color: #b0881e;
 
 $header-heights: (
@@ -32,6 +33,7 @@ $break-points: (
   "tab": 1260px,
   "xl": 1500px,
 );
+
 @mixin sp {
   @media screen and (max-width: #{map-get($break-points, "sp")}) {
     @content;
@@ -55,19 +57,26 @@ $break-points: (
   align-items: center;
 }
 
-// 画像等の縦横比固定用
-// ::beforeか::afterの中で使用してください
-// @contentでpadding-topを指定してください
-//   縦:横 1:1=100%, 4:3=75%, 16:9=56.25%
-@mixin aspect-ratio {
-  content: "";
+//   横比をpadding-topで固定する
+//     親要素用
+@mixin aspect-ratio-parent {
+  position: relative;
+  @content;
+}
+//     子要素用
+@mixin aspect-ratio-child {
+  position: absolute;
   width: 100%;
   height: 100%;
-  display: block;
-  position: absolute;
   top: 0;
   left: 0;
-  @content;
+}
+// 子要素のimageのサイズを親要素に合わせる
+@mixin img100 {
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @function calc-vw($content-width, $display-width: 1200) {
@@ -94,12 +103,20 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(21 / 16);
+  letter-spacing: 0.01em;
   font-style: normal;
+  color: $letter-color;
   width: 100vw;
   overflow-x: hidden;
   position: absolute;
   @include sp {
     font-size: 14px;
+  }
+}
+.home,
+.page {
+  body {
+    color: $accent-color;
   }
 }
 
@@ -121,6 +138,82 @@ section {
   display: flex;
   @include sp {
     font-size: 14px;
+  }
+}
+
+@mixin sectionNote {
+  text-align: center;
+  @include tab {
+    text-align: left;
+  }
+}
+.decoTitle,
+.ewd-ufaq-faq-category-title {
+  margin: 90px 0 11px;
+  position: relative;
+  @include sp {
+    margin-top: 60px;
+  }
+  &::before {
+    content: "";
+    background-image: url(../wp-content/themes/acro/images/title-deco.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    @include sp {
+      bottom: -25px;
+    }
+  }
+
+  & + p {
+    @include sectionNote;
+  }
+}
+.decoTitle + .wp-block-columns .wp-block-image {
+  background-color: #dbdbdb;
+  width: 100%;
+  @include aspect-ratio-parent {
+    padding-top: calc-percent(320, 560);
+  }
+  img {
+    object-fit: cover;
+    @include aspect-ratio-child;
+  }
+}
+.decoTitle__title,
+.ewd-ufaq-faq-category-title > h3 {
+  background-color: #fff;
+  width: fit-content;
+  padding: 10px 65px 0;
+  margin: 0 auto;
+  @include sp {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+  }
+}
+.decoTitle__note {
+  font-family: "Hiragino Mincho ProN", sans-serif;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+  & + p {
+    @include sectionNote;
+  }
+}
+.single-service {
+  .decoTitle::before,
+  .ewd-ufaq-faq-category-title::before {
+    background-image: url(../../wp-content/themes/acro/images/title-deco.png);
   }
 }
 
@@ -169,10 +262,10 @@ section {
     background: center/contain no-repeat url(./wp-content/themes/acro/images/button-scissors.png);
   }
 }
-
+.single-service,
 .author {
   .button::after {
-    background: center/cover no-repeat url(../../wp-content/themes/acro/images/button-scissors.png);
+    background: center/contain no-repeat url(../..//wp-content/themes/acro/images/button-scissors.png);
   }
 }
 
