@@ -4,9 +4,10 @@
     background-repeat: no-repeat;
     width: 100vw;
     min-height: 337px;
-    padding: 82px 0 1em;
+    padding: 56px 0 1em;
     margin-top: 32px;
     @include sp {
+        padding-top: 40px;
         margin-top: 10px;
     }
     &__title,
@@ -15,10 +16,16 @@
         text-shadow: 0 0 10px #fff;
     }
     &__title {
-        padding: 0 70px 20px 0;
+        font-family: "Delaney", sans-serif;
+        font-size: 50px;
+        font-weight: 600;
+        padding: 0 70px 2px 0;
         border-bottom: 1px solid $letter-color;
-        margin-bottom: 10px;
+        margin-bottom: 13px;
         display: inline-block;
+        @include sp {
+            font-size: 40px;
+        }
     }
     &__subtitle {
         margin-bottom: 15px;

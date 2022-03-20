@@ -59,7 +59,7 @@
                         border-style: solid;
                         border-width: 23px 40.5px 0 40.5px;
                         border-color: #eae5df transparent transparent transparent;
-                        top: calc(100% + 38px);
+                        top: calc(100% + 56px);
                         right: 50%;
                         transform: translate(50%, 0);
                     }
@@ -81,9 +81,7 @@
     }
     .wp-block-image {
         position: relative;
-        @include sp {
-            margin-bottom: 8px;
-        }
+        margin-bottom: 8px;
         &::after {
             content: "";
             background-color: $accent-color;
@@ -91,10 +89,10 @@
             height: 1px;
             position: absolute;
             right: 0;
-            bottom: -27px;
+            bottom: -35px;
             z-index: -1;
             @include sp {
-                bottom: -18px;
+                bottom: -26px;
             }
         }
 
@@ -103,9 +101,15 @@
             @include aspect-ratio-child;
         }
         + p {
+            font-family: "Delaney", sans-serif;
+            font-size: 40px;
+            font-weight: 600;
             background-color: #fff;
             width: fit-content;
             padding-right: 25px;
+            @include sp {
+                font-size: 26px;
+            }
         }
     }
 }
@@ -155,6 +159,9 @@
     }
 }
 .flow__title {
+    font-family: "Delaney", sans-serif;
+    font-size: 55px;
+    font-weight: 600;
     text-align: center;
     margin-top: 116px;
     position: relative;
@@ -165,12 +172,12 @@
         width: 113px;
         height: 55px;
         position: absolute;
-        top: -55px;
+        top: -45px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-38%);
     }
     & + .step {
-        margin-top: -10px;
+        margin-top: -33px;
         &::before {
             border-color: transparent transparent transparent transparent !important;
         }
