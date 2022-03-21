@@ -75,18 +75,6 @@ function add_thanks_page()
 add_action('wp_footer', 'add_thanks_page');
 
 
-// 新規投稿時に投稿表示順の初期値を挿入する
-function my_hook($post_id, $post, $update)
-{
-    if ($update == false) { // 新規投稿のみ
-        if (get_post_meta($post_id, 'トップページ：表示順', true) == '') {
-            update_post_meta($post_id, 'トップページ：表示順',  9999);
-        }
-    }
-}
-add_action('save_post', 'my_hook', 10, 3);
-
-
 
 /** 以下ショートコード */
 
@@ -201,6 +189,58 @@ function step($attr)
     return $step;
 }
 add_shortcode('step', 'step');
+
+
+/**
+ *  キャンペーンページの各キャンペーンのに表示する詳細 
+ * 
+ * @param str $one          アイテム1
+ * @param str $two          アイテム2（省略可）
+ * @param str $three        アイテム3（省略可）
+ * @param int $price_before 値引き前の値段（省略可） 
+ * @param int $price        値引き後の値段
+ * @param str $body         説明文
+ * @param str $note         注釈
+ */
+
+function campaign($attr)
+{
+    $set =
+        '<div class="set">
+        <div class="set__top">
+            <div class="set__items">
+                <p class="set__item">' . $attr['one'] . '</p>';
+    if (!empty($attr['two'])) {
+        $set .= '<p class="set__item">' . $attr['two'] . '</p>';
+    }
+    if (!empty($attr['three'])) {
+        $set .= '<p class="set__item">' . $attr['three'] . '</p>';
+    }
+    $set .=
+        '   </div>
+            <div class="set__priceArea is-hidden-sp">';
+    if (!empty($attr['price_before'])) {
+        $set .= '<p class="set__price--before">税込￥' . $attr['price_before'] . '⇒</p>';
+    }
+    $set .=
+        '       <p class="set__price">税込￥<span class="set__price--large">' . $attr['price'] . '</span></p>
+            </div>
+        </div>
+        <p class="set__body">' . $attr['body'] . '</p>
+        <p class="set__note">' . $attr['note'] . '</p>
+        <div class="set__priceArea is-shown-sp--flex">';
+    if (!empty($attr['price_before'])) {
+        $set .= '<p class="set__price--before">税込￥' . $attr['price_before'] . '⇒</p>';
+    }
+    $set .=
+        '       <p class="set__price">税込￥<span class="set__price--large">' . $attr['price'] . '</span></p>
+                </div>
+    
+    </div>';
+
+    return $set;
+}
+add_shortcode('campaign', 'campaign');
 
 
 /** 以上ショートコード */

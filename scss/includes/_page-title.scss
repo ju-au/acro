@@ -1,9 +1,9 @@
 .pageTitle {
     width: fit-content;
-    height: 250px;
+    min-height: 250px;
     margin-top: 27px;
     @include sp {
-        height: 100px;
+        min-height: 100px;
         margin-top: 10px;
     }
     &__inner {
@@ -14,16 +14,20 @@
         }
         @include sp {
             margin-left: calc((100vw - #{map-get($inner-width, "sp")}) / 2);
-            padding: 30px 70px 0 0;
+            padding: 27px 70px 30px 0;
         }
     }
     &__title {
-        padding: 0 70px 20px 0;
+        font-family: "Delaney", sans-serif;
+        font-size: 50px;
+        font-weight: 600;
+        padding: 0 70px 2px 0;
         border-bottom: 1px solid $letter-color;
-        margin-bottom: 10px;
+        margin-bottom: 13px;
         display: inline-block;
         @include sp {
-            padding: 0 15px 5px 0;
+            font-size: 35px;
+            padding-bottom: 0;
             margin-bottom: 5px;
         }
     }

@@ -30,19 +30,19 @@
             <?php
             $args = array(
                 'post_type' => 'post',
-                'category_name' => 'shown-on-top-page',
                 'posts_per_page' => 1,
-                'orderby' => array('date' => 'DES'),
+                'meta_key' => 'Topページに表示',
+                'meta_value' => '1',
             );
             $sub_query = new WP_Query($args);
             if ($sub_query->have_posts()) : while ($sub_query->have_posts()) : $sub_query->the_post();
             ?>
                     <div class="topCampaign__card">
-                        <div class="topCampaign__cardImg"><?php the_post_thumbnail('small', array('class' => 'topCampaign__cardImg')); ?></div>
+                        <figure class="topCampaign__cardImg"><?php the_post_thumbnail('small'); ?></figure>
                         <div class="topCampaign__textArea">
                             <div class="topCampaign__text-upper">
                                 <h3 class="topCampaign__cardTitle"><?php the_title(); ?></h3>
-                                <p class="topCampaign__cardBody"><?php echo mb_substr(get_the_excerpt(), 0, 100); ?></p>
+                                <p class="topCampaign__cardBody"><?php echo mb_substr(get_the_excerpt(), 0, 200); ?></p>
                             </div>
                             <!-- /.topCampaign__text-upper -->
                             <span class="topCampaign__cardDate"><?php echo $sub_query->post->キャンペーン期間; ?></span>

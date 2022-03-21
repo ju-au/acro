@@ -23,8 +23,14 @@ $burger-btn-height: (
 
 $inner-width: (
   "pc": 1200px,
-  "tab": 90%,
+  "tab": 90vw,
   "sp": calc(100vw - 40px),
+);
+
+$outer-width: (
+  "pc": calc((100vw - #{map-get($inner-width, pc)}) / 2),
+  "tab": calc((100vw - #{map-get($inner-width, tab)}) / 2),
+  "sp": calc((100vw - #{map-get($inner-width, sp)}) / 2),
 );
 
 // レスポンシブ対応
@@ -114,10 +120,9 @@ body {
   }
 }
 .home,
-.page {
-  body {
-    color: $accent-color;
-  }
+.page,
+.page-id-7 {
+  color: $accent-color;
 }
 
 section {
@@ -131,6 +136,7 @@ section {
   font-family: "delaney", sans-serif;
   font-size: 50px;
   font-weight: 600;
+  color: $accent-color;
   text-align: center;
   margin-bottom: 17px;
   @include sp {
@@ -186,7 +192,7 @@ section {
 .decoTitle__title,
 .ewd-ufaq-faq-category-title > h3 {
   font-family: "Hiragino Sans", sans-serif;
-  font-family: 22px;
+  font-size: 22px;
   font-weight: 500;
   background-color: #fff;
   width: fit-content;
@@ -286,9 +292,15 @@ section {
   }
 }
 .is-shown-sp {
-  display: none;
+  display: none !important;
   @include sp {
     display: block !important;
+  }
+}
+.is-shown-sp--flex {
+  display: none !important;
+  @include sp {
+    display: flex !important;
   }
 }
 .is-hidden-tab {
