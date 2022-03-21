@@ -1969,18 +1969,18 @@ section {
   }
 }
 
-.topGallery #sbi_images {
+#sbi_images {
   position: relative;
 }
 
 @media screen and (max-width: 1260px) {
-  .topGallery #sbi_images {
+  #sbi_images {
     padding: 5px !important;
   }
 }
 
 @media screen and (max-width: 598px) {
-  .topGallery #sbi_images {
+  #sbi_images {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1991,7 +1991,7 @@ section {
   }
 }
 
-.topGallery #sbi_images::before, .topGallery #sbi_images::after {
+#sbi_images::before, #sbi_images::after {
   content: "";
   width: 831px;
   height: 341px;
@@ -2000,27 +2000,27 @@ section {
 }
 
 @media screen and (max-width: 1260px) {
-  .topGallery #sbi_images::before, .topGallery #sbi_images::after {
+  #sbi_images::before, #sbi_images::after {
     width: 70%;
     height: 70%;
   }
 }
 
 @media screen and (max-width: 598px) {
-  .topGallery #sbi_images::before, .topGallery #sbi_images::after {
+  #sbi_images::before, #sbi_images::after {
     width: 66.66667vw;
     height: 87px;
   }
 }
 
-.topGallery #sbi_images::before {
+#sbi_images::before {
   top: 0;
   right: 0;
   border-top: 1px solid #2e200e;
   border-right: 1px solid #2e200e;
 }
 
-.topGallery #sbi_images::after {
+#sbi_images::after {
   bottom: 0;
   left: 0;
   border-bottom: 1px solid #2e200e;
@@ -2028,7 +2028,7 @@ section {
 }
 
 @media screen and (max-width: 598px) {
-  .topGallery .sbi_item {
+  .sbi_item {
     width: 100% !important;
   }
 }
@@ -2244,10 +2244,6 @@ section {
   }
 }
 
-.page {
-  letter-spacing: 0.01em;
-}
-
 .page__sectionNote {
   font-size: 12px;
   line-height: calc(16 / 12);
@@ -2350,20 +2346,12 @@ section {
   width: fit-content;
 }
 
-.page .wp-block-image {
-  width: 100vw;
-  margin: 65px 0 0 calc(50% - 50vw);
-}
-
-@media screen and (max-width: 598px) {
-  .page .wp-block-image {
-    height: 100px;
-  }
+.page .wp-block-image img {
+  width: 100%;
+  height: 100%;
 }
 
 .page .wp-block-image img {
-  width: 100% !important;
-  height: 100% !important;
   vertical-align: bottom;
 }
 
@@ -2388,6 +2376,17 @@ section {
 
 .page-id-9 .page__sectionTitleArea {
   margin-top: 60px;
+}
+
+.page-id-9 .wp-block-image {
+  width: 100vw;
+  margin: 65px 0 0 calc(50% - 50vw);
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-9 .wp-block-image {
+    height: 100px;
+  }
 }
 
 .page-id-19 .inner > h2 {
@@ -2513,6 +2512,122 @@ section {
   margin-top: 30px;
   position: relative;
   z-index: 5;
+}
+
+.page-id-29 .wp-block-columns {
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-29 .wp-block-columns {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .page-id-29 .wp-block-columns:first-of-type {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .page-id-29 .wp-block-column {
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .page-id-29 .wp-block-column:nth-of-type(even) {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .page-id-29 .wp-block-image {
+    margin-top: 20px;
+  }
+}
+
+.page-id-29 h2 {
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-29 h2 {
+    font-size: 16px;
+  }
+}
+
+.page-id-35 section {
+  font-family: "Hiragino Mincho ProN",sans-serif;
+  font-weight: 300;
+  background: url(../wp-content/themes/acro/images/index/bg-pattern2.png);
+  max-width: 1018px;
+  margin: 149px auto 100px;
+  padding: 9px;
+}
+
+@media screen and (max-width: 1260px) {
+  .page-id-35 section {
+    width: 90vw;
+    max-width: 1018px;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-35 section {
+    width: calc(100vw - 40px);
+    margin-bottom: 30px;
+  }
+}
+
+.page-id-35 .inner {
+  background-color: #fff;
+  width: 100%;
+  padding: 118px 56px 157px 47px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-35 .inner {
+    width: 100%;
+    padding: 126px 20px 20px;
+  }
+}
+
+.page-id-35 .inner:before {
+  content: "";
+  width: 318px;
+  height: 126px;
+  background: url(../wp-content/themes/acro/images/index/colona-deco.png) center/cover no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-35 .inner:before {
+    width: 100%;
+    max-width: 318px;
+  }
+}
+
+.page-id-35 h2 {
+  font-size: 22px;
+  line-height: calc(32 / 24);
+  text-align: center;
+  margin-bottom: 79px;
+}
+
+.page-id-35 p {
+  font-size: 20px;
+  line-height: calc(27 / 20);
 }
 
 .pageTop {

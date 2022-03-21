@@ -5,47 +5,47 @@
             margin-bottom: 0;
         }
     }
-    #sbi_images {
-        position: relative;
+}
+#sbi_images {
+    position: relative;
+    @include tab {
+        padding: 5px !important;
+    }
+    @include sp {
+        display: flex;
+        flex-direction: column;
+    }
+    &::before,
+    &::after {
+        content: "";
+        width: 831px;
+        height: 341px;
+        display: block;
+        position: absolute;
         @include tab {
-            padding: 5px !important;
+            width: 70%;
+            height: 70%;
         }
         @include sp {
-            display: flex;
-            flex-direction: column;
-        }
-        &::before,
-        &::after {
-            content: "";
-            width: 831px;
-            height: 341px;
-            display: block;
-            position: absolute;
-            @include tab {
-                width: 70%;
-                height: 70%;
-            }
-            @include sp {
-                width: calc-vw(250, 375);
-                height: 87px;
-            }
-        }
-        &::before {
-            top: 0;
-            right: 0;
-            border-top: 1px solid $letter-color;
-            border-right: 1px solid $letter-color;
-        }
-        &::after {
-            bottom: 0;
-            left: 0;
-            border-bottom: 1px solid $letter-color;
-            border-left: 1px solid $letter-color;
+            width: calc-vw(250, 375);
+            height: 87px;
         }
     }
-    .sbi_item {
-        @include sp {
-            width: 100% !important;
-        }
+    &::before {
+        top: 0;
+        right: 0;
+        border-top: 1px solid $letter-color;
+        border-right: 1px solid $letter-color;
+    }
+    &::after {
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid $letter-color;
+        border-left: 1px solid $letter-color;
+    }
+}
+.sbi_item {
+    @include sp {
+        width: 100% !important;
     }
 }
