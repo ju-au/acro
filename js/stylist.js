@@ -10,7 +10,8 @@ export default function () {
     function calculateMB() {
         imgHeight = img.clientHeight;
         bodyHeight = body.clientHeight;
-        if (window.matchMedia('(min-width: 598px)')) {
+        console.log(window.matchMedia('(max-width: 598px)').matches);
+        if (window.matchMedia('(max-width: 598px)').matches) {
             // sp画面
             bodyTopPercent = 85;
             gapBtwNextContent = 65;
@@ -19,6 +20,9 @@ export default function () {
             bodyTopPercent = 47;
             gapBtwNextContent = 109;
         };
+        console.log(bodyHeight);
+        console.log(imgHeight * ((100 - bodyTopPercent) / 100));
+        console.log(gapBtwNextContent);
         const mb = bodyHeight - (imgHeight * ((100 - bodyTopPercent) / 100)) + gapBtwNextContent;
         img.style.marginBottom = mb + "px";
 
