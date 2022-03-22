@@ -55,6 +55,7 @@ function my_user_meta($wb)
     $wb['stylists-creator'] = 'スタッフ紹介ページに表示（半角「1」を入力で表示）';
     $wb['comment'] = '一言コメント';
     $wb['job-title'] = '職種';
+    $wb['video'] = 'Youtubeアドレス';
 
     return $wb;
 }

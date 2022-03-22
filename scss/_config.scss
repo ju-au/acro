@@ -216,7 +216,8 @@ section {
     @include sectionNote;
   }
 }
-.single-service {
+.single-service,
+.author {
   .decoTitle::before,
   .ewd-ufaq-faq-category-title::before {
     background-image: url(../../wp-content/themes/acro/images/title-deco.png);

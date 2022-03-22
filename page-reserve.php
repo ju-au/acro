@@ -39,6 +39,7 @@
                             if ($show_on_reserve == 1) :
                         ?>
                                 <div class="reserve__body" id="reserve__body--<?php echo $uid; ?>"><?php echo do_shortcode('[attmgr_weekly id="' . $uid . '"]'); ?></div>
+                                <?php echo do_shortcode('[attmgr_weekly_all id="' . $uid . '"]'); ?>
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
@@ -48,7 +49,6 @@
             </div>
             <!-- /.reserve__inner -->
         </section>
-
         <?php echo do_shortcode('[contact-form-7 id="283" title="ご予約・お問い合わせフォーム"]'); ?>
 
         <div id="form__closure--hidden" style="display: hidden;"><?php echo '定休：' . get_post_meta(39, '定休日', true); ?></div>

@@ -1,0 +1,63 @@
+.stylist {
+    &__profile {
+        position: relative;
+    }
+    &__img {
+        width: calc-percent(530, 1200);
+        @include aspect-ratio-parent {
+            padding-top: calc((550 / 530 * 100%) * (530 / 1200));
+        }
+        @include sp {
+            width: calc-percent(198,335);
+            padding-top: calc((550 / 530 * 100%) * (198 / 335));
+        }
+        img {
+            @include aspect-ratio-child;
+        }
+    }
+    &__profileBody {
+        background: url(../../wp-content/themes/acro/images/stylist/stylist-bg.png) 0 0 / cover no-repeat;
+        width: calc-percent(762, 1200);
+        min-height: 337px;
+        padding: 43px 45px;
+        margin-left: calc-percent(-92, 1200);
+        position: absolute;
+        top: 47%;
+        right: 0;
+        z-index: 2;
+        @include sp {
+            width: calc-percent(256,335);
+            min-height: 125px;
+            padding: 17px 20px;
+            top: 85%;
+        }
+    }
+    &__videoWrapper {
+        width: calc-percent(792, 1200);
+        margin: 0 auto -30px;
+        display: block;
+        @include aspect-ratio-parent {
+            padding-top: calc((492 / 792 * 100%) * (792 / 1200));
+        }
+        @include sp {
+            width: 100%;
+            margin-bottom: 0;
+            padding-top: calc-percent(429,792);
+        }
+    }
+    &__video {
+        @include aspect-ratio-child;
+    }
+    &__schedule {
+        margin-bottom: 60px;
+        @include sp {
+            margin-bottom: 51px;
+        }
+    }
+    .decoTitle {
+        @include sp {
+            margin-bottom : 40px;
+        }
+
+    }
+}

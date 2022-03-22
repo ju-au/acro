@@ -15,6 +15,9 @@ form();
 import qaTitle from './js/qaTitle.js';
 qaTitle();
 
+import stylist from './js/stylist.js';
+stylist();
+
 import reserveCalender from './js/reserveCalender.js';
 reserveCalender();
 
