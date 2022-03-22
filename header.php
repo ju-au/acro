@@ -15,7 +15,11 @@
     <header class="header">
         <div class="header__left">
             <p class="header__title">葛西 南葛西の美容室 ヘアーラウンジアクロ南葛西店</p>
-            <a class="header__logo" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
+            <?php if (is_home()) : ?>
+                <h1 class="header__logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a></h1>
+            <?php else : ?>
+                <a class="header__logo" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
+            <?php endif; ?>
         </div>
         <!-- /.header__left -->
         <!-- ハンバーガーメニュー用 -->
