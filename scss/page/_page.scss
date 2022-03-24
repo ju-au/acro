@@ -100,6 +100,24 @@
             height: 100px;
         }
     }
+    .decoTitle {
+        @include sp {
+            margin-bottom: 31px;
+        }
+        &::before {
+            bottom: 15px;
+            @include sp {
+                bottom: -25px;
+            }
+        }
+        &__title {
+            font-family: "Pacifico", cursive;
+            font-size: 60px;
+            @include sp {
+                font-size: 30px;
+            }
+        }
+    }
 }
 
 // こだわりページ
@@ -129,8 +147,8 @@
         &__container {
             background: url(../wp-content/themes/acro/images/salon/salon-dots.png) center/contain no-repeat;
             @include sp {
-                background: url(../wp-content/themes/acro/images/salon/salon-dots-sp.png) left 37% top 0/contain no-repeat;
-                
+                background: url(../wp-content/themes/acro/images/salon/salon-dots-sp.png) left 37% top 0 / contain
+                    no-repeat;
             }
         }
         &__wrapper > .wp-block-group__inner-container {
@@ -151,7 +169,7 @@
             }
         }
         &__welcome {
-            font-family: 'Pacifico', cursive;
+            font-family: "Pacifico", cursive;
             font-size: 49px;
             font-weight: 600;
             color: $accent-color;
@@ -170,7 +188,7 @@
         }
     }
     h2 {
-        font-family: 'Pacifico', cursive;
+        font-family: "Pacifico", cursive;
         font-size: 34px;
         font-weight: 600;
         color: $accent-color;
@@ -409,7 +427,7 @@
             right: 0;
         }
         @include sp {
-            top: calc-percent(216 , 224);
+            top: calc-percent(216, 224);
         }
     }
 }
