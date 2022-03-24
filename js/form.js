@@ -1,6 +1,4 @@
 export default function () {
-    // formの表示、選択肢等の微調整
-
     // 「担当者の希望」のプルダウンメニューに、スタイリスト出勤日のスタイリスト名を付与
     (function () {
         const stylist = document.getElementById('form__stylist');

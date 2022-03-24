@@ -102,7 +102,7 @@
     }
 }
 
-// identityページ
+// こだわりページ
 .page-id-19 {
     .inner > h2 {
         font-family: "Hiragino Mincho ProN", sans-serif;
@@ -120,6 +120,333 @@
     }
     .decoTitle {
         margin-bottom: 36px;
+    }
+}
+
+// 店舗紹介ページ
+.page-id-21 {
+    .salon {
+        &__container {
+            background: url(../wp-content/themes/acro/images/salon/salon-dots.png) center/contain no-repeat;
+            @include sp {
+                background: url(../wp-content/themes/acro/images/salon/salon-dots-sp.png) left 37% top 0/contain no-repeat;
+                
+            }
+        }
+        &__wrapper > .wp-block-group__inner-container {
+            display: flex;
+            position: relative;
+            @include sp {
+                flex-direction: column;
+            }
+            > p {
+                background: url(../wp-content/themes/acro/images/salon/salon-bg.png) 0 0 / cover no-repeat;
+                width: calc-percent(610, 1200);
+                padding: 30px;
+                position: absolute;
+                @include sp {
+                    width: calc-percent(270, 335);
+                    padding: 20px;
+                }
+            }
+        }
+        &__welcome {
+            font-family: "delaney", sans-serif;
+            font-size: 49px;
+            font-weight: 600;
+            color: $accent-color;
+            text-align: center;
+            margin-top: 23px;
+            @include sp {
+                font-size: 36px;
+            }
+        }
+    }
+    .wp-block-image {
+        margin-bottom: 0;
+        img {
+            object-fit: cover;
+            @include aspect-ratio-child;
+        }
+    }
+    h2 {
+        font-family: "delaney", sans-serif;
+        font-size: 34px;
+        font-weight: 600;
+        color: $accent-color;
+        letter-spacing: -0.34em;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        @include sp {
+            letter-spacing: 0;
+            writing-mode: horizontal-tb;
+            text-orientation: unset;
+            background-color: rgba($color: #fff, $alpha: 0.8);
+            display: flex;
+            align-items: center;
+        }
+        &::before {
+            content: "";
+            width: 1px;
+            height: 88px;
+            background-color: $accent-color;
+            margin-bottom: 15px;
+            display: inline-block;
+            @include sp {
+                width: 70px;
+                height: 1px;
+                margin-bottom: 0;
+                margin-right: 7px;
+            }
+        }
+    }
+}
+.interior {
+    .wp-block-image {
+        width: calc-percent(1012, 1200);
+        @include aspect-ratio-parent {
+            padding-top: calc((519 / 1012 * 100%) * (1012 / 1200));
+        }
+        @include sp {
+            width: calc-percent(282, 335);
+            padding-top: calc((183 / 282 * 100%) * (282 / 335));
+        }
+    }
+    h2 {
+        margin-right: 10px;
+    }
+    p {
+        top: calc-percent(461, 519);
+        right: 0;
+        @include sp {
+            top: calc-percent(160, 183);
+        }
+    }
+}
+.exterior {
+    > .wp-block-group__inner-container {
+        flex-direction: row-reverse;
+        justify-content: end;
+        @include sp {
+            align-items: end;
+        }
+    }
+    .wp-block-image {
+        width: calc-percent(1073, 1200);
+        @include aspect-ratio-parent {
+            padding-top: calc((558 / 1073 * 100%) * (1073 / 1200));
+        }
+        @include sp {
+            width: calc-percent(282, 335);
+            padding-top: calc((183 / 282 * 100%) * (282 / 335));
+        }
+    }
+    h2 {
+        margin-left: 8px;
+    }
+    p {
+        top: calc-percent(492, 558);
+        left: 0;
+        @include sp {
+            top: calc-percent(162, 183);
+        }
+    }
+}
+.shopFront1 {
+    > .wp-block-group__inner-container {
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: end;
+    }
+    .wp-block-image {
+        &:first-of-type {
+            width: calc-percent(643, 1200);
+            z-index: 1;
+            @include aspect-ratio-parent {
+                padding-top: calc((558 / 1073 * 100%) * (1073 / 1200));
+            }
+            @include sp {
+                width: calc-percent(193, 335);
+                padding-top: calc((167 / 193 * 100%) * (193 / 335));
+            }
+        }
+        &:nth-of-type(2) {
+            width: calc-percent(557, 1200);
+            top: calc-percent(375, 558);
+            left: calc-percent(82, 1200);
+            @include aspect-ratio-parent {
+                padding-top: calc((368 / 557 * 100%) * (557 / 1200));
+            }
+            position: absolute;
+            top: 85%;
+            @include sp {
+                width: calc-percent(187, 335);
+                padding-top: calc((123 / 187 * 100%) * (187 / 335));
+                top: calc-percent(114, 167);
+                right: unset;
+                left: 0;
+            }
+        }
+    }
+    h2 {
+        font-size: 33px;
+        letter-spacing: 0;
+        writing-mode: horizontal-tb;
+        text-orientation: unset;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        bottom: -61px;
+        @include sp {
+            position: static;
+        }
+        &::before {
+            width: 192px;
+            height: 1px;
+            margin-bottom: 0;
+            margin-right: 15px;
+            @include sp {
+                width: 70px;
+                height: 1px;
+                margin-bottom: 0;
+                margin-right: 7px;
+            }
+        }
+    }
+    p {
+        top: calc-percent(162, 558);
+        left: calc-percent(82, 1200);
+        z-index: 3;
+        @include tab {
+            top: 14%;
+        }
+        @include sp {
+            top: calc-percent(213, 167);
+            left: unset;
+            right: 0;
+        }
+    }
+}
+.shopFront2 {
+    @include sp {
+        margin-bottom: 140px !important;
+    }
+    .wp-block-image {
+        &:first-of-type {
+            width: calc-percent(485, 1200);
+            @include aspect-ratio-parent {
+                padding-top: calc((699 / 485 * 100%) * (485 / 1200));
+            }
+            @include sp {
+                width: calc-percent(153, 335);
+                padding-top: calc((221 / 153 * 100%) * (153 / 335));
+                margin-top: 30px;
+            }
+        }
+        &:nth-of-type(2) {
+            width: calc-percent(673, 1200);
+            top: calc-percent(399, 699);
+            right: calc-percent(96, 1200);
+            @include aspect-ratio-parent {
+                padding-top: calc((355 / 673 * 100%) * (673 / 1200));
+            }
+            position: absolute;
+            @include tab {
+                top: 70%;
+            }
+            @include sp {
+                width: calc-percent(227, 335);
+                padding-top: calc((123 / 227 * 100%) * (227 / 335));
+                top: 44px;
+                right: 0;
+            }
+        }
+    }
+    h2 {
+        margin-right: 6px;
+    }
+    p {
+        top: calc-percent(142, 699);
+        right: calc-percent(140, 1200);
+        @include tab {
+            top: 7%;
+        }
+        @include sp {
+            top: calc((216 / 268 * 100%) + 44px);
+            right: 0;
+        }
+    }
+}
+.shampoo {
+    > .wp-block-group__inner-container {
+        justify-content: end;
+        @include sp {
+            padding-right: 0;
+        }
+    }
+    h2 {
+        margin-right: 10px;
+    }
+    .wp-block-image {
+        width: calc-percent(607, 1200);
+        @include aspect-ratio-parent {
+            padding-top: calc((693 / 607 * 100%) * (607 / 1200));
+        }
+        @include tab {
+            width: 70%;
+            padding-top: calc((693 / 607 * 100%) * 0.7);
+        }
+        @include sp {
+            width: calc-percent(196, 335);
+            padding-top: calc((224 / 196 * 100%) * (196 / 335));
+        }
+    }
+    p {
+        top: calc-percent(607, 693);
+        right: calc-percent(260, 1200);
+        @include tab {
+            right: 0;
+        }
+        @include sp {
+            top: calc-percent(216 , 224);
+        }
+    }
+}
+
+// Accessページ
+.page-id-29 {
+    .wp-block-columns {
+        margin-bottom: 100px;
+        @include sp {
+            margin-bottom: 60px;
+        }
+        &:first-of-type {
+            @include tab {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    .wp-block-column {
+        @include tab {
+            margin-left: 0 !important;
+        }
+        &:nth-of-type(even) {
+            @include tab {
+                align-self: start;
+            }
+        }
+    }
+    .wp-block-image {
+        @include tab {
+            margin-top: 20px;
+        }
+    }
+    h2 {
+        margin-bottom: 1em;
+        @include sp {
+            font-size: 16px;
+        }
     }
 }
 
@@ -190,46 +517,10 @@
     }
 }
 
-// Accessページ
-.page-id-29 {
-    .wp-block-columns {
-        margin-bottom: 100px;
-        @include sp {
-            margin-bottom: 60px;
-        }
-        &:first-of-type {
-            @include tab {
-                flex-direction: column-reverse;
-            }
-        }
-    }
-    .wp-block-column {
-        @include tab {
-            margin-left: 0 !important;
-        }
-        &:nth-of-type(even) {
-            @include tab {
-                align-self: start;
-            }
-        }
-    }
-    .wp-block-image {
-        @include tab {
-            margin-top: 20px;
-        }
-    }
-    h2 {
-        margin-bottom: 1em;
-        @include sp {
-            font-size: 16px;
-        }
-    }
-}
-
 // Thanksページ
 .page-id-35 {
     section {
-        font-family: "Hiragino Mincho ProN",sans-serif;
+        font-family: "Hiragino Mincho ProN", sans-serif;
         font-weight: 300;
         background: url(../wp-content/themes/acro/images/index/bg-pattern2.png);
         max-width: 1018px;
