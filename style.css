@@ -3068,7 +3068,7 @@ section {
 }
 
 .pageTop__title, .pageTop__subtitle, .pageTop__message {
-  text-shadow: 0 0 10px #fff;
+  text-shadow: 0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 10px #fff;
 }
 
 .pageTop__title {
@@ -3089,6 +3089,10 @@ section {
 
 .pageTop__subtitle {
   margin-bottom: 15px;
+}
+
+.pageTop__message {
+  width: 40%;
 }
 
 .page-id-9 .pageTop {
