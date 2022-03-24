@@ -56,10 +56,17 @@
         flex-grow: 0 !important;
         flex-basis: unset !important;
         margin-left: 20px;
+        @include tab {
+            width: 80%;
+            margin-right: auto !important;
+            margin-left: auto !important;
+        }
+        @include sp {
+            width: 100%;
+        }
         &:nth-of-type(even) {
             @include tab {
-                margin-top: 5px;
-                align-self: end;
+                margin-top: 15px;
             }
         }
         p {
@@ -128,10 +135,18 @@
         font-weight: 300;
         line-height: calc(48 / 32);
         margin: 96px 0 -54px;
+        @include sp {
+            font-size: 18px;
+            margin-top: 50px;
+        }
     }
     .wp-block-column {
         flex-basis: 0 !important;
         flex-grow: 1 !important;
+        @include sp {
+            width: 100%;
+            margin-left: 0;
+        }
     }
     .wp-block-image {
         margin: 0;

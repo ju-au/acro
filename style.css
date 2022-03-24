@@ -1345,6 +1345,7 @@ section {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   left: 50%;
+  z-index: 2;
 }
 
 .topCampaign__card-wrapper {
@@ -1815,12 +1816,14 @@ section {
 @media screen and (max-width: 1260px) {
   .topMenu__link::after {
     margin-right: 13.0719%;
+    width: 29px;
   }
 }
 
 @media screen and (max-width: 598px) {
   .topMenu__link::after {
     font-size: 12px;
+    width: 26px;
   }
 }
 
@@ -2337,11 +2340,22 @@ section {
 }
 
 @media screen and (max-width: 1260px) {
+  .page .wp-block-column {
+    width: 80%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .page .wp-block-column {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1260px) {
   .page .wp-block-column:nth-of-type(even) {
-    margin-top: 5px;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
+    margin-top: 15px;
   }
 }
 
@@ -2394,6 +2408,33 @@ section {
   }
 }
 
+@media screen and (max-width: 598px) {
+  .page-id-9 .decoTitle {
+    margin-bottom: 31px;
+  }
+}
+
+.page-id-9 .decoTitle::before {
+  bottom: 15px;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-9 .decoTitle::before {
+    bottom: -25px;
+  }
+}
+
+.page-id-9 .decoTitle__title {
+  font-family: "Pacifico", cursive;
+  font-size: 60px;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-9 .decoTitle__title {
+    font-size: 30px;
+  }
+}
+
 .page-id-19 .inner > h2 {
   font-family: "Hiragino Mincho ProN", sans-serif;
   font-size: 32px;
@@ -2402,12 +2443,26 @@ section {
   margin: 96px 0 -54px;
 }
 
+@media screen and (max-width: 598px) {
+  .page-id-19 .inner > h2 {
+    font-size: 18px;
+    margin-top: 50px;
+  }
+}
+
 .page-id-19 .wp-block-column {
   -ms-flex-preferred-size: 0 !important;
       flex-basis: 0 !important;
   -webkit-box-flex: 1 !important;
       -ms-flex-positive: 1 !important;
           flex-grow: 1 !important;
+}
+
+@media screen and (max-width: 598px) {
+  .page-id-19 .wp-block-column {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .page-id-19 .wp-block-image {
@@ -2459,7 +2514,7 @@ section {
 }
 
 .page-id-21 .salon__welcome {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 49px;
   font-weight: 600;
   color: #5d3c13;
@@ -2488,7 +2543,7 @@ section {
 }
 
 .page-id-21 h2 {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 34px;
   font-weight: 600;
   color: #5d3c13;
@@ -3094,6 +3149,12 @@ section {
 
 .pageTop__message {
   width: 40%;
+}
+
+@media screen and (max-width: 598px) {
+  .pageTop__message {
+    width: 100%;
+  }
 }
 
 .page-id-9 .pageTop {

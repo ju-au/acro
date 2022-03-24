@@ -193,9 +193,11 @@
             margin-right: 40px;
             @include tab {
                 margin-right: calc-percent(20, 153);
+                width: 29px;
             }
             @include sp {
                 font-size: 12px;
+                width: 26px;
             }
         }
         p {
