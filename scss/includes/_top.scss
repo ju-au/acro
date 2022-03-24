@@ -13,10 +13,10 @@
     &__title,
     &__subtitle,
     &__message {
-        text-shadow: 0 0 10px #fff;
+        text-shadow: 0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 10px #fff;
     }
     &__title {
-        font-family: "Delaney", sans-serif;
+        font-family: 'Pacifico', cursive;
         font-size: 50px;
         font-weight: 600;
         padding: 0 70px 2px 0;
@@ -29,6 +29,9 @@
     }
     &__subtitle {
         margin-bottom: 15px;
+    }
+    &__message {
+        width: 40%;
     }
 }
 

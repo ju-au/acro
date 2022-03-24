@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 li {
   list-style: none;
 }
@@ -48,7 +49,7 @@ section {
 }
 
 .sectionTitle {
-  font-family: "delaney", sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 50px;
   font-weight: 600;
   color: #5d3c13;
@@ -1207,7 +1208,7 @@ section {
 }
 
 .pageTitle__title {
-  font-family: "Delaney", sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 50px;
   font-weight: 600;
   padding: 0 70px 2px 0;
@@ -2458,7 +2459,7 @@ section {
 }
 
 .page-id-21 .salon__welcome {
-  font-family: "delaney", sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 49px;
   font-weight: 600;
   color: #5d3c13;
@@ -2487,7 +2488,7 @@ section {
 }
 
 .page-id-21 h2 {
-  font-family: "delaney", sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 34px;
   font-weight: 600;
   color: #5d3c13;
@@ -3072,7 +3073,7 @@ section {
 }
 
 .pageTop__title {
-  font-family: "Delaney", sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 50px;
   font-weight: 600;
   padding: 0 70px 2px 0;
@@ -3258,7 +3259,7 @@ section {
 }
 
 .beforeAfter .wp-block-image + p {
-  font-family: "Delaney", sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 40px;
   font-weight: 600;
   background-color: #fff;
@@ -3335,7 +3336,7 @@ section {
 }
 
 .flow__title {
-  font-family: "Delaney", sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 55px;
   font-weight: 600;
   text-align: center;
@@ -4314,5 +4315,69 @@ section {
   .stylist .decoTitle {
     margin-bottom: 40px;
   }
+}
+
+.phone {
+  margin-bottom: 50px;
+}
+
+.phone__inner {
+  text-align: center;
+  background: url(../wp-content/themes/acro/images/reserve/phone-bg.png) 0 0/100% 100% no-repeat;
+  width: 100%;
+  max-width: 675px;
+  margin: 0 auto;
+  padding: 50px 73px 35px 67px;
+  position: relative;
+}
+
+.phone__inner::before, .phone__inner::after {
+  content: "";
+  position: absolute;
+}
+
+.phone__inner::before {
+  background: url(../wp-content/themes/acro/images/reserve/reserve-deco1.png) 0 0/100% 100% no-repeat;
+  width: 92px;
+  height: 110px;
+  top: -25px;
+  left: -16px;
+}
+
+.phone__inner::after {
+  background: url(../wp-content/themes/acro/images/reserve/reserve-deco2.png) 0 0/100% 100% no-repeat;
+  width: 112px;
+  height: 106px;
+  right: -29px;
+  bottom: -30px;
+}
+
+.phone__title {
+  font-size: 24px;
+  line-height: calc(32 / 24);
+  margin-bottom: 22px;
+}
+
+.phone__number {
+  font-size: 60px;
+  line-height: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.phone__number::before {
+  content: "";
+  background: url(../wp-content/themes/acro/images/reserve/reserve-handset.png) 0 0/100% 100% no-repeat;
+  width: 69px;
+  height: 69px;
+  margin-right: 9px;
 }
 /*# sourceMappingURL=style.css.map */

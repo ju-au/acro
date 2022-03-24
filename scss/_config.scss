@@ -1,3 +1,6 @@
+// Google Fontsのインポート
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 // 変数
 $primary-color: #f7e9d6;
 $secondary-color: #fff6ea;
@@ -133,7 +136,7 @@ section {
 }
 
 .sectionTitle {
-  font-family: "delaney", sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 50px;
   font-weight: 600;
   color: $accent-color;
