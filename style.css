@@ -1566,7 +1566,6 @@ section {
 @media screen and (max-width: 598px) {
   .topMenu__title {
     font-size: 25px;
-    height: 460px;
   }
 }
 
@@ -4533,6 +4532,7 @@ section {
   margin-right: 14px;
   display: inline-block;
   position: relative;
+  z-index: 5;
   cursor: pointer;
 }
 
@@ -4551,21 +4551,35 @@ section {
 .schedule__tab.active {
   color: #fff;
   background-color: #91734d;
-  z-index: 2;
+  margin-right: 19px;
 }
 
 .schedule__tab.active::before {
   z-index: 3;
+  top: -3px;
 }
 
 .schedule__tab.active::after {
   content: "";
+  background-color: #fff;
   width: calc(100% + 5px);
   height: calc(100% + 3px);
-  top: -3px;
-  left: 5px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   border-top: 1px solid #707070;
   border-right: 1px solid #707070;
   z-index: 1;
+}
+
+.schedule__body {
+  padding: 20px;
+  border: 1px solid #707070;
+  display: none;
+}
+
+.schedule__body.active {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
