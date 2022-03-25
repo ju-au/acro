@@ -30,6 +30,7 @@
             <?php
             $args = array(
                 'post_type' => 'post',
+                'post_status' => 'publish',
                 'posts_per_page' => 1,
                 'meta_key' => 'Topページに表示',
                 'meta_value' => '1',
@@ -49,8 +50,13 @@
                         </div>
                     </div>
                     <!-- /.topCampaign__card -->
-            <?php
+                <?php
                 endwhile;
+            else :
+                ?>
+                <div class="topCampaign__card">現在トピックはありません</div>
+
+            <?php
             endif;
             wp_reset_postdata();
             ?>
