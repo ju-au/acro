@@ -13,10 +13,12 @@
         letter-spacing: -0.5em;
         writing-mode: vertical-lr;
         text-orientation: upright;
+        height: 580px;
         margin: 0;
         display: flex;
         @include sp {
             font-size: 25px;
+            height: 460px;
         }
         &::before {
             content: "";

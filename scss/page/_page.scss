@@ -215,6 +215,7 @@
             writing-mode: horizontal-tb;
             text-orientation: unset;
             background-color: rgba($color: #fff, $alpha: 0.8);
+            margin-bottom: 11px;
             display: flex;
             align-items: center;
         }
@@ -247,6 +248,10 @@
     }
     h2 {
         margin-right: 10px;
+        height: 490px;
+        @include sp {
+            height: unset;
+        }
     }
     p {
         top: calc-percent(461, 519);
@@ -276,6 +281,10 @@
     }
     h2 {
         margin-left: 8px;
+        height: 490px;
+        @include sp {
+            height: unset;
+        }
     }
     p {
         top: calc-percent(492, 558);
@@ -374,7 +383,7 @@
             @include sp {
                 width: calc-percent(153, 335);
                 padding-top: calc((221 / 153 * 100%) * (153 / 335));
-                margin-top: 30px;
+                margin-top: 40px;
             }
         }
         &:nth-of-type(2) {
@@ -391,13 +400,17 @@
             @include sp {
                 width: calc-percent(227, 335);
                 padding-top: calc((123 / 227 * 100%) * (227 / 335));
-                top: 44px;
+                top: 55px;
                 right: 0;
             }
         }
     }
     h2 {
         margin-right: 6px;
+        height: 580px;
+        @include sp {
+            height: unset;
+        }
     }
     p {
         top: calc-percent(142, 699);
@@ -420,6 +433,10 @@
     }
     h2 {
         margin-right: 10px;
+        height: 440px;
+        @include sp {
+            height: unset;
+        }
     }
     .wp-block-image {
         width: calc-percent(607, 1200);

@@ -13,6 +13,10 @@ img {
   vertical-align: bottom;
 }
 
+html {
+  overflow-x: auto;
+}
+
 body {
   font-family: "Yu Gothic", sans-serif;
   font-weight: 500;
@@ -1552,6 +1556,7 @@ section {
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
   text-orientation: upright;
+  height: 580px;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1561,6 +1566,7 @@ section {
 @media screen and (max-width: 598px) {
   .topMenu__title {
     font-size: 25px;
+    height: 460px;
   }
 }
 
@@ -2562,6 +2568,7 @@ section {
             writing-mode: horizontal-tb;
     text-orientation: unset;
     background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 11px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2604,6 +2611,13 @@ section {
 
 .interior h2 {
   margin-right: 10px;
+  height: 490px;
+}
+
+@media screen and (max-width: 598px) {
+  .interior h2 {
+    height: unset;
+  }
 }
 
 .interior p {
@@ -2650,6 +2664,13 @@ section {
 
 .exterior h2 {
   margin-left: 8px;
+  height: 490px;
+}
+
+@media screen and (max-width: 598px) {
+  .exterior h2 {
+    height: unset;
+  }
 }
 
 .exterior p {
@@ -2786,7 +2807,7 @@ section {
   .shopFront2 .wp-block-image:first-of-type {
     width: 45.67164%;
     padding-top: calc((221 / 153 * 100%) * (153 / 335));
-    margin-top: 30px;
+    margin-top: 40px;
   }
 }
 
@@ -2809,13 +2830,20 @@ section {
   .shopFront2 .wp-block-image:nth-of-type(2) {
     width: 67.76119%;
     padding-top: calc((123 / 227 * 100%) * (227 / 335));
-    top: 44px;
+    top: 55px;
     right: 0;
   }
 }
 
 .shopFront2 h2 {
   margin-right: 6px;
+  height: 580px;
+}
+
+@media screen and (max-width: 598px) {
+  .shopFront2 h2 {
+    height: unset;
+  }
 }
 
 .shopFront2 p {
@@ -2850,6 +2878,13 @@ section {
 
 .shampoo h2 {
   margin-right: 10px;
+  height: 440px;
+}
+
+@media screen and (max-width: 598px) {
+  .shampoo h2 {
+    height: unset;
+  }
 }
 
 .shampoo .wp-block-image {
@@ -4440,5 +4475,97 @@ section {
   width: 69px;
   height: 69px;
   margin-right: 9px;
+}
+
+.guide {
+  margin-bottom: 52px;
+}
+
+.guide__toSchedule, .guide__toMail, .guide__arrow {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.guide__toSchedule {
+  font-family: "Hiragino Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: calc(20 / 18);
+  margin-bottom: 13px;
+}
+
+.guide__toMail {
+  font-size: 24px;
+  line-height: calc(32 / 24);
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.guide__toMail::before {
+  content: "";
+  background: url(../wp-content/themes/acro/images/reserve/reserve-email.png) 0 0/100% 100% no-repeat;
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: calc(100% + 50px);
+}
+
+.guide__arrow {
+  width: 24px;
+  height: 35px;
+}
+
+.schedule .decoTitle {
+  margin-bottom: 21px;
+}
+
+.schedule__tab {
+  background-color: #fcf2e5;
+  color: #aca59a;
+  text-align: center;
+  min-width: 178px;
+  padding: 12px 1em 4px;
+  margin-right: 14px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.schedule__tab::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 19px 19px 0 0;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.schedule__tab.active {
+  color: #fff;
+  background-color: #91734d;
+  z-index: 2;
+}
+
+.schedule__tab.active::before {
+  z-index: 3;
+}
+
+.schedule__tab.active::after {
+  content: "";
+  width: calc(100% + 5px);
+  height: calc(100% + 3px);
+  top: -3px;
+  left: 5px;
+  border-top: 1px solid #707070;
+  border-right: 1px solid #707070;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
