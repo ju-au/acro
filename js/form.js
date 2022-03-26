@@ -3,7 +3,7 @@ export default function () {
     (function () {
         const stylist = document.getElementById('form__stylist');
         if (!stylist) return;
-        const stylistNames = document.querySelectorAll('.reserve__tab');
+        const stylistNames = document.querySelectorAll('.schedule__tab');
         stylistNames.forEach(stylistName => {
             const option = document.createElement('option');
             option.setAttribute('value', stylistName.innerText);

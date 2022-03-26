@@ -157,6 +157,7 @@ section {
   }
 }
 .decoTitle,
+.form__title,
 .ewd-ufaq-faq-category-title {
   margin: 90px 0 11px;
   position: relative;
@@ -196,6 +197,7 @@ section {
   }
 }
 .decoTitle__title,
+.form__title > h2,
 .ewd-ufaq-faq-category-title > h3 {
   font-family: "Hiragino Sans", sans-serif;
   font-size: 22px;
@@ -252,6 +254,7 @@ section {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  cursor: pointer;
   @include sp {
     font-size: 13px;
     line-height: calc(17 / 13);
