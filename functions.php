@@ -112,8 +112,9 @@ add_shortcode('get_contents_from_page', 'get_contents_from_page');
  */
 function deco_title($attr)
 {
+    $title_class = ($attr['lang'] === 'jp') ? 'decoTitle__title decoTitle__title--jp' : 'decoTitle__title';
     $title_area = '<div class="decoTitle">
-    <h2 class="decoTitle__title">' . $attr['title'] . '</h2></div>';
+        <h2 class="' . $title_class . '">' . $attr['title'] . '</h2></div>';
     if (!empty($attr['note'])) {
         $title_area .= '<span class="decoTitle__note">' . $attr['note'] . '</span>';
     }

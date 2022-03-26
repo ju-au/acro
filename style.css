@@ -2449,6 +2449,10 @@ section {
   }
 }
 
+.page-id-9 .decoTitle__title--jp {
+  font-size: 40px;
+}
+
 .page-id-19 .inner > h2 {
   font-family: "Hiragino Mincho ProN", sans-serif;
   font-size: 32px;
@@ -3473,8 +3477,16 @@ section {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 100%;
+  padding: 0 calc(53px * 2 + 18px * 2);
   margin: 17px auto 30px;
   position: relative;
+}
+
+@media screen and (max-width: 1260px) {
+  .flow__title + p {
+    padding: 0 calc(20px * 2 + 18px * 2);
+  }
 }
 
 .flow__title + p::before, .flow__title + p::after {
@@ -3483,19 +3495,19 @@ section {
   width: 1px;
   height: 45px;
   position: absolute;
-  top: -15px;
+  top: 50%;
 }
 
 .flow__title + p::before {
-  -webkit-transform: rotate(-22deg);
-          transform: rotate(-22deg);
-  left: -53px;
+  -webkit-transform: rotate(-22deg) translateY(-50%);
+          transform: rotate(-22deg) translateY(-50%);
+  left: 19px;
 }
 
 .flow__title + p::after {
-  -webkit-transform: rotate(22deg);
-          transform: rotate(22deg);
-  right: -53px;
+  -webkit-transform: rotate(22deg) translateY(-50%);
+          transform: rotate(22deg) translateY(-50%);
+  right: 19px;
 }
 
 .flow__title + p + .step {
@@ -3682,8 +3694,16 @@ section {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 100%;
+  padding: 0 calc(53px * 2 + 18px * 2);
   margin: 80px auto 42px;
   position: relative;
+}
+
+@media screen and (max-width: 1260px) {
+  .step + p {
+    padding: 0 calc(20px * 2 + 18px * 2);
+  }
 }
 
 .step + p::before, .step + p::after {
@@ -3692,19 +3712,19 @@ section {
   width: 1px;
   height: 45px;
   position: absolute;
-  top: -15px;
+  top: 50%;
 }
 
 .step + p::before {
-  -webkit-transform: rotate(-22deg);
-          transform: rotate(-22deg);
-  left: -53px;
+  -webkit-transform: rotate(-22deg) translateY(-50%);
+          transform: rotate(-22deg) translateY(-50%);
+  left: 19px;
 }
 
 .step + p::after {
-  -webkit-transform: rotate(22deg);
-          transform: rotate(22deg);
-  right: -53px;
+  -webkit-transform: rotate(22deg) translateY(-50%);
+          transform: rotate(22deg) translateY(-50%);
+  right: 19px;
 }
 
 .step + p + .step {
@@ -4655,7 +4675,7 @@ section {
   display: none;
 }
 
-.schedule__tab {
+.schedule__tabName {
   background-color: #fcf2e5;
   color: #aca59a;
   text-align: center;
@@ -4668,14 +4688,14 @@ section {
 }
 
 @media screen and (max-width: 598px) {
-  .schedule__tab {
+  .schedule__tabName {
     min-width: 104px;
     padding: 14px 20px 2px;
     margin-right: 11px;
   }
 }
 
-.schedule__tab::before {
+.schedule__tabName::before {
   content: "";
   width: 0;
   height: 0;
@@ -4687,24 +4707,24 @@ section {
   left: 0;
 }
 
-.schedule__tab.active {
+.schedule__tabName.active {
   color: #fff;
   background-color: #91734d;
   margin-right: 19px;
 }
 
 @media screen and (max-width: 598px) {
-  .schedule__tab.active {
+  .schedule__tabName.active {
     margin-right: 11px;
   }
 }
 
-.schedule__tab.active::before {
+.schedule__tabName.active::before {
   z-index: 3;
   top: -3px;
 }
 
-.schedule__tab.active::after {
+.schedule__tabName.active::after {
   content: "";
   background-color: #fff;
   width: calc(100% + 5px);
@@ -4719,7 +4739,7 @@ section {
 }
 
 @media screen and (max-width: 598px) {
-  .schedule__tab.active::after {
+  .schedule__tabName.active::after {
     width: calc(100% + 3px);
     top: -3px;
     bottom: unset;
