@@ -124,6 +124,7 @@
                 'number' => 3,
                 'meta_key' => 'main-creator',
                 'meta_value' => 1,
+                'orderby' => 'ID',
             ));
 
             foreach ($users as $user) :
