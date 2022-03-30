@@ -24,22 +24,6 @@
         margin: 0 auto;
         display: block;
     }
-    h3 {
-        font-size: 20px;
-        line-height: calc(27 / 20);
-        padding-left: 1em;
-        margin: 12px auto 0.25em;
-        position: relative;
-        @include sp {
-            font-size: 16px;
-        }
-        &::before {
-            content: "・";
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    }
     td {
         text-align: right;
         padding-left: 1em;
@@ -99,6 +83,23 @@
         &__sectionTitleArea {
             margin-top: 60px;
         }
+        h3 {
+            font-size: 20px;
+            line-height: calc(27 / 20);
+            padding-left: 1em;
+            margin: 12px auto 0.25em;
+            position: relative;
+            @include sp {
+                font-size: 16px;
+            }
+
+            &::before {
+                content: "・";
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
     }
     .wp-block-image {
         width: 100vw;
@@ -118,8 +119,9 @@
             }
         }
         &__title {
-            font-family: "Pacifico", cursive;
+            font-family: "Dancing Script", cursive;
             font-size: 60px;
+            font-weight: 700;
             @include sp {
                 font-size: 30px;
             }
@@ -187,9 +189,9 @@
             }
         }
         &__welcome {
-            font-family: "Pacifico", cursive;
+            font-family: "Dancing Script", cursive;
             font-size: 49px;
-            font-weight: 600;
+            font-weight: 700;
             color: $accent-color;
             text-align: center;
             margin-top: 23px;
@@ -206,9 +208,9 @@
         }
     }
     h2 {
-        font-family: "Pacifico", cursive;
+        font-family: "Dancing Script", cursive;
         font-size: 34px;
-        font-weight: 600;
+        font-weight: 700;
         color: $accent-color;
         letter-spacing: -0.34em;
         writing-mode: vertical-rl;
@@ -508,11 +510,6 @@
 .single-service {
     .ewd-ufaq-post-margin-symbol {
         display: none;
-    }
-    .ewd-ufaq-faq-category-title {
-        & > h3::before {
-            content: "";
-        }
     }
     .ewd-ufaq-faq-title,
     .ewd-ufaq-faq-body {
