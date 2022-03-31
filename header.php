@@ -7,8 +7,9 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="<?php bloginfo('description'); ?>">
-    <link rel="stylesheet" href="https://use.typekit.net/gdm0hfh.css">
-    <?php wp_head(); ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
