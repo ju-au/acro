@@ -37,8 +37,6 @@
     }
     .wp-block-column {
         width: fit-content;
-        flex-grow: 0 !important;
-        flex-basis: unset !important;
         margin-left: 20px;
         @include tab {
             width: 80%;
@@ -100,6 +98,10 @@
                 left: 0;
             }
         }
+    }
+    .wp-block-column {
+        flex-grow: 0 !important;
+        flex-basis: unset !important;
     }
     .wp-block-image {
         width: 100vw;
@@ -469,8 +471,9 @@
     }
 }
 
-// Accessページ
-.page-id-29 {
+// Accessページ、採用情報ページのアクセスセクション
+.page-id-29,
+.access {
     .wp-block-columns {
         margin-bottom: 100px;
         @include sp {
@@ -497,6 +500,8 @@
             margin-top: 20px;
         }
     }
+}
+.page-id-29 {
     h2 {
         margin-bottom: 1em;
         @include sp {
