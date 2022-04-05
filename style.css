@@ -2396,7 +2396,11 @@ section {
   margin-top: 60px;
 }
 
+<<<<<<< HEAD
 .page-id-9 h3 {
+=======
+.page-id-9 .page h3 {
+>>>>>>> 782775416dc29d64e1a67e489930e82b90274051
   font-size: 20px;
   line-height: calc(27 / 20);
   padding-left: 1em;
@@ -2405,6 +2409,7 @@ section {
 }
 
 @media screen and (max-width: 598px) {
+<<<<<<< HEAD
   .page-id-9 h3 {
     font-size: 16px;
     margin-top: 25px;
@@ -2412,6 +2417,14 @@ section {
 }
 
 .page-id-9 h3::before {
+=======
+  .page-id-9 .page h3 {
+    font-size: 16px;
+  }
+}
+
+.page-id-9 .page h3::before {
+>>>>>>> 782775416dc29d64e1a67e489930e82b90274051
   content: "・";
   position: absolute;
   top: 0;
@@ -2426,6 +2439,7 @@ section {
       flex-basis: unset !important;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 598px) {
   .page-id-9 .wp-block-column {
     padding-left: 2em;
@@ -2443,6 +2457,8 @@ section {
   margin-left: auto;
 }
 
+=======
+>>>>>>> 782775416dc29d64e1a67e489930e82b90274051
 .page-id-9 .wp-block-image {
   width: 100vw;
   margin: 65px 0 0 calc(50% - 50vw);
@@ -2486,12 +2502,15 @@ section {
   font-size: 40px;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 598px) {
   .page-id-9 .decoTitle__title--jp {
     font-size: 20px;
   }
 }
 
+=======
+>>>>>>> 782775416dc29d64e1a67e489930e82b90274051
 .page-id-19 .inner > h2 {
   font-family: "Hiragino Mincho ProN", sans-serif;
   font-size: 32px;
@@ -5089,8 +5108,13 @@ section {
   }
 }
 
+<<<<<<< HEAD
 .page-id-621 .sectionTitle,
 .page-id-621 .sectionSubtitle {
+=======
+.page-id-596 .sectionTitle,
+.page-id-596 .sectionSubtitle {
+>>>>>>> 782775416dc29d64e1a67e489930e82b90274051
   text-align: left;
   width: 1200px;
   margin-left: auto;
@@ -5098,20 +5122,34 @@ section {
 }
 
 @media screen and (max-width: 1260px) {
+<<<<<<< HEAD
   .page-id-621 .sectionTitle,
   .page-id-621 .sectionSubtitle {
+=======
+  .page-id-596 .sectionTitle,
+  .page-id-596 .sectionSubtitle {
+>>>>>>> 782775416dc29d64e1a67e489930e82b90274051
     width: 90vw;
   }
 }
 
 @media screen and (max-width: 598px) {
+<<<<<<< HEAD
   .page-id-621 .sectionTitle,
   .page-id-621 .sectionSubtitle {
+=======
+  .page-id-596 .sectionTitle,
+  .page-id-596 .sectionSubtitle {
+>>>>>>> 782775416dc29d64e1a67e489930e82b90274051
     width: calc(100vw - 40px);
   }
 }
 
+<<<<<<< HEAD
 .page-id-621 .sectionTitle {
+=======
+.page-id-596 .sectionTitle {
+>>>>>>> 782775416dc29d64e1a67e489930e82b90274051
   margin-bottom: 0;
 }
 
