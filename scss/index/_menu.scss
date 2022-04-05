@@ -18,7 +18,6 @@
         display: flex;
         @include sp {
             font-size: 25px;
-            height: 460px;
         }
         &::before {
             content: "";

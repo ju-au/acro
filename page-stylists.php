@@ -13,6 +13,7 @@
                     $users = get_users(array(
                         'meta_key' => 'stylists-creator',
                         'meta_value' => 1,
+                        'orderby' =>'ID',
                     ));
                     foreach ($users as $user) :
                         $uid = $user->ID;

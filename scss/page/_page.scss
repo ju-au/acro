@@ -24,22 +24,6 @@
         margin: 0 auto;
         display: block;
     }
-    h3 {
-        font-size: 20px;
-        line-height: calc(27 / 20);
-        padding-left: 1em;
-        margin: 12px auto 0.25em;
-        position: relative;
-        @include sp {
-            font-size: 16px;
-        }
-        &::before {
-            content: "・";
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    }
     td {
         text-align: right;
         padding-left: 1em;
@@ -53,8 +37,6 @@
     }
     .wp-block-column {
         width: fit-content;
-        flex-grow: 0 !important;
-        flex-basis: unset !important;
         margin-left: 20px;
         @include tab {
             width: 80%;
@@ -99,6 +81,27 @@
         &__sectionTitleArea {
             margin-top: 60px;
         }
+        h3 {
+            font-size: 20px;
+            line-height: calc(27 / 20);
+            padding-left: 1em;
+            margin: 12px auto 0.25em;
+            position: relative;
+            @include sp {
+                font-size: 16px;
+            }
+
+            &::before {
+                content: "・";
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    .wp-block-column {
+        flex-grow: 0 !important;
+        flex-basis: unset !important;
     }
     .wp-block-image {
         width: 100vw;
@@ -118,10 +121,14 @@
             }
         }
         &__title {
-            font-family: "Pacifico", cursive;
+            font-family: "Dancing Script", cursive;
             font-size: 60px;
+            font-weight: 700;
             @include sp {
                 font-size: 30px;
+            }
+            &--jp {
+                font-size: 40px;
             }
         }
     }
@@ -184,9 +191,9 @@
             }
         }
         &__welcome {
-            font-family: "Pacifico", cursive;
+            font-family: "Dancing Script", cursive;
             font-size: 49px;
-            font-weight: 600;
+            font-weight: 700;
             color: $accent-color;
             text-align: center;
             margin-top: 23px;
@@ -203,9 +210,9 @@
         }
     }
     h2 {
-        font-family: "Pacifico", cursive;
+        font-family: "Dancing Script", cursive;
         font-size: 34px;
-        font-weight: 600;
+        font-weight: 700;
         color: $accent-color;
         letter-spacing: -0.34em;
         writing-mode: vertical-rl;
@@ -464,8 +471,9 @@
     }
 }
 
-// Accessページ
-.page-id-29 {
+// Accessページ、採用情報ページのアクセスセクション
+.page-id-29,
+.access {
     .wp-block-columns {
         margin-bottom: 100px;
         @include sp {
@@ -492,6 +500,8 @@
             margin-top: 20px;
         }
     }
+}
+.page-id-29 {
     h2 {
         margin-bottom: 1em;
         @include sp {
@@ -505,11 +515,6 @@
 .single-service {
     .ewd-ufaq-post-margin-symbol {
         display: none;
-    }
-    .ewd-ufaq-faq-category-title {
-        & > h3::before {
-            content: "";
-        }
     }
     .ewd-ufaq-faq-title,
     .ewd-ufaq-faq-body {

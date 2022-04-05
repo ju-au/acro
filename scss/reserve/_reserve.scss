@@ -1,0 +1,427 @@
+.reserve {
+}
+.phone {
+    margin-bottom: 50px;
+    @include sp {
+        margin-bottom: 35px;
+    }
+    &__wrapper {
+        text-align: center;
+        background: url(../wp-content/themes/acro/images/reserve/phone-bg.png) 0 0 / 100% 100% no-repeat;
+        width: 100%;
+        max-width: 675px;
+        margin: 0 auto;
+        padding: 50px 73px 35px 67px;
+        position: relative;
+        @include tab {
+            padding: 20px;
+        }
+        @include sp {
+            padding-top: 30px;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+        &::before {
+            background: url(../wp-content/themes/acro/images/reserve/reserve-deco1.png) 0 0 / 100% 100% no-repeat;
+            width: 92px;
+            height: 110px;
+            top: -25px;
+            left: -16px;
+            @include sp {
+                width: 63px;
+                height: 92px;
+            }
+        }
+        &::after {
+            background: url(../wp-content/themes/acro/images/reserve/reserve-deco2.png) 0 0 / 100% 100% no-repeat;
+            width: 112px;
+            height: 106px;
+            right: -29px;
+            bottom: -30px;
+            @include sp {
+                width: 89px;
+                height: 67px;
+                right: -30px;
+                bottom: -20px;
+            }
+        }
+    }
+    &__title {
+        font-size: 24px;
+        line-height: calc(32 / 24);
+        margin-bottom: 22px;
+        @include sp {
+            font-size: calc-vw(14, 360);
+            margin-bottom: 0.65em;
+        }
+    }
+    &__number {
+        font-size: 60px;
+        line-height: 1;
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        align-items: end;
+        @include sp {
+            font-size: calc-vw(34, 360);
+            align-items: center;
+        }
+        &::before {
+            content: "";
+            background: url(../wp-content/themes/acro/images/reserve/reserve-handset.png) 0 0 / 100% 100% no-repeat;
+            width: 69px;
+            height: 69px;
+            margin-right: 9px;
+            @include sp {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+// /.phone
+
+.guide {
+    margin-bottom: 52px;
+    @include sp {
+        margin-bottom: 28px;
+    }
+    &__toSchedule,
+    &__toMail,
+    &__arrow {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    &__toSchedule {
+        font-family: "Hiragino Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: calc(20 / 18);
+        margin-bottom: 13px;
+        @include sp {
+            font-size: calc-vw(15, 360);
+            margin-bottom: 9px;
+        }
+    }
+    &__toMail {
+        $icon-size: 58px;
+        $icon-size-sp: 40px;
+
+        font-size: 24px;
+        line-height: calc(32 / 24);
+        margin-bottom: 22px;
+        position: relative;
+        @include tab {
+            padding-left: calc(#{$icon-size} + 0.5em);
+        }
+        @include sp {
+            font-size: calc-vw(20, 360);
+            text-align: center;
+            padding-left: calc(#{$icon-size-sp} + 0.5em);
+            margin-bottom: 13px;
+        }
+        &::before {
+            content: "";
+            background: url(../wp-content/themes/acro/images/reserve/reserve-email.png) 0 0 / 100% 100% no-repeat;
+            width: $icon-size;
+            height: $icon-size;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: calc(100% + 50px);
+            @include tab {
+                right: unset;
+                left: 0;
+            }
+            @include sp {
+                width: $icon-size-sp;
+                height: $icon-size-sp;
+                top: 0;
+                transform: translateY(0);
+            }
+        }
+    }
+    &__arrow {
+        width: 24px;
+        height: 35px;
+    }
+}
+// /.guide
+
+.schedule {
+    .decoTitle {
+        margin-bottom: 21px;
+        @include sp {
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+    }
+    &__tabArea {
+        z-index: 2;
+        padding-top: 3px;
+        display: flex;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    &__tab {
+        background-color: #fcf2e5;
+        color: #aca59a;
+        text-align: center;
+        min-width: 178px;
+        padding: 12px 1em 4px;
+        margin-right: 14px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        @include sp {
+            min-width: 104px;
+            padding: 14px 20px 2px;
+            margin-right: 11px;
+        }
+        &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 19px 19px 0 0;
+            border-color: #fff transparent transparent transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &.active {
+            color: #fff;
+            background-color: #91734d;
+            margin-right: 19px;
+            @include sp {
+                margin-right: 11px;
+            }
+            &::before {
+                z-index: 3;
+                top: -3px;
+            }
+            &::after {
+                content: "";
+                background-color: #fff;
+                width: calc(100% + 5px);
+                height: calc(100% + 3px);
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-top: 1px solid #707070;
+                border-right: 1px solid #707070;
+                z-index: -1;
+                @include sp {
+                    width: calc(100% + 3px);
+                    top: -3px;
+                    bottom: unset;
+                }
+            }
+        }
+    }
+    &__bodyArea {
+        padding: 40px;
+        border: 1px solid #707070;
+        z-index: 1;
+        @include sp {
+            padding: 20px 10px;
+        }
+    }
+    &__body {
+        margin-bottom: 40px;
+        display: none;
+        @include sp {
+            margin-bottom: 20px;
+        }
+        &.active {
+            display: block;
+        }
+    }
+    &__note {
+        padding-left: 1em;
+        position: relative;
+        &::before {
+            content: "・";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        span {
+            font-size: 13px;
+        }
+    }
+}
+// /.schedule
+
+.form {
+    &__container {
+        width: 100%;
+        margin: 22px 0 55px;
+        @include sp {
+            margin-top: 35px;
+        }
+    }
+    &__item {
+        width: 100%;
+        display: flex;
+    }
+    &__titleArea {
+        background-color: #fbf1e5;
+        width: calc-percent(430, 1200);
+        padding: 14px calc-percent(33, 1200);
+        border: 1px solid #707070;
+        display: flex;
+        justify-content: space-between;
+        @include tab {
+            flex-direction: column;
+            justify-content: start;
+        }
+        @include sp {
+            padding: 14px 1%;
+        }
+    }
+    &__itemTitle {
+        @include tab {
+            margin-bottom: 10px;
+        }
+    }
+    &__inputArea {
+        padding: 10px calc-percent(50, 1200);
+        border: 1px solid #707070;
+        display: flex;
+        flex-basis: 0;
+        flex-grow: 1;
+        &--name,
+        &--kana {
+            @include sp {
+                flex-direction: column;
+            }
+        }
+        &--prefered-day {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            column-gap: 1em;
+            justify-content: start;
+            @include tab {
+                grid-template-columns: repeat(3, auto);
+                row-gap: 10px;
+            }
+            @include sp {
+                grid-template-columns: 40%;
+            }
+            .form__input,
+            .wpcf7-form-control-wrap,
+            .wpcf7-number {
+                @include sp {
+                    width: 100%;
+                }
+            }
+            .wpcf7-form-control-wrap {
+                margin-right: 2px;
+            }
+        }
+    }
+    &__note {
+        font-size: 13px;
+        line-height: calc(18 / 13);
+        @include tab {
+            align-self: end;
+        }
+        @include sp {
+            font-size: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            align-self: start;
+        }
+    }
+    &__requiered {
+        color: #fff;
+        background-color: #91734d;
+        padding: 2px 11px;
+        margin-left: 5px;
+        display: inline-block;
+        @include sp {
+            margin-left: 0;
+        }
+    }
+    &__input {
+        display: flex;
+        align-items: center;
+        &--family-name,
+        &--given-name,
+        &--kana-family-name,
+        &--kana-given-name {
+            width: calc((188 / 670 * 100%) + 1em);
+            min-width: 140px;
+            @include sp {
+                width: 100%;
+            }
+            input {
+                margin-left: 5px;
+                width: 100%;
+            }
+        }
+        &--family-name,
+        &--kana-family-name {
+            margin-right: calc-percent(50, 670);
+            @include sp {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+        }
+        &--email,
+        &--tel {
+            width: 100%;
+            max-width: 564px;
+            * {
+                width: 100%;
+            }
+        }
+        &--menu,
+        &--source {
+            .wpcf7-checkbox {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                @include tab {
+                    grid-template-columns: auto;
+                }
+            }
+        }
+        &--prefered-time {
+            .wpcf7-checkbox {
+                display: grid;
+                grid-template-columns: auto;
+                row-gap: 5px;
+            }
+        }
+        &--request,
+        &--comment {
+            width: 100%;
+            height: 204px;
+            * {
+                width: 100%;
+                height: 100%;
+            }
+            .wpcf7-textarea {
+                padding: 1em;
+            }
+        }
+        &--enquiry {
+            .wpcf7-checkbox {
+                display: flex;
+                justify-content: start;
+                @include sp {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
