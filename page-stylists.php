@@ -26,7 +26,7 @@
                                 <div class="stylists__textUpper">
                                     <p class="stylists__jobTitle"><?php echo get_user_meta($uid, 'job-title', true); ?></p>
                                     <h2 class="stylists__name"><?php echo get_user_meta($uid, 'nickname', true); ?></h2>
-                                    <span class="stylists__enName"><?php echo get_user_meta($uid, 'last_name', true); ?>&nbsp;<?php echo get_user_meta($uid, 'first_name', true); ?></span>
+                                    <span class="stylists__enName"><?php echo get_user_meta($uid, 'last_name', true); ?>&nbsp;<br class="is-shown-sp"><?php echo get_user_meta($uid, 'first_name', true); ?></span>
                                     <p class="stylists__comment"><?php echo get_user_meta($uid, 'comment', true); ?></p>
                                 </div>
                                 <!-- /.stylists__textUpper -->

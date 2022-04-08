@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 .page-id-621 {
-=======
-.page-id-596 {
-    // .page-id-621 {
->>>>>>> 782775416dc29d64e1a67e489930e82b90274051
     .sectionTitle,
     .sectionSubtitle {
         text-align: left;
@@ -197,6 +192,9 @@
                 @include tab {
                     width: calc-vw(161, 1260);
                 }
+                img {
+                    width: 100%;
+                }
             }
         }
         &--leaves {
@@ -362,7 +360,7 @@
     }
     &__deco {
         img {
-            width: 100px;
+            width: 100%;
         }
     }
 }
@@ -521,6 +519,9 @@
     &__clock {
         width: 100%;
         margin-bottom: 16px;
+        img {
+            width: 100%;
+        }
     }
     &__finishTime {
         width: 153px;
@@ -528,6 +529,9 @@
         @include tab {
             width: calc-vw(197, 810);
             max-width: 197px;
+        }
+        img {
+            width: 100%;
         }
     }
     &__finishBodyArea {
@@ -793,6 +797,7 @@
         box-shadow: 7px 0px 7px -3px rgba(0, 0, 0, 0.2), -7px 0px 7px -3px rgba(0, 0, 0, 0.2);
         margin-bottom: 10px;
         img {
+            width: 100%;
             object-fit: cover;
         }
     }

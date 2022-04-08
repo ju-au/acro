@@ -115,6 +115,9 @@
     &__deco2 {
         position: absolute;
         z-index: 1;
+        img {
+            width: 100%;
+        }
     }
     &__deco1 {
         width: 576px;

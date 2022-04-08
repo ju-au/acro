@@ -95,11 +95,8 @@
         <div class="inner greeting__inner">
             <?php
             $args = [
-<<<<<<< HEAD
                 'page_id' => 623,
-=======
-                'page_id' => 566,
->>>>>>> 782775416dc29d64e1a67e489930e82b90274051
+                // 'page_id' => 566,
             ];
             $sub_query = new WP_Query($args);
             if ($sub_query->have_posts()) :
@@ -122,11 +119,8 @@
 
 <section class="workFlow">
     <?php 
-<<<<<<< HEAD
     $setting_page_id = 634; 
-=======
-    $setting_page_id = 604; 
->>>>>>> 782775416dc29d64e1a67e489930e82b90274051
+    // $setting_page_id = 604; 
     $timeLine_img_1 = "0850";
     $timeLine_img_2 = "0900";
     $timeLine_img_3 = "09000930";
@@ -317,11 +311,8 @@
         <div class="inner skill__inner">
             <?php
             $args = [
-<<<<<<< HEAD
                 'page_id' => 630,
-=======
-                'page_id' => 568,
->>>>>>> 782775416dc29d64e1a67e489930e82b90274051
+                // 'page_id' => 568,
             ];
             $sub_query = new WP_Query($args);
             if ($sub_query->have_posts()) :
@@ -351,11 +342,8 @@
         <div class="shop__photos">
             <?php
             $args = [
-<<<<<<< HEAD
                 'page_id' => 625,
-=======
-                'page_id' => 578,
->>>>>>> 782775416dc29d64e1a67e489930e82b90274051
+                // 'page_id' => 578,
             ];
             $sub_query = new WP_Query($args);
             if ($sub_query->have_posts()) :
@@ -426,10 +414,7 @@
 </section>
 <!-- /.jobDescription -->
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 782775416dc29d64e1a67e489930e82b90274051
 <section class="jobApplication">
     <div class="inner jobApplication">
         <?php echo do_shortcode('[deco_title title="応募フォーム"]'); ?>

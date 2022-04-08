@@ -53,6 +53,9 @@
         }
         p {
             width: fit-content;
+            @include tab {
+                width: 100%;
+            }
         }
     }
     .wp-block-image {
@@ -65,43 +68,60 @@
 
 // menuページ
 .page-id-9 {
-    .page {
-        h3,
-        &__sectionNote,
-        .wp-block-columns,
-        &__link {
-            width: 1000px;
-            @include tab {
-                width: 90%;
-            }
-            @include sp {
-                width: 100%;
-            }
+    h3,
+    .page__sectionNote,
+    .wp-block-columns,
+    .page__link {
+        width: 1000px;
+        @include tab {
+            width: 90%;
         }
-        &__sectionTitleArea {
-            margin-top: 60px;
-        }
-        h3 {
-            font-size: 20px;
-            line-height: calc(27 / 20);
-            padding-left: 1em;
-            margin: 12px auto 0.25em;
-            position: relative;
-            @include sp {
-                font-size: 16px;
-            }
-
-            &::before {
-                content: "・";
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
+        @include sp {
+            width: 100%;
         }
     }
+    .page__sectionTitleArea {
+        margin-top: 60px;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: calc(27 / 20);
+        padding-left: 1em;
+        margin: 12px auto 0.25em;
+        position: relative;
+        @include sp {
+            font-size: 16px;
+        }
+
+        &::before {
+            content: "・";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
     .wp-block-column {
         flex-grow: 0 !important;
         flex-basis: unset !important;
+        &:first-of-type {
+            > p {
+                @include sp {
+                    margin-left: 1em;
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            @include sp {
+                margin-top: 5px;
+                margin-bottom: 20px;
+            }
+            > p {
+                @include tab {
+                    text-align: right;
+                }
+            }
+        }
     }
     .wp-block-image {
         width: 100vw;
@@ -129,6 +149,12 @@
             }
             &--jp {
                 font-size: 40px;
+                @include tab {
+                    font-size: 38px;
+                }
+                @include sp {
+                    font-size: 25px;
+                }
             }
         }
     }

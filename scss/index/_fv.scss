@@ -31,6 +31,9 @@
             line-height: calc(20 / 16);
             left: 0;
         }
+        img {
+            width: 100%;
+        }
     }
     &__swiper {
         width: calc(100vw - #{$outer-width});
